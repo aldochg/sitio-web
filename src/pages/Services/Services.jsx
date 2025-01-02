@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import './Contact.css';
+import './services.css';
 
 export const Services = () => {
     return (
