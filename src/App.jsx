@@ -6,12 +6,14 @@ import { AboutUs } from './pages/AboutUs/AboutUs';
 import { Contact } from './pages/Contact/Contact';
 import { Products } from './pages/Products/Products';
 
-import { Sidebar } from './components/Sidebar/Sidebar';
+//import { Sidebar } from './components/Sidebar/Sidebar';
+import { Header } from './components/Header/Header';
+import { Footer } from './components/Footer/Footer';
 
 const App = () => {
   return (
     <div>
-      <Sidebar/>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
@@ -19,6 +21,7 @@ const App = () => {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
+      <Footer/>
     </div>
   );
 };

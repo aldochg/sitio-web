@@ -1,0 +1,24 @@
+.sidebar__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    list-style: none;
+    background-color: rgb(180, 114, 206);
+    padding: 10px;
+}
+
+.sidebar__list-item{
+    display: flex;
+    padding: 10px;
+    list-style: none;
+    background-color: rgb(210, 121, 121);
+}
+
+.sidebar__list-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}

@@ -1,0 +1,28 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border-bottom: 1px solid #e0e0e0; */
+    background-color: bisque;
+    position: fixed;
+    width: 100%;
+    
+}
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(210, 121, 121);
+}
+
+.header__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 10px;
+    background-color: rgb(210, 121, 121);
+}

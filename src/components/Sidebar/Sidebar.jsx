@@ -5,34 +5,34 @@ import './Sidebar.css';
 
 export const Sidebar = () => {
     return (
-        <div className="sidebar" style={{ width: '100%', height: '100%', padding: '10px', position: 'fixed', top: '0', left: '0' }}>
-            <ul style={{display: 'flex', flexDirection: 'row', margin: '60px', padding: '20px'}}>
-                <li>
+        <nav className="sidebar">
+            <ul className="sidebar__list">
+                <li className="sidebar__list-item">
                     <NavLink to="/" activeClassName="active" end>
-                        Home
+                        Inicio
                     </NavLink>
                 </li>
-                <li>
+                <li className="sidebar__list-item">
                     <NavLink to="/products" activeClassName="active">
-                        Products
+                        Productos
                     </NavLink>
                 </li>
-                <li>
+                <li className="sidebar__list-item">
                     <NavLink to="/services" activeClassName="active">
-                        Services
+                        Servicios
                     </NavLink>
                 </li>
-                <li>
+                <li className="sidebar__list-item">
                     <NavLink to="/about-us" activeClassName="active">
-                        About Us
+                        Sobre Nosotros
                     </NavLink>
                 </li>
-                <li>
+                <li className="sidebar__list-item">
                     <NavLink to="/contact" activeClassName="active">
-                        Contact
+                        Contacto
                     </NavLink>
                 </li>
             </ul>
-        </div>
+        </nav>
     );
 }
