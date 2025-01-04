@@ -1,19 +1,23 @@
-.sidebar__list{
+
+.sidebar__list {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     width: 100%;
     list-style: none;
-    background-color: rgb(180, 114, 206);
+
     padding: 10px;
 }
 
 .sidebar__list-item{
     display: flex;
-    padding: 10px;
+    padding: 20px;
     list-style: none;
-    background-color: rgb(210, 121, 121);
+
+    height: auto;
+    position: relative;
+    margin: 2px;
 }
 
 .sidebar__list-item a {
@@ -21,4 +25,45 @@
     color: #333;
     font-size: 16px;
     transition: color 0.3s ease;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.submenu {
+    list-style: none;
+    position: absolute;
+    top: 50px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    z-index: 10;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    width: 200px;
+}
+
+.submenu__item {
+    padding: 10px 0;
+    border-bottom: 1.5px dotted rgb(211, 211, 211);
+}
+
+.submenu__item:hover {
+    background-color: rgb(0, 0, 0, 0.15);
+}
+
+.submenu__item a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px;
+    display: block;
+}
+
+.submenu__item a.active {
+    font-weight: bold;
+    color: #007bff;
+    width: 200px;
 }

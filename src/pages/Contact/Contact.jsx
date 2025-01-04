@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import './Contact.css';
+import  { Breadcrumb } from "../../components/Breadcrumb/Breadcrumb";
 
 export const Contact = () => {
     return (
-        <div>
-        <h1>Contact</h1>
+        <div className="contact">
+            <Breadcrumb />
+            <i className="pi pi-home" style={{ fontSize: '2rem' }}></i>
         </div>
     );
 }
