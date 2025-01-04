@@ -6,7 +6,6 @@ export const Contact = () => {
     return (
         <div className="contact">
             <Breadcrumb />
-            <i className="pi pi-home" style={{ fontSize: '2rem' }}></i>
         </div>
     );
 }

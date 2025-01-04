@@ -1,4 +1,5 @@
 import { useLocation, NavLink } from "react-router-dom";
+import './Breadcrumb.css';
 
 export const Breadcrumb = () => {
     const location = useLocation();
@@ -12,7 +13,7 @@ export const Breadcrumb = () => {
                 console.log(to);
                 return (
                     <div key={to}>
-                        <a className="breadcrumb__separator"> / </a>
+                        <a className="breadcrumb__separator"><i className="pi pi-home"></i> </a>
                         <NavLink className="breadcrumb__link">
                             {value.charAt(0).toUpperCase() + value.slice(1)}
                         </NavLink>

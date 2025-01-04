@@ -22,7 +22,7 @@ export const Sidebar = () => {
                     onMouseLeave={handleMouseLeave}
                 >
                     <div className="menu-item">
-                    <i className="pi pi-align-center" style={{ color:'#46494d', padding:'10px' }}></i>
+                        <i className="pi pi-align-center" style={{ color:'#46494d', padding:'10px' }}></i>
                         <NavLink to="/products">
                             Productos
                         </NavLink>

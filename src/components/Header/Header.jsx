@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Sidebar } from "../Sidebar/Sidebar";
 import './Header.css';
-import imagen from '../../assets/react.svg';
+import imagen from '../../assets/8.png';
 import 'primeicons/primeicons.css';
 
 export const Header = () => {
@@ -47,15 +47,16 @@ export const Header = () => {
             {/* Segunda fila: Menús */}
             <div className="header__bottom">
                 <div className="header__logo">
-                    <img src={imagen} alt="Logo" />
+                    <img className="img-logo" src={imagen} alt="Logo"/>
                 </div>
                 <div className="header__menu">
                     <Sidebar />
                 </div>
                 <div className="header__icons">
-                    <i className="pi pi-user" style={{ fontSize: '2rem', color: '#46494d' }}></i>
-                    <i className="pi pi-heart-fill" style={{ fontSize: '2rem', color: '#46494d' }}></i>
-                    <i className="pi pi-shopping-cart" style={{ fontSize: '2rem', color: '#46494d' }}></i>
+                    <i className="pi pi-user plex-icons"></i>
+                    <i className="pi pi-heart-fill plex-icons"></i>
+                    <i className="pi pi-shopping-cart plex-icons"></i>
+                    <i id="pi-align-justify" className="pi pi-align-justify"></i>
                 </div>
             </div>
         </header>

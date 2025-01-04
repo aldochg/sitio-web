@@ -1,13 +1,14 @@
 import { useState, useEffect } from "react";
 import './Footer.css';
+import imagen from '../../assets/8.png';
 
 export const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer-container">
-                <div style={{ backgroundColor: '#333', borderRadius: '10px' }}>
+                <div>
                     <h3>Empresa S.A.C</h3>
-                    <img src="#" alt="Empresa" />
+                    <img src={imagen} alt="Empresa" width={200}/>
                     <p>Empresa industrial de </p>
                     <p>© {new Date().getFullYear()} Todos los derechos reservados.</p>
                 </div>
