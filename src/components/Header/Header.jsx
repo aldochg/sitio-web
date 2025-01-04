@@ -30,17 +30,33 @@ export const Header = () => {
 
     return (
         <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
-            <div className="header__logo">
-                <img src={imagen} alt="Logo" />
+            {/* Primera fila: Información relevante */}
+            <div className="header__top">
+                <div className="header__info">
+                    <span><i className="pi pi-phone"></i> +51 972 373 515</span>
+                    <span><i className="pi pi-envelope"></i> compania@empresa.com</span>
+                </div>
+                <div className="header__social">
+                    <a href="https://facebook.com" style={{ color: '#fff' }}><i className="pi pi-facebook"></i></a>
+                    <a href="https://instagram.com" style={{ color: '#fff' }}><i className="pi pi-instagram"></i></a>
+                    <a href="https://twitter.com" style={{ color: '#fff' }}><i className="pi pi-twitter"></i></a>
+                    <a href="https://tiktok.com" style={{ color: '#fff' }}><i className="pi pi-tiktok"></i></a>
+                </div>
             </div>
-            <div className="header__search">
-                <Sidebar />
-            </div>
-            <div className="header__icons">
-                <i className="pi pi-align-justify" style={{ fontSize: '2rem', display:'none' }}></i>
-                <i className="pi pi-user" style={{ fontSize: '2rem' }}></i>
-                <i className="pi pi-heart-fill" style={{ fontSize: '2rem' }}></i>
-                <i className="pi pi-cart-minus" style={{ fontSize: '2rem' }}></i>
+
+            {/* Segunda fila: Menús */}
+            <div className="header__bottom">
+                <div className="header__logo">
+                    <img src={imagen} alt="Logo" />
+                </div>
+                <div className="header__menu">
+                    <Sidebar />
+                </div>
+                <div className="header__icons">
+                    <i className="pi pi-user" style={{ fontSize: '2rem', color: '#46494d' }}></i>
+                    <i className="pi pi-heart-fill" style={{ fontSize: '2rem', color: '#46494d' }}></i>
+                    <i className="pi pi-shopping-cart" style={{ fontSize: '2rem', color: '#46494d' }}></i>
+                </div>
             </div>
         </header>
     );

@@ -1,8 +1,25 @@
 footer {
-    background-color: #333;
+    background-color: #3D3D49;
     color: #fff;
-    padding: 20px;
-    text-align: center;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+  }
+
+  .footer-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 80%;
+  }
+
+  .footer-bottom{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
   }
   
   footer h3, footer h4 {
@@ -27,4 +44,85 @@ footer {
   footer a:hover {
     text-decoration: underline;
   }
+
+  .list-menu-footer{
+    list-style: none;
+    padding: 0;
+  }
+
+  .list-menu-footer li{
+    padding: 10px 0 10px 0;
+  }
+
+  .contact-info p{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 10px 0 10px 0;
+  }
+
+  .social-icons{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    padding: 20px 0 20px 0;
+  }
+
+  .p-inputgroup-flex{
+    min-width: 300px;
+    padding: 20px 0 20px 0;
+  }
+
+  .input-flex{
+    height: 45px;
+    width: 100%;
+    outline: none;
+    background-color: transparent;
+    border: 2px solid rgba(220, 220, 220, 0.3);
+    border-radius: 0px;
+    caret-color: #ffffff;
+    padding: 0px 10px;
+  }
+
+  .input-flex::content{
+    color: #fff;
+
+  }
+
+  .button-flex{
+    height: 45px;
+    width: 100%;
+    background-color: #4682B4;
+    color: #fff;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .button-flex:hover{
+    box-shadow: 0px 0px 5px 0px rgba(220, 220, 220, 0.3);
+  }
+
+  .button-flex:hover{
+    background-color: #666668;
+  }
+
   
+  .footer-bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 20%;
+  }
+
+  .linea-separacion{
+    width: 100%;
+    height: 2px;
+    background-color: rgba(192, 192, 192, 0.5);
+  }

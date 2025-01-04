@@ -12,7 +12,7 @@ export const Breadcrumb = () => {
                 console.log(to);
                 return (
                     <div key={to}>
-                        <span className="breadcrumb__separator"> / </span>
+                        <a className="breadcrumb__separator"> / </a>
                         <NavLink className="breadcrumb__link">
                             {value.charAt(0).toUpperCase() + value.slice(1)}
                         </NavLink>
