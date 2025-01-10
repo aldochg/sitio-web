@@ -1,12 +1,15 @@
 import { useState, useEffect } from "react";
-import { Sidebar } from "../Sidebar/Sidebar";
+import { SidebarH } from "../SidebarH/SidebarH";
 import './Header.css';
 import imagen from '../../assets/8.png';
 import 'primeicons/primeicons.css';
+import { Sidebar } from 'primereact/sidebar';
+import { Button } from 'primereact/button';
 
 export const Header = () => {
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
+    const [visible, setVisible] = useState(false);
 
     const handleScroll = () => {
         const currentScrollY = window.scrollY;
@@ -38,8 +41,6 @@ export const Header = () => {
                 </div>
                 <div className="header__social">
                     <a href="https://facebook.com" style={{ color: '#fff' }}><i className="pi pi-facebook"></i></a>
-                    <a href="https://instagram.com" style={{ color: '#fff' }}><i className="pi pi-instagram"></i></a>
-                    <a href="https://twitter.com" style={{ color: '#fff' }}><i className="pi pi-twitter"></i></a>
                     <a href="https://tiktok.com" style={{ color: '#fff' }}><i className="pi pi-tiktok"></i></a>
                 </div>
             </div>
@@ -50,15 +51,20 @@ export const Header = () => {
                     <img className="img-logo" src={imagen} alt="Logo"/>
                 </div>
                 <div className="header__menu">
-                    <Sidebar />
+                    <SidebarH />
                 </div>
                 <div className="header__icons">
                     <i className="pi pi-user plex-icons"></i>
                     <i className="pi pi-heart-fill plex-icons"></i>
                     <i className="pi pi-shopping-cart plex-icons"></i>
-                    <i id="pi-align-justify" className="pi pi-align-justify"></i>
+                    <i id="pi-align-justify" className="pi pi-align-justify" onClick={() => setVisible(true)}></i>
                 </div>
             </div>
+
+            <Sidebar visible={visible} onHide={() => setVisible(false)}>
+                <SidebarH/>
+            </Sidebar>
+            
         </header>
     );
 };

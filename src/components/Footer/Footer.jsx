@@ -13,7 +13,7 @@ export const Footer = () => {
                     <p>© {new Date().getFullYear()} Todos los derechos reservados.</p>
                 </div>
                 <div>
-                    <h4>Menu</h4>
+                    <h4>ENLASES RAPIDOS</h4>
                     <ul className="list-menu-footer">
                         <li><a href="/" style={{ textDecoration: 'none' }}>Inicio</a></li>
                         <li><a href="/services" style={{ textDecoration: 'none' }}>Servicios</a></li>
@@ -23,7 +23,7 @@ export const Footer = () => {
                     </ul>
                 </div>
                 <div className="">
-                    <h4>Contáctanos</h4>
+                    <h4>DATOS DE CONTACTO</h4>
                     <div className="contact-info">
                         <p><i className="pi pi-envelope" style={{ fontSize: '1.5rem', padding:'0 10px 0 3px' }}></i> contacto@empresa.com</p>
                         <p><i className="pi pi-envelope" style={{ fontSize: '1.5rem', padding:'0 10px 0 3px' }}></i> contacto@empresa.com</p>
@@ -34,14 +34,14 @@ export const Footer = () => {
                     </div>
                 </div>
                 <div className="" >
-                    <h4>Síguenos</h4>
+                    <h4>SIGUENOS</h4>
                     <div className="social-icons">
                         <a href="https://facebook.com" style={{ color: '#fff' }}><i className="pi pi-facebook" style={{ fontSize: '1.5rem' }}></i></a>
                         <a href="https://instagram.com" style={{ color: '#fff' }}><i className="pi pi-instagram" style={{ fontSize: '1.5rem' }}></i></a>
                         <a href="https://twitter.com" style={{ color: '#fff' }}><i className="pi pi-twitter" style={{ fontSize: '1.5rem' }}></i></a>
                         <a href="https://tiktok.com" style={{ color: '#fff' }}><i className="pi pi-tiktok" style={{ fontSize: '1.5rem' }}></i></a>
                     </div>
-                    <h4>Contactanos</h4>
+                    <h4>CONTACTANOS</h4>
                     <div className="p-inputgroup-flex">
                         <div className="p-inputgroup">
                             {/* <span className="p-inputgroup-addon">

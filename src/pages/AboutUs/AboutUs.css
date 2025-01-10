@@ -1,14 +1,537 @@
-.about-us{
-    background-image: url('../../assets/image.jpg');
+.about-us {
+    background-image: url('../../assets/fondos/uno.jpg');
     object-fit: cover;
     object-position: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 46vh;
+    min-height: 56vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
+    color: white;
+}
+
+.about-us::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Fondo negro con 50% de opacidad */
+    z-index: 1;
+}
+
+.about-us>* {
+    position: relative;
+    z-index: 2;
+    /* Asegura que el contenido esté encima del fondo */
+}
+
+.about__content {
+    max-width: 1200px;
+    text-align: center;
+    line-height: 30px;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about__content-title{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+/* Estilos para el card de informacion */
+.card__message__contenedor {
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.card__message__sub__contenedor {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    position: absolute;
+    top: -100px;
+    z-index: 200;
+}
+
+.card__mensages {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 450px;
+    padding: 10px;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.card__mensages:hover {
+    background-color: #4682B4;
+    color: white;
+    transition: transform 0.3s, background-color 0.8s;
+}
+
+.card__message__i {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #EDF4FC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card__message__i i {
+    font-size: 30px;
+    color: #4682B4;
+}
+
+.card__message__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+
+    text-align: center;
+}
+
+.card__message__title {
+    line-height: 30px;
+    margin-bottom: 10px;
+
+}
+
+.card__message__text {
+    line-height: 30px;
+}
+
+.card__message__button {
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    display: flex;
+    color: #285071;
+    margin-top: 20px;
+    background-color: #EDF4FC;
+}
+
+.card__message__button i {
+    padding: 0 10px 0 10px;
+    color: #285071;
+}
+
+@media(max-width: 690px) {
+    .about-us {
+        min-height: 70vh;
+    }
+
+    .card__message__contenedor {
+        min-height: 140vh;
+    }
+
+    .card__message__sub__contenedor {
+        gap: 30px;
+        position: absolute;
+        top: -60px;
+        z-index: 200;
+    }
+
+    .card__message__sub__contenedor {
+        max-width: 1200px;
+        display: flex;
+        flex-direction: column;
+        margin: 0 10px 0 10px;
+    }
+
+    .about__content h1 {
+        font-size: 20px;
+    }
+}
+
+@media(max-width: 280px) {
+    .card__message__contenedor {
+        min-height: 150vh;
+    }
+
+    .card__message__sub__contenedor {
+        gap: 30px;
+        position: absolute;
+        top: -40px;
+        z-index: 200;
+    }
+
+
+}
+
+/* Estilos para quienes somos */
+.container__quienes__somos {
+    min-height: 50vh;
+}
+
+.about-us__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding: 2rem;
+    background-color: #F3F3F3;
+    min-height: 70vh;
+}
+
+.about-us__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    max-width: 1200px;
+    background-color: #F3F3F3;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.about-us__image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.about-us__text {
+    padding: 0 0 0 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: start;
+}
+
+.about-us__subtitle {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 0.5rem;
+}
+
+.about-us__title {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 1rem;
+}
+
+.about-us__description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.about-us__highlight {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.about-us__guarantee {
+    width: 100%;
+    text-align: center;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.about-us__progress-bar {
+    width: 100%;
+    height: 20px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.about-us__progress-bar-fill {
+    height: 100%;
+    width: 0%;
+    background-color: #285071;
+    transition: width 0.2s ease-in-out;
+    border-radius: 10px;
+}
+
+.about-us__progress-span {
+    color: #ffffff;
+}
+
+@media(max-width: 1000px) {
+
+    .about-us__content {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .about-us__text {
+        padding: 2rem 0 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: start;
+    }
+}
+
+/* Estilso de los numeros de la empresa */
+.contenedor__numeros__general {
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.contenedor__numeros__subgeneral {
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -75px;
+    z-index: 200;
+}
+
+.contenedor__numeros {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 2px 2px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    background-color: white;
+}
+
+.contenedor__datos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px 40px 10px;
+    min-height: 150px;
+    width: 100%;
+}
+
+.contenedor__general__icons {
+    padding: 10px;
+}
+
+.contenedor__general__i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #4682B4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor__general__i i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 25px;
+}
+
+.contendor__general__info {
+    display: flex;
+    flex-direction: column;
+}
+
+@media(max-width: 750px) {
+    .contenedor__numeros__general {
+        min-height: 60vh;
+    }
+
+    .contenedor__numeros__subgeneral {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .contenedor__numeros {
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .contenedor__datos {
+       display: flex;
+       justify-content: space-around;
+    }
+}
+
+@media(max-width: 400px) {
+    .contenedor__numeros__general {
+        min-height: 50vh;
+    }
+
+    .contenedor__numeros__subgeneral {
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -40px;
+        z-index: 200;
+    }
+
+    .contenedor__general__title{
+        font-size: 20px;
+    }
+
+    .contenedor__datos{
+        padding: 0 5px 0 5px;
+        min-height: 100px;
+    }
+
+}
+
+@media(max-width: 290px) {
+    .contenedor__numeros__general {
+        min-height: 45vh;
+    }
+
+    .contenedor__numeros__subgeneral {
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        bottom: -10px;
+        z-index: 200;
+    }
+}
+
+/* Estilos para mision y vision */
+.mision-vision__content {
+    min-height: 60vh;
+}
+
+.mision-vision {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.mision-vision__image1 {
+    position: relative;
+    background-image: url('../../assets/mision1.webp');
+    /* Cambia 'ruta-de-la-imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* Para que el texto sea visible */
+    padding: 100px;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mision-vision__image2 {
+    position: relative;
+    background-image: url('../../assets/vision3.jpg');
+    /* Cambia 'ruta-de-la-imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* Para que el texto sea visible */
+    padding: 100px;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mision-vision__image3 {
+    position: relative;
+    background-image: url('../../assets/valores2.jpg');
+    /* Cambia 'ruta-de-la-imagen.jpg' por la ruta de tu imagen */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    /* Para que el texto sea visible */
+    padding: 100px;
+    overflow: hidden;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.mision-vision__image1::after,
+.mision-vision__image2::after,
+.mision-vision__image3::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Capa negra con opacidad del 50% */
+    z-index: 1;
+}
+
+.mision__title,
+.vision__title,
+.valores__title,
+.mision__text,
+.vision__text,
+.valores__text {
+    position: relative;
+    z-index: 2;
+    /* Para que el texto esté encima de la capa */
+    margin: 0;
+    line-height: 30px;
+}
+
+
+@media(max-width: 1000px) {
+    .mision-vision {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .mision-vision__image1,
+    .mision-vision__image2,
+    .mision-vision__image3 {
+        padding: 10px;
+    }
+
+}
+
+@media(max-width: 400px) {
+    .mision__title,
+    .vision__title,
+    .valores__title {
+        font-size: 16px;
+    }
+
 }

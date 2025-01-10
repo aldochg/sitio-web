@@ -21,11 +21,11 @@
 /* Primera fila */
 .header__top {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 15px 20px;
     /* background-color: #556877; */
-    background-color: #4682B4;
+    background-color: #00247E;
     border-bottom: rgb(89, 107, 125, 0.15)  1px solid;
     font-size: 0.9rem;
     color: #ffffff;
