@@ -13,12 +13,7 @@ import imagen4 from '../../assets/inicio/cuatro.jpg';
 export const Products = () => {
     // paginatos 
     const [first, setFirst] = useState(0);
-    const [rows, setRows] = useState(10);
-
-    const onPageChange = (event) => {
-        setFirst(event.first);
-        setRows(event.rows);
-    };
+    const [rows, setRows] = useState(8);
 
     // Estilos para la visibilidad del modal
     const [visible, setVisible] = useState(false);
@@ -29,7 +24,7 @@ export const Products = () => {
         const productos_destacados = [
             {
                 id: 1,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen1,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 250.0,
@@ -37,7 +32,7 @@ export const Products = () => {
             },
             {
                 id: 2,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen2,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -45,7 +40,7 @@ export const Products = () => {
             },
             {
                 id: 3,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen3,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -53,7 +48,7 @@ export const Products = () => {
             },
             {
                 id: 4,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen4,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -61,7 +56,7 @@ export const Products = () => {
             },
             {
                 id: 5,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen1,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -69,7 +64,7 @@ export const Products = () => {
             },
             {
                 id: 6,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen2,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -77,7 +72,7 @@ export const Products = () => {
             },
             {
                 id: 7,
-                id_categoria:234,
+                id_categoria: 234,
                 imagen: imagen2,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -85,7 +80,31 @@ export const Products = () => {
             },
             {
                 id: 8,
-                id_categoria:234,
+                id_categoria: 234,
+                imagen: imagen2,
+                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 9,
+                id_categoria: 234,
+                imagen: imagen2,
+                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 10,
+                id_categoria: 234,
+                imagen: imagen2,
+                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 11,
+                id_categoria: 234,
                 imagen: imagen2,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
@@ -114,11 +133,11 @@ export const Products = () => {
                             { id: 4, id_categoria: 101, imagen: 'imagen4', descripcion: 'Cocina de gas compacta.', precio: 550.0, rating: 3 },
                         ]
                     },
-                    {id: 102, producto: 'Horno eléctrico'},
-                    {id: 103, producto: 'Freidora de gas'},
-                    {id: 104, producto: 'Salamandra'},
-                    {id: 105, producto: 'Plancha de cocina (griddle)'},
-                    {id: 106, producto: 'Baño maría' }
+                    { id: 102, producto: 'Horno eléctrico' },
+                    { id: 103, producto: 'Freidora de gas' },
+                    { id: 104, producto: 'Salamandra' },
+                    { id: 105, producto: 'Plancha de cocina (griddle)' },
+                    { id: 106, producto: 'Baño maría' }
                 ]
             },
             {
@@ -176,7 +195,7 @@ export const Products = () => {
         ];
         setProductos(datos);
     }, []);
-    
+
 
     const toggleAccordion = (index) => {
         setActiveIndex(index === activeIndex ? null : index);
@@ -186,6 +205,15 @@ export const Products = () => {
         console.log(item.productos_destacados)
         setProductosDestacados(item.productos_destacados)
     }
+
+    // Manejador de cambio de página
+    const onPageChange = (event) => {
+        setFirst(event.first);
+        setRows(event.rows);
+    };
+
+    // Determina los elementos visibles según la página actual
+    const productosDestacadosReal = productosDestacados.slice(first, first + rows);
 
     return (
         <div>
@@ -204,13 +232,13 @@ export const Products = () => {
                         <div className="contenedor-articulos-acordeon">
                             <div className="contenedor-articulos-acordeon-acordeon">
                                 <h4>FILTROS</h4>
-                                <Ball/>
+                                <Ball />
                             </div>
-                            <div className="accordion-container">
+                            <div className="accordion-container-products">
                                 {productos.map((linea, index) => (
-                                    <div key={linea.id} className="accordion-item">
-                                        <div className="accordion-header" onClick={() => toggleAccordion(index)}>
-                                            <h4>{linea.nombre}</h4>
+                                    <div key={linea.id} className="accordion-item-products">
+                                        <div className="accordion-header-products" onClick={() => toggleAccordion(index)}>
+                                            <h5>{linea.nombre}</h5>
                                             <i className={`pi ${activeIndex === index ? 'pi-minus' : 'pi-plus'}`}></i>
                                         </div>
                                         <div
@@ -224,11 +252,14 @@ export const Products = () => {
                                         </div>
                                     </div>
                                 ))}
+                                <div className="contenedor-acordeon-footer">
+
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div className="contenedor-articulos-productos">
-                        {productosDestacados.map((producto, index) => (
+                        {productosDestacadosReal.map((producto, index) => (
                             <div className="home__products" key={index}>
                                 <div className="home__product">
                                     <img src={producto.imagen} alt={`Producto ${index + 1}`} />
@@ -248,13 +279,22 @@ export const Products = () => {
                                 </div>
                             </div>
                         ))}
+                        <div className="contenedor-paginator-first">
+                            <Paginator
+                                first={first}
+                                rows={rows}
+                                totalRecords={productosDestacados.length}
+                                rowsPerPageOptions={[2, 4, 8]}
+                                onPageChange={onPageChange}
+                            />
+                        </div>
                     </div>
                 </div>
             </div>
-            <Paginator first={first} rows={rows} totalRecords={productosDestacados.length} rowsPerPageOptions={[10, 20, 30]} onPageChange={onPageChange} />
-            <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => {if (!visible) return; setVisible(false); }}>
+
+            <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => { if (!visible) return; setVisible(false); }}>
                 <p className="m-0">
-                   Hola mundo de laa mara villas
+                    Hola mundo de laa mara villas
                 </p>
             </Dialog>
         </div>

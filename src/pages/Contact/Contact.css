@@ -1,3 +1,17 @@
+:root{
+  /* Para los bakcground de los elementos */
+  --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+  --background-color-primario:#0C5ADB;/* Para los principales */ 
+  --background-color-secundario:#00247E;/* Para los hover */ 
+
+  /* Para los boxs shadoms */
+  --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+  --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+
+  /* Colore de letras dentro de un color con bakcground */
+  --color-con-fondo:#ffffff;
+}
+
 .contact {
   background-image: url('../../assets/fondos/seis.webp');
   object-fit: cover;
@@ -21,7 +35,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: var(--background-fond-primario); 
   /* Fondo negro con 50% de opacidad */
   z-index: 1;
 }
@@ -36,7 +50,7 @@
   max-width: 1200px;
   text-align: center;
   text-transform: uppercase;
-  color: white;
+  color: var(--color-con-fondo);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -63,9 +77,9 @@
   grid-template-columns: 1fr 1fr;
   width: 100%;
   max-width: 1280px;
-  background-color: white;
+  background-color: var(--color-con-fondo);
   gap: 30px;
-  box-shadow: 0 2px 8px rgba(129, 129, 129, 0.1);
+  box-shadow: var(--box-shadow-principal);
   padding: 5px;
 }
 
@@ -95,7 +109,7 @@
   padding: 18px;
   border: none;
   border-radius: 5px;
-  background-color: #F3F3F3;
+  background-color: #d7d1e8;
   border-radius: 5px;
   border: none;
   outline: none;

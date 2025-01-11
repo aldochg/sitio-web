@@ -1,3 +1,18 @@
+:root{
+  /* Para los bakcground de los elementos */
+  --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+  --background-color-primario:#0C5ADB;/* Para los principales */ 
+  --background-color-secundario:#00247E;/* Para los hover */ 
+
+  /* Para los boxs shadoms */
+  --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+  --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+
+  /* Colore de letras dentro de un color con bakcground */
+  --color-con-fondo:#ffffff;
+}
+
+
 .breadcrumb {
     display: flex;
     align-items: center;
@@ -6,19 +21,19 @@
   
   .breadcrumb__link {
     text-decoration: none;
-    color: #4682B4;
+    color: var(--color-con-fondo);
     margin: 0 5px;
     font-weight: bold;
   }
 
   .breadcrumb__link i {
-    color: white;
+    color: var(--color-con-fondo);
   }
   
   .breadcrumb__link:hover {
     text-decoration: underline;
     text-decoration: none;
-    color: white;
+    color: var(--color-con-fondo);
   }
   
   .breadcrumb__separator {
@@ -28,7 +43,7 @@
   
   .breadcrumb__arrow {
     margin: 0 5px;
-    color: #ffffff;
+    color: var(--color-con-fondo);
     font-weight: bold;
   }
   

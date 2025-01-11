@@ -21,7 +21,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(7, 75, 247, 0.4); 
     z-index: 1;
 }
 
@@ -53,13 +53,14 @@
     flex-direction: column;
     min-width: 260px;
     gap: 10px;
+    height: auto;
 }
 
 .contenedor-articulos{
     min-height: 80vh;
     display: flex;
     justify-content: center;
-    padding: 50px 0 50px 0;
+    padding: 100px 0 100px 0;
 }
 
 .contenedor-sub-articulos{
@@ -78,6 +79,7 @@
     align-items: center;
     flex-wrap: wrap;
     gap: 10px;
+    position: relative;
 }
 
 .contenedor-encabesado-categorias{
@@ -86,6 +88,11 @@
     border-radius: 10px;
     color: white;
     text-align: center;
+    box-shadow: 0px 0px 10px rgba(111, 141, 232);
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .contenedor-articulos-acordeon{
@@ -94,10 +101,14 @@
 }
 
 .contenedor-articulos-acordeon-acordeon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     padding: 10px;
     text-align: center;
     margin: 10px auto;
-
+    text-align: center;
 }
 
 .contenedor-linea-adordeon{
@@ -106,20 +117,20 @@
     background-color: #007bff;
     padding: 0 10px 0 10px;
 }
-.accordion-container {
+.accordion-container-products {
     width: 100%;
     font-family: 'Poppins', sans-serif;
+    height: auto;
 }
 
-.accordion-item {
-    border: 1px solid rgba(179, 179, 179, 0.1);
+.accordion-item-products {
     border-radius: 5px;
     margin-bottom: 10px;
     overflow: hidden;
     transition: all 0.3s ease;
 }
 
-.accordion-header {
+.accordion-header-products {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -130,8 +141,8 @@
     color: #333;
 }
 
-.accordion-header:hover {
-    background-color: #285071;
+.accordion-header-products:hover {
+    background-color: #007BFF;
     color: white;
 }
 
@@ -150,13 +161,31 @@
 
 .accordion-link {
     display: block;
-    padding: 5px 0;
-    color: #007bff;
+    padding: 8px 0;
+    color: #909090;
     text-decoration: none;
     transition: color 0.2s ease;
     cursor: pointer;
 }
 
 .accordion-link:hover {
-    color: #0056b3;
+    color: #CBBDED;
+}
+
+.contenedor-acordeon-footer{
+    height: 50px;
+    width: 100%;
+    background-color: #007bff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(111, 141, 232);
+    padding: 10px;
+}
+
+
+/* Estilos para un contenedor de pagiator */
+.contenedor-paginator-first{
+    position: absolute;
+    bottom: -80px;
+    left: 50%; /* Mueve horizontalmente el centro */
+    transform: translateX(-50%); /* Ajusta el centro al eje X */
 }

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import './Home.css';
 
+import { Ball } from "../../components/Ball/Ball";
+
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
 
 import imagen1 from '../../assets/inicio/uno.jpg';
@@ -8,6 +10,14 @@ import imagen2 from '../../assets/inicio/dos.jpg';
 import imagen3 from '../../assets/inicio/tres.jpg';
 import imagen4 from '../../assets/inicio/cuatro.jpg';
 import imagen5 from '../../assets/somos5.jpg';
+
+import slider1 from '../../assets/slider1.jpg'
+import slider2 from '../../assets/slider2.jpg'
+import slider3 from '../../assets/slider3.jpg'
+import slider9 from '../../assets/slider9.jpg'
+import slider17 from '../../assets/slider17.jpg'
+import slider4 from '../../assets/slider4.jpg'
+import slider5 from '../../assets/slider5.webp'
 
 
 import destacado1 from '../../assets/destacados/calidad_garantizada.jpg'
@@ -23,9 +33,17 @@ import destacado10 from '../../assets/destacados/entrega_rapida1.jpg'
 
 
 export const Home = () => {
-  const images = [imagen1, imagen2, imagen3, imagen4, imagen2, imagen2, imagen2];
-  const [currentIndex, setCurrentIndex] = useState(0);
+  const images = [slider1, slider2, slider3, slider4, slider5, slider9, slider17];
 
+  // Generar imagene automaticas
+  const [img, setImg] = useState([]);
+  useEffect(() => {
+    const images = import.meta.glob("../../assets/fondos/*.{png,jpg,jpeg,svg,webp,gif,bmp}");
+    const imagePaths = Object.keys(images).map((path) => images[path]);
+    setImg(imagePaths)
+  }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   // preguntas frecuentes
   const [activeIndex, setActiveIndex] = useState(null);
@@ -245,28 +263,41 @@ export const Home = () => {
     <div>
       <div className="home">
         <div className="home__container">
-          <div className="home__container__text">
-            <div className="home__container__text__title">
-              <p>¡Haz el cambio ahora!</p>
-              <h1>Equipamiento de Acero Inoxidable</h1>
-              <p style={{ lineHeight: '30px' }}>Transformamos tus espacios con equipos de acero inoxidable diseñados para superar expectativas. Fabricamos soluciones que optimizan tu eficiencia y te permiten concentrarte en lo que realmente importa: hacer crecer tu negocio.</p>
-              <button className="home__container__button"><i className="pi pi-whatsapp"></i>CONTACTANOS</button>
-            </div>
-          </div>
           <div className="home__container__image">
-            <div className="home__container__image__container">
-              <img className="home__container__image__img" src={images[currentIndex]} />
-              {/* Botones de navegación */}
-              <button className="home__button home__button--prev" onClick={handlePrev}>
-                <i className="pi pi-angle-left" style={{ color: '#ffffff', fontSize: '30px' }}></i>
-              </button>
-              <button className="home__button home__button--next" onClick={handleNext}>
-                <i className="pi pi-angle-right" style={{ color: '#ffffff', fontSize: '30px' }}></i>
-              </button>
+            <div
+              className="home__container__image__img"
+              style={{ backgroundImage: `url(${images[currentIndex]})` }}
+            >
+              <div className="home__container__text">
+                <div className="home__container__text__title">
+                  <p>¡Haz el cambio ahora!</p>
+                  <h1>Equipamiento de Acero Inoxidable</h1>
+                  <p style={{ lineHeight: '30px' }}>Transformamos tus espacios con equipos de acero inoxidable diseñados para superar expectativas. Fabricamos soluciones que optimizan tu eficiencia y te permiten concentrarte en lo que realmente importa: hacer crecer tu negocio.</p>
+                  <div className="home__container__con__vide">
+                    <div>
+                      <button className="home__container__button"><i className="pi pi-whatsapp"></i>CONTACTANOS</button>
+                    </div>
+                    <div>
+                      <div className="home__container__video">
+                        <i className="pi pi-caret-right"></i>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
             </div>
+            {/* Botones de navegación */}
+            <button className="home__button home__button--prev" onClick={handlePrev}>
+              ❮
+            </button>
+            <button className="home__button home__button--next" onClick={handleNext}>
+              ❯
+            </button>
           </div>
         </div>
-      </div >
+      </div>
 
       {/* informacion adicional*/}
       <div className="home__sin_descripcion__general">
@@ -288,6 +319,7 @@ export const Home = () => {
       <div className="home__general__container">
         <div className="home__products__title">
           <h2 className="home_titles">Productos Destacados</h2>
+          <Ball />
         </div>
         <div className="homo_container_productos_destacados">
           {productosDestacados.map((producto, index) => (
@@ -359,7 +391,11 @@ export const Home = () => {
 
       {/* Preguntas frecuentes */}
       <div className="accordion-container">
-        <h1 className="accordion-title">Preguntas Frecuentes</h1>
+        <div className="acordion-animacion-title">
+          <h1 className="accordion-title">Preguntas Frecuentes</h1>
+          <Ball/>
+        </div>
+        
         <div className="accordion">
           {preguntasFrecuentes.map((faq, index) => (
             <div

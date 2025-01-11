@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Carousel } from 'primereact/carousel';
 import './CarruselTestimonio.css';
+import { Ball } from '../Ball/Ball';
 
 import testimonio1 from '../../assets/testimonios/testimonio4.jpg'
 import testimonio2 from '../../assets/testimonios/testimonio2.jpg'
@@ -100,7 +101,10 @@ export const TestimonialsCarousel = () => {
 
   return (
     <div className="testimonials-carousel-container">
-      <h2 className="carousel-title">Testimonios de nuestros clientes</h2>
+      <div className='testimonio-title-animacion'>
+        <h2 className="carousel-title">Testimonios de nuestros clientes</h2>
+        <Ball />
+      </div>
       <Carousel
         value={testimonioClientes}
         itemTemplate={(item) => <TestimonialCard testimonial={item} />}

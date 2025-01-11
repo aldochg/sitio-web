@@ -1,14 +1,40 @@
+:root{
+  /* Para los bakcground de los elementos */
+  --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+  --background-color-primario:#0C5ADB;/* Para los principales */ 
+  --background-color-secundario:#00247E;/* Para los hover */ 
+
+  /* Para los boxs shadoms */
+  --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+  --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+  --box-shadow-elevado:2px 2px 50px rgba(7, 75, 247, 0.4);
+
+  /* Colore de letras dentro de un color con bakcground */
+  --color-con-fondo:#ffffff;
+
+  /* Color de las letras */
+  --color-letras:#616161;
+}
+
 .testimonials-carousel-container {
     max-width: 1200px;
     margin: 0 auto;
     text-align: center;
-    min-height: 50vh;
+    min-height: 65vh;
+  }
+
+  .testimonio-title-animacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
   }
   
   .carousel-title {
     font-size: 2rem;
     margin: 100px 0 20px 0;
-    color: #333;
+    color: var(--color-letras);
   }
   
   .testimonial-card {
@@ -27,7 +53,7 @@
 
   .testimonial-card:hover {
     cursor: pointer;
-    background-color: #285071;
+    background-color: var(--background-color-primario);
     color: white;
   }
   
@@ -68,8 +94,8 @@
     font-size: 1.2rem;
     color: #333;
   }
-  
+/*   
 .p-link{
     background-color: #285071;
     color: white;
-}
+} */

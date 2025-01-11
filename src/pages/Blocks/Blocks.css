@@ -1,3 +1,17 @@
+:root{
+    /* Para los bakcground de los elementos */
+    --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+    --background-color-primario:#0C5ADB;/* Para los principales */ 
+    --background-color-secundario:#00247E;/* Para los hover */ 
+
+    /* Para los boxs shadoms */
+    --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+    --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+
+    /* Colore de letras dentro de un color con bakcground */
+    --color-con-fondo:#ffffff;
+}
+
 .services{
     background-image: url('../../assets/fondos/tres.jpg');
     object-fit: cover;
@@ -20,7 +34,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.4); /* Fondo negro con 50% de opacidad */
+    background-color: var(--background-fond-primario); 
     z-index: 1;
 }
 
@@ -31,7 +45,7 @@
 
 .services__content{
     max-width: 1200px;
-    color: white;
+    color: var(--color-con-fondo);
     text-align: center;
     text-transform: uppercase;
 }
@@ -40,4 +54,97 @@
     text-align: center;
     font-size: 40px;
     margin-bottom: 20px;
+}
+
+/* Estilos para los blocks */
+.container-blocks{
+    min-height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container-sub-blocks{
+    max-width: 1200px;
+    padding-top: 85px;
+}
+
+.container-sub-blocks-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+.grids-boxs{
+    box-shadow: var(--box-shadow-principal);
+    padding-bottom: 35px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grids-boxs:hover {
+    transform: scale(1);
+    box-shadow: var(--box-shadow-secundario);
+}
+
+.grids-boxs-img img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px;
+    padding-bottom: 1.5rem;
+  }
+
+.grid-boxs-texts{
+    padding: 0 1.5rem;
+}
+
+.grid-boxs-title{
+    line-height: 1.3;
+}
+.grid-boxs-description{
+    line-height: 27px;
+}
+
+.grid-boxs-header{
+    padding: 0px 0px 10px 0px;
+}
+
+.grid-boxs-header-text{
+    position: relative;
+    padding: 0 8px 0 0;
+    margin: 0 8px 0 0;
+}
+
+.grid-boxs-header-text::after{
+    content: '';
+    position: absolute;
+    height: 16px;
+    width: 2px;
+    background-color: #285071;
+    right: -2px;
+}
+
+.grid-boxs-leer-mas{
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 30px;
+    display: flex;
+    color: #285071;
+    margin-top: 20px;
+    background-color: #EDF4FC;
+    max-width: 130px;
+}
+
+.grid-boxs-leer-mas i{
+    padding: 0 10px 0 10px;
+    color: #285071;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Estilos para el contenedor de la paginacion */
+.paginator-container{
+    margin: 40px 0;
 }
