@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import './Contact.css';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
+import { SliderAutomatico } from "../../components/SliderAutomatico/SliderAutomatico";
 
 // Google Maps API Component
 const GoogleMap = () => {

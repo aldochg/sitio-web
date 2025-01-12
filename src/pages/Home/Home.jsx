@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import './Home.css';
-
+import { SliderAutomatico } from "../../components/SliderAutomatico/SliderAutomatico";
 import { Ball } from "../../components/Ball/Ball";
 
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
@@ -300,22 +300,18 @@ export const Home = () => {
       </div>
 
       {/* informacion adicional*/}
-      <div className="home__sin_descripcion__general">
-        <div className="home__sin_descripcion__general__card">
-          {informacionAdicional.map((producto, index) => (
-            <div className="home__info__adicional" key={index}>
-              <div className="home__adicional">
-                <img src={producto.logo} alt={`Producto ${index + 1}`} />
-              </div>
-              <div className="home__adicional__descripcion">
-                <h4 className="home__adicional__title">{producto.title}</h4>
-                <p className="home__adicional__text">&quot;{producto.descripcion}&quot;</p>
-              </div>
-            </div>
-          ))}
+      {/* <SliderAutomatico/> */}
+
+      {/* Seccion para calidad, profesionales,  */}
+      <div style={{minHeight: '20vh'}}>
+        <div style={{maxWidth:'1200px'}}>
+          <div>
+
+          </div>
         </div>
       </div>
 
+      {/* Secciona para los productos destacados */}
       <div className="home__general__container">
         <div className="home__products__title">
           <h2 className="home_titles">Productos Destacados</h2>

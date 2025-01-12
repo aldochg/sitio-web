@@ -217,130 +217,6 @@
 
 
 
-/* Estilos para informacion adicional */
-.home__sin_descripcion__general {
-  min-height: 30vh;
-  display: flex;
-  scroll-snap-type: x mandatory;
-  /* Alineación de elementos al hacer scroll */
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 10px 0 10px 0;
-  margin: 0 5%;
-}
-
-.home__sin_descripcion__general__card {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  flex-direction: row;
-  transition: min-height 1s ease-in-out;
-  max-width: 1200px;
-  gap: 10px;
-  overflow: auto;
-  width: 100%;
-  padding: 10px 0 10px 0;
-  scroll-snap-type: x mandatory
-}
-
-.home__info__adicional {
-  display: flex;
-  flex: 0 0 auto;
-  flex-direction: row;
-  align-items: center;
-  background-color: var(--color-con-fondo);
-  justify-content: space-between;
-  /* border: 1px solid #e0e0e0; */
-  border-radius: 8px;
-  padding: 10px;
-  transition: transform 0.3s, box-shadow 0.3s;
-  max-width: 350px;
-  min-height: 160px;
-  margin: 0;
-  scroll-snap-align: center;
-  scroll-snap-align: start;
-  position: relative;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-.home__info__adicional:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.home__info__adicional::before {
-  content: '';
-  width: 7px;
-  height: 97%;
-  position: absolute;
-  background-color: #285071;
-  left: 0;
-  border-radius: 10px;
-  margin-left: 0.5px;
-}
-
-.home__sin_descripcion__general__card::-webkit-scrollbar {
-  width: 7px;
-  height: 7px;
-}
-
-.home__sin_descripcion__general__card::-webkit-scrollbar-thumb {
-  background-color: transparent;
-  border-radius: 7px;
-}
-
-.home__sin_descripcion__general__card::-webkit-scrollbar-track {
-  background-color: transparent;
-}
-
-
-.home__sin_descripcion__general__card:hover {
-  overflow: auto;
-}
-
-.home__sin_descripcion__general__card:hover::-webkit-scrollbar-thumb {
-  background: rgb(155, 155, 155);
-}
-
-.home__sin_descripcion__general__card::-webkit-scrollbar-thumb:hover {
-  background-color: rgb(80, 80, 80);
-}
-
-.home__adicional__descripcion {
-  padding: 0.5rem;
-  width: 70%;
-}
-
-.home__adicional {
-  width: 30%;
-}
-
-.home__adicional__title {
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
-}
-
-.home__adicional__text {
-  font-family: 'Roboto', sans-serif;
-  font-style: italic;
-}
-
-
-
-.home__adicional img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-
-.home__adicional img:hover {
-  transform: scale(1.05);
-}
-
-
 /* estilos pra productos destacados */
 .home__products__descripcion {
   padding: 0.5rem;
@@ -350,7 +226,7 @@
 
 .home__general__container {
   min-height: 60vh;
-  background-color: #F1F1F1;
+  background-color: #EFF2F7;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -563,6 +439,7 @@
   transition: background-position 0.5s ease, color 0.5s ease;
   background-size: 200%;
   background-position: left;
+  box-shadow: var(--box-shadow-principal);
 }
 
 .home__message__button:hover {
