@@ -272,7 +272,7 @@ export const Home = () => {
                 <div className="home__container__text__title">
                   <p>¡Haz el cambio ahora!</p>
                   <h1>Equipamiento de Acero Inoxidable</h1>
-                  <p style={{ lineHeight: '30px' }}>Transformamos tus espacios con equipos de acero inoxidable diseñados para superar expectativas. Fabricamos soluciones que optimizan tu eficiencia y te permiten concentrarte en lo que realmente importa: hacer crecer tu negocio.</p>
+                  <p style={{ lineHeight: '34px' }}>Transformamos tus espacios con equipos de acero inoxidable diseñados para superar expectativas. Fabricamos soluciones que optimizan tu eficiencia y te permiten concentrarte en lo que realmente importa: hacer crecer tu negocio.</p>
                   <div className="home__container__con__vide">
                     <div>
                       <button className="home__container__button"><i className="pi pi-whatsapp"></i>CONTACTANOS</button>
@@ -369,6 +369,9 @@ export const Home = () => {
           </div>
           <div className="about-us__text">
             <p className="about-us__subtitle">¿Quiénes somos?</p>
+            <div>
+                <Ball/>
+            </div>
             <h1 className="about-us__title">Fabricante de equipamiento de acero inoxidable</h1>
             <p className="about-us__description">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, saepe mollitia. Est excepturi dolorum accusantium expedita error veniam, nam assumenda vitae sed voluptatibus dolorem laudantium officiis animi totam ullam rerum.

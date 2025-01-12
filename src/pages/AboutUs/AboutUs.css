@@ -2,7 +2,8 @@
     /* Para los bakcground de los elementos */
     --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
     --background-color-primario:#0C5ADB;/* Para los principales */ 
-    --background-color-secundario:#00247E;/* Para los hover */ 
+    --background-color-secundario:#00247E;/* Para los hover */
+    --background-color-claro:#007BFF; 
   
     /* Para los boxs shadoms */
     --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
@@ -11,6 +12,9 @@
   
     /* Colore de letras dentro de un color con bakcground */
     --color-con-fondo:#ffffff;
+  
+    /* Color de las letras */
+    --color-letras:#616161;
   }
 
 .about-us {

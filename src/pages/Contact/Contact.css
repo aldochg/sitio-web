@@ -2,14 +2,19 @@
   /* Para los bakcground de los elementos */
   --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
   --background-color-primario:#0C5ADB;/* Para los principales */ 
-  --background-color-secundario:#00247E;/* Para los hover */ 
+  --background-color-secundario:#00247E;/* Para los hover */
+  --background-color-claro:#007BFF; 
 
   /* Para los boxs shadoms */
   --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
   --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+  --box-shadow-elevado:2px 2px 50px rgba(7, 75, 247, 0.4);
 
   /* Colore de letras dentro de un color con bakcground */
   --color-con-fondo:#ffffff;
+
+  /* Color de las letras */
+  --color-letras:#616161;
 }
 
 .contact {
@@ -117,7 +122,7 @@
 
 .form-group input:focus,
 .form-group textarea:focus {
-  box-shadow: 4px 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow-principal);
 }
 
 .form-group input::placeholder,
@@ -142,7 +147,7 @@
   border: none;
   outline: none;
   background: none;
-  color: #aaa;
+  color: #CBBDED;
   cursor: text;
   resize: none;
   min-height: 100px;
@@ -153,16 +158,18 @@
 }
 
 .form-group button {
-  padding: 10px 20px;
-  background-color: #285071;
-  color: #fff;
+  padding: 10px 40px;
+  background-color: #007BFF;
+  color: var(--color-con-fondo);
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  font-weight: bold;
+  box-shadow: var(--box-shadow-principal);
 }
 
 .form-group button:hover {
-  background-color: #4682B4;
+  background-color: var(--background-color-primario);
 }
 
 @media(max-width: 1000px) {

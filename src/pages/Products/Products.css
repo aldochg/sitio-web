@@ -1,3 +1,22 @@
+:root{
+    /* Para los bakcground de los elementos */
+    --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+    --background-color-primario:#0C5ADB;/* Para los principales */ 
+    --background-color-secundario:#00247E;/* Para los hover */
+    --background-color-claro:#007BFF; 
+  
+    /* Para los boxs shadoms */
+    --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+    --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+    --box-shadow-elevado:2px 2px 50px rgba(7, 75, 247, 0.4);
+  
+    /* Colore de letras dentro de un color con bakcground */
+    --color-con-fondo:#ffffff;
+  
+    /* Color de las letras */
+    --color-letras:#616161;
+  }
+  
 .products {
     background-image: url('../../assets/fondos/nueve.webp');
     object-fit: cover;
@@ -21,7 +40,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(7, 75, 247, 0.4); 
+    background-color: var(--background-fond-primario); 
     z-index: 1;
 }
 
@@ -32,7 +51,7 @@
 
 .products__content {
     max-width: 1200px;
-    color: white;
+    color: var(--color-con-fondo);
     text-align: center;
     text-transform: uppercase;
     display: flex;
@@ -86,7 +105,7 @@
     background-color: #007bff;
     padding: 10px;
     border-radius: 10px;
-    color: white;
+    color: var(--color-con-fondo);
     text-align: center;
     box-shadow: 0px 0px 10px rgba(111, 141, 232);
     height: 50px;
@@ -96,7 +115,7 @@
 }
 
 .contenedor-articulos-acordeon{
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-principal);
     border-radius: 10px;
 }
 
@@ -114,7 +133,7 @@
 .contenedor-linea-adordeon{
     height: 2px;
     width: 100%;
-    background-color: #007bff;
+    background-color: var(--background-color-claro);
     padding: 0 10px 0 10px;
 }
 .accordion-container-products {
@@ -136,21 +155,22 @@
     align-items: center;
     padding: 10px 15px;
     cursor: pointer;
-    background-color: #ffffff;
-    font-size: 18px;
-    color: #333;
+    background-color: var(--color-con-fondo);
+    font-size: 20px;
+    color: var(--color-letras);
+    font-weight: bold;
 }
 
 .accordion-header-products:hover {
-    background-color: #007BFF;
-    color: white;
+    background-color: var(--background-color-claro);
+    color: var(--color-con-fondo);
 }
 
 .accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    background-color: #ffffff;
+    background-color: var(--color-con-fondo);
     padding: 0 15px;
 }
 
@@ -162,7 +182,7 @@
 .accordion-link {
     display: block;
     padding: 8px 0;
-    color: #909090;
+    color: var(--color-letras);
     text-decoration: none;
     transition: color 0.2s ease;
     cursor: pointer;
@@ -175,7 +195,7 @@
 .contenedor-acordeon-footer{
     height: 50px;
     width: 100%;
-    background-color: #007bff;
+    background-color: var(--background-color-claro);
     border-radius: 10px;
     box-shadow: 0px 0px 10px rgba(111, 141, 232);
     padding: 10px;

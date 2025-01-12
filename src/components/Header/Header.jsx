@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { SidebarH } from "../SidebarH/SidebarH";
 import './Header.css';
 import imagen from '../../assets/8.png';
+import logon from '../../assets/logo_original2.jpg'
 import 'primeicons/primeicons.css';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
@@ -48,7 +49,7 @@ export const Header = () => {
             {/* Segunda fila: Menús */}
             <div className="header__bottom">
                 <div className="header__logo">
-                    <img className="img-logo" src={imagen} alt="Logo"/>
+                    <img className="img-logo" src={logon} alt="Logo"/>
                 </div>
                 <div className="header__menu">
                     <SidebarH />

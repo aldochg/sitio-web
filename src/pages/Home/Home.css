@@ -2,7 +2,8 @@
   /* Para los bakcground de los elementos */
   --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
   --background-color-primario:#0C5ADB;/* Para los principales */ 
-  --background-color-secundario:#00247E;/* Para los hover */ 
+  --background-color-secundario:#00247E;/* Para los hover */
+  --background-color-claro:#007BFF; 
 
   /* Para los boxs shadoms */
   --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
@@ -14,6 +15,9 @@
 
   /* Color de las letras */
   --color-letras:#616161;
+
+  /* Tamaño de las descripciones */
+  --tamano-descripciones:'16px';
 }
 
 /* Contenedor de la imagen */
@@ -54,7 +58,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(7, 75, 247, 0.4); 
+  background-color: var(--background-fond-primario); 
   /* Fondo negro con 50% de opacidad */
   z-index: 1;
 }
@@ -78,6 +82,17 @@
   flex-direction: column;
 }
 
+.home__container__text__title h1{
+  font-size: 40px;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.home__container__text__title p{
+  font-size: 16px;
+  font-weight: bold;
+}
+
 .home__container__con__vide{
   display: flex;
   align-items: center;
@@ -86,7 +101,7 @@
 }
 
 .home__container__button{
-  background-color: var(--color-con-fondo);
+  background-color: var(--background-color-claro);
   border: none;
   padding: 20px;
   border-radius: 50px;
@@ -95,16 +110,20 @@
   align-items: center;
   text-align: center;
   font-weight: bold;
+  color: var(--color-con-fondo);
   box-shadow: var(--box-shadow-principal);
 }
 
 .home__container__button:hover{
-  background-color: #0C5ADB;
+  background-color: var(--background-color-primario);
   color: var(--color-con-fondo);
-  box-shadow: var(--box-shadow-secundario);
+  box-shadow: var(--box-shadow-elevado);
   cursor: pointer;
 }
 
+.home__container__button i{
+  padding: 0px 10px 0px 0;
+}
 
 .home__container__video {
   width: 70px;
@@ -600,8 +619,8 @@
 }
 
 .about-us__title {
-  font-size: 2rem;
-  color: #222;
+  font-size: 40px;
+  color: var(--color-letras);
   margin-bottom: 1rem;
 }
 

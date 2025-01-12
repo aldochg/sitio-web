@@ -2,7 +2,8 @@
   /* Para los bakcground de los elementos */
   --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
   --background-color-primario:#0C5ADB;/* Para los principales */ 
-  --background-color-secundario:#00247E;/* Para los hover */ 
+  --background-color-secundario:#00247E;/* Para los hover */
+  --background-color-claro:#007BFF; 
 
   /* Para los boxs shadoms */
   --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
@@ -14,6 +15,9 @@
 
   /* Color de las letras */
   --color-letras:#616161;
+
+  /* Tamaño de las descripciones */
+  --tamano-descripciones:'16px';
 }
 
 .testimonials-carousel-container {
@@ -41,7 +45,7 @@
     background: #ffffff;
     border-radius: 10px;
     padding: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--box-shadow-principal);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,11 +55,11 @@
     min-height: 350px;
   }
 
-  .testimonial-card:hover {
+  /* .testimonial-card:hover {
     cursor: pointer;
-    background-color: var(--background-color-primario);
+    background-color: red;
     color: white;
-  }
+  } */
   
   .testimonial-content {
     margin-bottom: 20px;
@@ -68,8 +72,9 @@
   
   .testimonial-feedback {
     font-size: 1rem;
-    color: #555;
+    color: var(--color-letras);
     margin: 10px 0;
+    font-size: var(--tamano-descripciones);
   }
   
   .testimonial-rating i {
@@ -88,6 +93,7 @@
     height: 60px;
     border-radius: 50%;
     margin-bottom: 10px;
+    box-shadow: var(--box-shadow-principal);
   }
   
   .testimonial-avatar h3 {
