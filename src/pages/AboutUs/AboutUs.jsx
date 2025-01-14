@@ -2,8 +2,56 @@ import { useState, useEffect, useRef } from "react";
 import './AboutUs.css';
 import about1 from '../../assets/somos3.jpg';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
+import img_why from '../../assets/acero1.jpg'
+import { CarruselEmpresa } from "../../components/CarruselEmpresa/CarruselEmpresa";
 
 export const AboutUs = () => {
+
+    // Datos para galeria de por que elegirnos
+    const [galeri, setGaleri] = useState([]);
+
+    useEffect(() => {
+        const data = [
+            {
+                id: 1,
+                img: img_why,
+                title: 'Fabricas de calidad',
+                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+            },
+            {
+                id: 1,
+                img: img_why,
+                title: 'Fabricas de calidad',
+                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+            },
+            {
+                id: 1,
+                img: img_why,
+                title: 'Fabricas de calidad',
+                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+            },
+            {
+                id: 1,
+                img: img_why,
+                title: 'Fabricas de calidad',
+                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+            },
+            {
+                id: 1,
+                img: img_why,
+                title: 'Fabricas de calidad',
+                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+            },
+            {
+                id: 1,
+                img: img_why,
+                title: 'Fabricas de calidad',
+                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+            },
+        ]
+
+        setGaleri(data)
+    }, []);
 
     const [count, setCount] = useState(0); // Estado inicial del contador
     const [isVisible, setIsVisible] = useState(false); // Estado para detectar visibilidad
@@ -11,44 +59,44 @@ export const AboutUs = () => {
     const increment = 50; // Incremento en cada paso
     const intervalTime = 20; // Tiempo entre incrementos
     const counterRef = useRef(null); // Referencia al elemento del contador
-  
+
     // Función para manejar visibilidad del elemento
     useEffect(() => {
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          setIsVisible(entry.isIntersecting); // Actualiza si el elemento es visible
-        },
-        { threshold: 0.1 } // Detecta cuando al menos el 10% del elemento es visible
-      );
-  
-      if (counterRef.current) {
-        observer.observe(counterRef.current);
-      }
-  
-      return () => {
-        if (counterRef.current) observer.unobserve(counterRef.current);
-      };
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                setIsVisible(entry.isIntersecting); // Actualiza si el elemento es visible
+            },
+            { threshold: 0.1 } // Detecta cuando al menos el 10% del elemento es visible
+        );
+
+        if (counterRef.current) {
+            observer.observe(counterRef.current);
+        }
+
+        return () => {
+            if (counterRef.current) observer.unobserve(counterRef.current);
+        };
     }, []);
-  
+
     // Incrementa el contador cuando el elemento es visible
     useEffect(() => {
-      if (!isVisible || count >= target) return; // Solo cuenta si es visible y no alcanzó el objetivo
-  
-      const interval = setInterval(() => {
-        setCount((prevCount) => {
-          const nextValue = prevCount + increment;
-          return nextValue >= target ? target : nextValue; // Evita exceder el objetivo
-        });
-      }, intervalTime);
-  
-      return () => clearInterval(interval); // Limpia el intervalo al desmontar
+        if (!isVisible || count >= target) return; // Solo cuenta si es visible y no alcanzó el objetivo
+
+        const interval = setInterval(() => {
+            setCount((prevCount) => {
+                const nextValue = prevCount + increment;
+                return nextValue >= target ? target : nextValue; // Evita exceder el objetivo
+            });
+        }, intervalTime);
+
+        return () => clearInterval(interval); // Limpia el intervalo al desmontar
     }, [isVisible, count]);
-  
+
     // Reinicia el contador si vuelve a entrar a la pantalla
     useEffect(() => {
-      if (!isVisible) {
-        setCount(0); // Reinicia cuando deja de ser visible
-      }
+        if (!isVisible) {
+            setCount(0); // Reinicia cuando deja de ser visible
+        }
     }, [isVisible]);
 
     return (
@@ -56,7 +104,7 @@ export const AboutUs = () => {
             <div className="about-us">
                 <div className="about__content">
                     <h1 className="about__content-title">SOBRE NOSOTROS</h1>
-                    <Breadcrumb/>
+                    <Breadcrumb />
                 </div>
             </div>
             {/* card para mensages */}
@@ -125,8 +173,36 @@ export const AboutUs = () => {
                 </div>
             </div>
 
-
-
+            <div className="why-us">
+                <div className="why-us-sub">
+                    <div className="why-us-title">
+                        <h1>¿Por qué elegirnos?</h1>
+                        
+                    </div>
+                    <div className="why-us-galeri">
+                        {galeri.map((data, index) => (
+                            <div className="why-us-galeri-img" key={index}>
+                                <div className="">
+                                    <div className="why-us-galeri-img-verdadero">
+                                        <img src={data.img} alt={`Galería ${index + 1}`} />
+                                        <div className="overlay">
+                                            <p>{data.descripcion}</p>
+                                        </div>
+                                    </div>
+                                    <div className="why-us-title-card">
+                                        <div className="why-us-title-card-title">
+                                            <h4>{data.title}</h4>
+                                        </div>
+                                        <div className="why-us-title-card-icon">
+                                            <i className="pi pi-plus"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+            </div>
 
 
             {/* Numeros de la empresa */}
@@ -200,9 +276,7 @@ export const AboutUs = () => {
             </div>
 
             {/* Por que elegirnos */}
-            <div>
-
-            </div>
+            <CarruselEmpresa />
 
         </div>
     );

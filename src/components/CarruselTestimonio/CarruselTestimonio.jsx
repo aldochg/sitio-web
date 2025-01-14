@@ -113,7 +113,7 @@ export const TestimonialsCarousel = () => {
         responsiveOptions={responsiveOptions}
         autoplayInterval={3000} // Avanza automáticamente cada 3 segundos
         circular
-        showIndicators
+        showIndicators={false}
         showNavigators
       />
     </div>

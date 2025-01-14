@@ -69,6 +69,16 @@
 }
 
 /* Estilos para el formulario y la mapa de google maps */
+.contact-container-info{
+  display: flex;
+  flex-direction: column;
+  color: var(--color-letras);
+}
+
+.contact-container-info i, span{
+  font-weight: bold;
+}
+
 .contact-container {
   display: flex;
   flex-direction: column;
@@ -94,6 +104,11 @@
   padding: 10px 10px 10px 40px;
 }
 
+.contact-form h2{
+  color: var(--color-letras);
+  font-size: 30px;
+}
+
 .contact-map {
   flex: 1;
   min-width: 300px;
@@ -112,30 +127,37 @@
 .form-group textarea {
   width: 100%;
   padding: 18px;
+  height: 50px;
   border: none;
   border-radius: 5px;
-  background-color: #d7d1e8;
+  background-color: #f2eefe;
   border-radius: 5px;
   border: none;
   outline: none;
+  font-size: 18px;
+  color: rgb(0, 0, 0);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   box-shadow: var(--box-shadow-principal);
+  color: var(--color-letras);
+  font-size: 20px;
+  
 }
 
 .form-group input::placeholder,
-.form-group textarea t::placeholder {
-  color: #aaa;
+.form-group textarea::placeholder {
+  color: var(--color-letras);
   font-style: italic;
   transition: color 0.3s ease;
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .form-group input:focus::placeholder,
 .form-group textarea:focus::placeholder {
-  color: transparent;
+  color: #f2eefe;
+  font-size: 20px;
 }
 
 .animated-border-input {
@@ -154,7 +176,8 @@
   max-height: 200px;
   min-width: 200px;
   max-width: 100%;
-  font-style: italic;
+
+  
 }
 
 .form-group button {

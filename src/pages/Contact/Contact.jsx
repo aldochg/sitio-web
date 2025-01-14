@@ -50,7 +50,7 @@ export const Contact = () => {
                     <div className="contact-form-wrapper">
                         <div className="contact-form">
                             <h2>Contáctanos</h2>
-                            <div style={{ display: 'flex', flexDirection: 'column' }}>
+                            <div className="contact-container-info">
                                 <i className="pi pi-map-marker" style={{ padding: '10px 0 10px 0' }}><span style={{ padding: '0 0 0 20px' }}>Av. 1ro de mayo - primer sector - villa el salvador</span></i>
                                 <i className="pi pi-envelope" style={{ padding: '10px 0 10px 0' }}><span style={{ padding: '0 0 0 20px' }}>empresa@gmail.com</span></i>
                                 <i className="pi pi-phone" style={{ padding: '10px 0 20px 0' }}><span style={{ padding: '0 0 0 20px' }}>+51 972373512</span></i>

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import './Home.css';
 import { SliderAutomatico } from "../../components/SliderAutomatico/SliderAutomatico";
 import { Ball } from "../../components/Ball/Ball";
-
+import { Accordion, AccordionTab } from 'primereact/accordion';
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
 
 import imagen1 from '../../assets/inicio/uno.jpg';
@@ -397,7 +397,7 @@ export const Home = () => {
         
         <div className="accordion">
           {preguntasFrecuentes.map((faq, index) => (
-            <div
+           <div
               key={index}
               className={`accordion-item ${activeIndex === index ? 'active' : ''}`}
             >
@@ -407,7 +407,7 @@ export const Home = () => {
               >
                 <p className="accordion-question">{faq.question}</p>
                 <i className={`accordion-icon pi pi-${activeIndex === index ? 'minus' : 'plus'}`} style={{ fontSize: '14px', fontWeight: 'bold' }}></i>
-              </div>
+              </div> 
               {activeIndex === index && (
                 <div className="accordion-body">
                   <p className="accordion-answer">{faq.answer}</p>
