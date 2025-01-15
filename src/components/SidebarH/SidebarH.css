@@ -28,7 +28,6 @@
 .sidebar__list-item a::before {
     content: '';
     height: 5px;
-    border-radius: 10px;
     width: 0%;
     background-color: #007BFF;
     position: absolute;
@@ -41,6 +40,9 @@
     width: 100%; 
 }
 
+.sidebar__list-item a.active::before {
+    width: 100%; 
+  }
 .sidebar__list-item a {
     text-decoration: none;
     color: #46494d;

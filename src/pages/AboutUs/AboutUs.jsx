@@ -177,7 +177,6 @@ export const AboutUs = () => {
                 <div className="why-us-sub">
                     <div className="why-us-title">
                         <h1>¿Por qué elegirnos?</h1>
-                        
                     </div>
                     <div className="why-us-galeri">
                         {galeri.map((data, index) => (

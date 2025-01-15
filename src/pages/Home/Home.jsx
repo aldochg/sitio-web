@@ -5,6 +5,10 @@ import { Ball } from "../../components/Ball/Ball";
 import { Accordion, AccordionTab } from 'primereact/accordion';
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
 
+import img_why from '../../assets/acero1.jpg'
+
+import { Carousel } from 'primereact/carousel';
+
 import imagen1 from '../../assets/inicio/uno.jpg';
 import imagen2 from '../../assets/inicio/dos.jpg';
 import imagen3 from '../../assets/inicio/tres.jpg';
@@ -258,6 +262,161 @@ export const Home = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
+  //Codigo para manejar las categorias de los productos.
+  const [categorias, setCategorias] = useState([]);
+  useEffect(() => {
+    const data = [
+      {
+        id: 1,
+        image: imagen1,
+        title: 'FREIDORAS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+
+        ]
+      },
+      {
+        id: 2,
+        image: imagen2,
+        title: 'MESAS',
+      },
+      {
+        id: 3,
+        image: imagen3,
+        title: 'COCINAS',
+      },
+      {
+        id: 4,
+        image: imagen4,
+        title: 'ESCURRIDORES',
+      },
+      {
+        id: 5,
+        image: imagen5,
+        title: 'HORNOS',
+      },
+      {
+        id: 6,
+        image: imagen5,
+        title: 'LAVADEROS',
+      },
+    ]
+    setCategorias(data);
+  }, []);
+
+  const responsiveOptions = [
+    {
+      breakpoint: '1400px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '1199px',
+      numVisible: 3,
+      numScroll: 1
+    },
+    {
+      breakpoint: '767px',
+      numVisible: 2,
+      numScroll: 1
+    },
+    {
+      breakpoint: '575px',
+      numVisible: 1,
+      numScroll: 1
+    }
+  ];
+  const [activeId, setActiveId] = useState(null); // Estado para el producto activo
+
+  const handleClick = (id) => {
+    setActiveId(id); // Activar el producto clickeado
+  };
+
+  // Datos para galeria de por que elegirnos
+  const [galeri, setGaleri] = useState([]);
+
+  useEffect(() => {
+    const data = [
+      {
+        id: 1,
+        img: img_why,
+        title: 'Mesas de acero',
+        descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+      },
+      {
+        id: 1,
+        img: img_why,
+        title: 'Mesas de acero',
+        descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+      },
+      {
+        id: 1,
+        img: img_why,
+        title: 'Mesas de acero',
+        descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+      },
+      {
+        id: 1,
+        img: img_why,
+        title: 'Mesas de acero',
+        descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+      },
+      {
+        id: 1,
+        img: img_why,
+        title: 'Mesas de acero',
+        descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+      },
+      {
+        id: 1,
+        img: img_why,
+        title: 'Mesas de acero',
+        descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+      },
+    ]
+
+    setGaleri(data)
+  }, []);
+
+  const productTemplate = (product) => {
+    const isActive = activeId === product.id; // Verificar si este producto está activo
+
+    //Funcion para cambiar las categorias
+    const getDatos = (data) => {
+      console.log(data.item)
+      setGaleri(data.item)
+    }
+
+    return (
+      <div
+        key={product.id}
+        className={`categoria-container-button surface-border text-center ${isActive ? "active" : ""}`}
+        onClick={() => {
+          handleClick(product.id); // Llama a la primera función
+          getDatos(product); // Llama a la segunda función
+        }}// Asignar el id del producto al hacer clic
+      >
+        <div className="categoria-container-button-sub">
+          <img src={product.image} alt={product.name} className="w-8 img-categorias" />
+          <div className="categoria-container-button-absoluto">
+            <h3>{product.title}</h3>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
 
   return (
     <div>
@@ -299,14 +458,35 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* informacion adicional*/}
-      {/* <SliderAutomatico/> */}
-
-      {/* Seccion para calidad, profesionales,  */}
-      <div style={{minHeight: '20vh'}}>
-        <div style={{maxWidth:'1200px'}}>
+      {/* Seccion de categorias*/}
+      <div className="categorias-container">
+        <div className="categorias-container-sub">
           <div>
+            <h1>Categorias</h1>
+          </div>
+          <div>
+            <Carousel value={categorias} numVisible={3} numScroll={3} responsiveOptions={responsiveOptions} itemTemplate={productTemplate} showIndicators={false} circular autoplayInterval={3000} />
+          </div>
+        </div>
+      </div>
 
+      {/* Seccion de las categorias, cuando hacen click */}
+      <div className="why-us-categori">
+        <div className="why-us-sub-categori">
+          <div className="why-us-galeri-categori">
+            {galeri.map((data, index) => (
+              <div className="why-us-galeri-img-categori" key={index}>
+                <div className="why-us-galeri-img-verdadero-categori">
+                  <img src={data.img} alt={`Galería ${index + 1}`} />
+                  <div className="overlay-categori">
+                    <div className="overlay-categori-line">
+                      <h4 className="overlay-categori-line-text">{data.title}</h4>
+                    </div>
+                    <p>{data.descripcion}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -366,7 +546,7 @@ export const Home = () => {
           <div className="about-us__text">
             <p className="about-us__subtitle">¿Quiénes somos?</p>
             <div>
-                <Ball/>
+              <Ball />
             </div>
             <h1 className="about-us__title">Fabricante de equipamiento de acero inoxidable</h1>
             <p className="about-us__description">
@@ -392,12 +572,12 @@ export const Home = () => {
       <div className="accordion-container">
         <div className="acordion-animacion-title">
           <h1 className="accordion-title">Preguntas Frecuentes</h1>
-          <Ball/>
+          <Ball />
         </div>
-        
+
         <div className="accordion">
           {preguntasFrecuentes.map((faq, index) => (
-           <div
+            <div
               key={index}
               className={`accordion-item ${activeIndex === index ? 'active' : ''}`}
             >
@@ -407,7 +587,7 @@ export const Home = () => {
               >
                 <p className="accordion-question">{faq.question}</p>
                 <i className={`accordion-icon pi pi-${activeIndex === index ? 'minus' : 'plus'}`} style={{ fontSize: '14px', fontWeight: 'bold' }}></i>
-              </div> 
+              </div>
               {activeIndex === index && (
                 <div className="accordion-body">
                   <p className="accordion-answer">{faq.answer}</p>

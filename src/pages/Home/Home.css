@@ -27,9 +27,8 @@
 
 /* Contenedor de la imagen */
 .home {
-  margin-top: 150px;
+  margin: 150px 0px 0px 0px;
   border: 0;
-  margin: 0;
 }
 
 .home__container {
@@ -228,8 +227,179 @@
 .home__button--next {
   right: 10px;
 }
+/*************************************************************************************/
+/****************************** Estilos para categoriqas *****************************/
+/*************************************************************************************/
+.categoria-container-button{
+  position: relative;
+  margin: 0px 10px;
+  cursor: pointer;
+}
+.categoria-container-button-sub{
+  position: relative;
+  z-index: 100;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.categoria-container-button-absoluto{
+  position: absolute;
+  z-index: 200;
+  height: 100%;
+  width: 100%;
+  background-color: var(--color-con-fondo);
+  box-shadow: var(--box-shadow-principal);
+  top: 0;
+  color: var(--color-letras);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.categoria-container-button {
+  position: relative;
+  display: inline-block;
+}
+
+.categoria-container-button::after {
+  content: '';
+  position: absolute;
+  height: 5px;
+  width: 0%;
+  background-color: var(--background-color-claro);
+  bottom: 20px;
+  left: 0;
+  z-index: 300;
+  transition: width 0.5s ease; /* Transición suave */
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-secundario);
+}
+
+.categoria-container-button:hover::after {
+  width: 100%; /* La barra se extiende suavemente */
+}
+
+.categoria-container-button.active::after {
+  width: 100%; /* Mantener activa la barra al hacer clic */
+}
+
+.categorias-container{
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.categorias-container-sub{
+  max-width: 600px;
+  text-align: center;
+}
+
+/**************************************************************************/
+/***************Estilos para por la galeria de categorias******************/
+/**************************************************************************/
+.why-us-categori {
+  padding: 20px;
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.why-us-sub-categori {
+  max-width: 1200px;
+}
+
+.why-us-galeri-categori {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.why-us-galeri-img-categori {
+  max-width: 370px;
+  overflow: hidden;
+  box-shadow: var(--box-shadow-principal);
+}
+
+.why-us-galeri-img-categori img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease;
+}
+
+.overlay-categori {
+  position: absolute;
+  top: 15px; 
+  left: 15px; 
+  bottom: 15px;
+  right: 15px; 
+  width: calc(100% - 30px); 
+  height: calc(100% - 30px);
+  background: rgba(0, 123, 255, 0.8);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  z-index: 100;
+}
+
+.overlay-categori-line {
+  position: relative;
+  display: inline-block; /* Ajusta el ancho al contenido del texto */
+}
+
+.overlay-categori-line::after,
+.overlay-categori-line::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  width: 100%; 
+  bottom: -5px; 
+}
+
+.overlay-categori-line::after {
+  left: 0;
+  width: 100%; /* Extiende la línea al ancho completo del texto */
+  background-color: var(--color-con-fondo);
+}
+
+.overlay-categori-line::before {
+  left: 0; /* Empieza desde el borde izquierdo */
+  background-color: var(--color-con-fondo);
+}
+
+.overlay-categori-line-text {
+  padding: 0;
+  margin: 0;
+}
 
 
+.why-us-galeri-img-verdadero-categori{
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+  position: relative;
+}
+
+.why-us-title-card{
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color-claro);
+  color: var(--color-con-fondo);
+  height: 60px;
+  align-items: center;
+}
+
+.why-us-galeri-img-verdadero-categori:hover .overlay-categori {
+  opacity: 1;
+}
 
 /* estilos pra productos destacados */
 .home__products__descripcion {
