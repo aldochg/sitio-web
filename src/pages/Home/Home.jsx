@@ -283,33 +283,102 @@ export const Home = () => {
             title: 'Mesas de acero',
             descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
           },
-
         ]
       },
       {
         id: 2,
         image: imagen2,
         title: 'MESAS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+        ]
       },
       {
         id: 3,
         image: imagen3,
         title: 'COCINAS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+        ]
       },
       {
         id: 4,
         image: imagen4,
         title: 'ESCURRIDORES',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+        ]
       },
       {
         id: 5,
         image: imagen5,
         title: 'HORNOS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+        ]
       },
       {
         id: 6,
         image: imagen5,
         title: 'LAVADEROS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesas de acero',
+            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+          },
+        ]
       },
     ]
     setCategorias(data);

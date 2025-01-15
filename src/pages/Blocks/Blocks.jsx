@@ -3,6 +3,8 @@ import './Blocks.css';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb';
 import { Paginator } from 'primereact/paginator';
 import imagen5 from '../../assets/somos5.jpg';
+import { Dropdown } from 'primereact/dropdown';
+
 
 export const Blocks = () => {
     const [blocks, setBlocks] = useState([]);
@@ -56,6 +58,16 @@ export const Blocks = () => {
     // Determina los elementos visibles según la página actual
     const visibleBlocks = blocks.slice(first, first + rows);
 
+    // variables de Dropdown
+    const [selectedCity, setSelectedCity] = useState(null);
+    const cities = [
+        { name: 'Mesas', code: 'NY' },
+        { name: 'Lavadoras', code: 'RM' },
+        { name: 'Cocinas', code: 'LDN' },
+        { name: 'Freidoras', code: 'IST' },
+        { name: 'Hornos', code: 'PRS' }
+    ];
+
     return (
         <div>
             <div className="services">
@@ -64,6 +76,20 @@ export const Blocks = () => {
                     <Breadcrumb />
                 </div>
             </div>
+
+            {/* Contenedor del filter de blocks */}
+            <div className="contenedor-filter-block">
+                <div className="contenedor-filter-block-sub">
+                    <div>
+                        <h1>Filtrado de blocks</h1>
+                    </div>
+                    <Dropdown value={selectedCity} onChange={(e) => setSelectedCity(e.value)} options={cities} optionLabel="name"
+                        placeholder="Seleccione la categoria" className="w-full md:w-30rem" checkmark={true} highlightOnSelect={false} filter />
+                </div>
+            </div>
+
+
+
             <div className="container-blocks">
                 <div className="container-sub-blocks">
                     <div className="container-sub-blocks-grid">

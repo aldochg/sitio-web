@@ -93,11 +93,13 @@
   font-size: 40px;
   font-weight: bold;
   padding: 10px 0;
+  margin: 0;
 }
 
 .home__container__text__title p {
   font-size: 16px;
   font-weight: bold;
+  margin: 0;
 }
 
 .home__container__con__vide {
@@ -227,6 +229,40 @@
 .home__button--next {
   right: 10px;
 }
+
+
+@media(max-width: 400px) {
+  .home__container__video {
+    width: 40px;
+    height: 40px;
+  }
+
+  .home__container__con__vide {
+    padding: 30px;
+  }
+
+  @keyframes wave {
+    0% {
+      box-shadow:
+        0 0 0 0 rgba(255, 255, 255, 0.4),
+        0 0 0 10px rgba(255, 255, 255, 0.4),
+  
+    }
+  
+    100% {
+      box-shadow:
+        0 0 0 10px rgba(255, 255, 255, 0.2),
+        0 0 0 20px rgba(255, 255, 255, 0.010),
+        0 0 0 30px rgba(255, 255, 255, 0);
+    }
+  }
+
+  .home__container__text__title {
+    text-align: center;
+  }
+  
+}
+
 /*************************************************************************************/
 /****************************** Estilos para categoriqas *****************************/
 /*************************************************************************************/
@@ -302,7 +338,7 @@
 .why-us-categori {
   padding: 20px;
   text-align: center;
-  min-height: 100vh;
+  min-height: 42vh;
   display: flex;
   justify-content: center;
 }
@@ -423,11 +459,13 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   padding: 0 0 20px 0;
 }
 
 .home_titles {
   font-size: 40px;
+  margin: 0;
   color: var(--color-letras);
 }
 
@@ -605,6 +643,14 @@
   font-weight: bold;
 }
 
+.home__message__container h1{
+  margin: 0;
+}
+
+.home__message__container p{
+  margin: 0;
+}
+
 @media (max-width: 690px) {
   .home__message__container {
     padding: 20px 0 20px 0;
@@ -712,12 +758,14 @@
   border-radius: 10px;
   overflow: hidden;
   position: relative;
+  box-shadow: var(--box-shadow-principal);
 }
 
 .about-us__progress-bar-fill {
   height: 100%;
   width: 0%;
   background-color: var(--background-color-primario);
+  
   transition: width 0.2s ease-in-out;
   border-radius: 20px;
   display: flex;
@@ -726,7 +774,8 @@
 }
 
 .about-us__progress-span {
-  color: #ffffff;
+  color: var(--color-con-fondo);
+  font-weight: bold;
 }
 
 @media(max-width: 1000px) {
