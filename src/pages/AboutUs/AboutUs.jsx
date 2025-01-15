@@ -19,31 +19,31 @@ export const AboutUs = () => {
                 descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
             },
             {
-                id: 1,
+                id: 2,
                 img: img_why,
                 title: 'Fabricas de calidad',
                 descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
             },
             {
-                id: 1,
+                id: 3,
                 img: img_why,
                 title: 'Fabricas de calidad',
                 descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
             },
             {
-                id: 1,
+                id: 4,
                 img: img_why,
                 title: 'Fabricas de calidad',
                 descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
             },
             {
-                id: 1,
+                id: 5,
                 img: img_why,
                 title: 'Fabricas de calidad',
                 descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
             },
             {
-                id: 1,
+                id: 6,
                 img: img_why,
                 title: 'Fabricas de calidad',
                 descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
