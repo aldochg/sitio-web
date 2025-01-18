@@ -1,9 +1,18 @@
 import { useState, useEffect, useRef } from "react";
 import './AboutUs.css';
-import about1 from '../../assets/somos3.jpg';
+import sobre_nosotros1 from '../../assets/sobre_nosotros1.png';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 import img_why from '../../assets/acero1.jpg'
 import { CarruselEmpresa } from "../../components/CarruselEmpresa/CarruselEmpresa";
+
+import por_que1 from '../../assets/por_que_elegirnos/por_que1.jpg';
+import por_que2 from '../../assets/por_que_elegirnos/por_que2.jpg';
+import por_que3 from '../../assets/por_que_elegirnos/por_que3.jpg';
+import por_que4 from '../../assets/por_que_elegirnos/por_que4.webp';
+import por_que5 from '../../assets/por_que_elegirnos/por_que5.webp';
+import por_que6 from '../../assets/por_que_elegirnos/por_que6.jpg';
+import por_que7 from '../../assets/por_que_elegirnos/por_que7.jpg';
+
 
 export const AboutUs = () => {
 
@@ -14,43 +23,43 @@ export const AboutUs = () => {
         const data = [
             {
                 id: 1,
-                img: img_why,
-                title: 'Fabricas de calidad',
-                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+                img: por_que1,
+                title: 'Fabricación de calidad',
+                descripcion: 'Contamos con más de 20 años de experiencia en la fabricación de equipos gastronómicos de acero inoxidable, garantizando la durabilidad y el rendimiento de nuestros productos en cualquier entorno comercial.'
             },
             {
                 id: 2,
-                img: img_why,
-                title: 'Fabricas de calidad',
-                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+                img: por_que2,
+                title: 'Innovación constante',
+                descripcion: 'Estamos comprometidos con la innovación. Nuestros diseños son modernos, eficientes y adaptados a las últimas necesidades del mercado, mejorando la productividad de los negocios de nuestros clientes.'
             },
             {
                 id: 3,
-                img: img_why,
-                title: 'Fabricas de calidad',
-                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+                img: por_que3,
+                title: 'Atención personalizada',
+                descripcion: 'Ofrecemos atención al cliente 24/7 para resolver cualquier duda o consulta. Nuestro equipo está siempre disponible para ayudar con la elección del equipo adecuado y la optimización de los procesos.'
             },
             {
                 id: 4,
-                img: img_why,
-                title: 'Fabricas de calidad',
-                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+                img: por_que4,
+                title: 'Entrega rápida y confiable',
+                descripcion: 'Nos comprometemos con tiempos de entrega rápidos, asegurando que tus pedidos lleguen en el plazo acordado y en perfectas condiciones, sin comprometer la calidad del producto.'
             },
             {
                 id: 5,
-                img: img_why,
-                title: 'Fabricas de calidad',
-                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+                img: por_que5,
+                title: 'Sostenibilidad',
+                descripcion: 'Nuestros procesos de fabricación están enfocados en la sostenibilidad, utilizando materiales reciclables y prácticas eco-amigables para reducir el impacto ambiental en la industria.'
             },
             {
                 id: 6,
-                img: img_why,
-                title: 'Fabricas de calidad',
-                descripcion: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur iste at ratione obcaecati, quis praesentium facere totam ipsum ab architecto autem debitis provident ex natus repudiandae voluptatem est. Placeat, voluptatum.'
+                img: por_que6,
+                title: 'Precios competitivos',
+                descripcion: 'Ofrecemos precios altamente competitivos sin sacrificar la calidad de nuestros productos. Trabajamos para garantizar la mejor relación calidad-precio para tu negocio.'
             },
-        ]
-
-        setGaleri(data)
+        ];
+    
+        setGaleri(data);
     }, []);
 
     const [count, setCount] = useState(0); // Estado inicial del contador
@@ -148,61 +157,54 @@ export const AboutUs = () => {
                     </div>
                 </div>
             </div>
-            {/* Quienes somos 1: productos destacados, 2:  */}
             <div className="about-us__container">
-                <div className="about-us__content">
-                    <div className="about-us__image">
-                        <img src={about1} alt="Fabricante de equipamiento de acero inoxidable" />
-                    </div>
-                    <div className="about-us__text">
-                        <p className="about-us__subtitle">Nosotros Somos</p>
-                        <h1 className="about-us__title">Fabricante de equipamiento de acero inoxidable</h1>
-                        <p className="about-us__description">
-                            Somos especialistas en la fabricación de equipamiento de acero inoxidable diseñado para satisfacer las más altas exigencias del sector gastronómico, industrial y comercial. Nuestro catálogo incluye una amplia variedad de productos como mesas de trabajo, cocinas industriales, freidoras, lavaderos, estanterías, campanas extractoras, entre otros.
-                        </p>
-                        <p className="about-us__description">
-                            Con un enfoque en la calidad, la durabilidad y el diseño funcional, trabajamos con acero inoxidable de primera calidad, asegurando productos resistentes a la corrosión, fáciles de limpiar y con acabados impecables.
-                        </p>
-                        <p className="about-us__description">
-                            Nuestro compromiso es ofrecer soluciones personalizadas que se adapten a las necesidades específicas de cada cliente, garantizando eficiencia, higiene y estilo en cada proyecto. Con años de experiencia en el sector, somos aliados confiables para negocios de restaurantes, hoteles, hospitales y más.
-                        </p>
-                        <p className="about-us__description">
-                            Déjanos ser parte de tu proyecto, y juntos crearemos espacios funcionales que destacan por su calidad y elegancia.
-                        </p>
-                    </div>
-                </div>
-            </div>
+    <div className="about-us__content">
+        <div className="about-us__image">
+            <img src={sobre_nosotros1} alt="Proceso de fabricación" />
+        </div>
+        <div className="about-us__text">
+            <p className="about-us__subtitle">Nuestro Proceso de Fabricación</p>
+            <h1 className="about-us__title">Tecnología y Mano de Obra Especializada</h1>
+            <p className="about-us__description">
+                En [Nombre de tu empresa], nuestro proceso de fabricación se basa en la combinación de la tecnología más avanzada y la experiencia de nuestro equipo humano. Desde el diseño hasta la entrega del producto final, cada etapa se ejecuta con precisión para garantizar productos de la más alta calidad.
+            </p>
+            <p className="about-us__description">
+                Utilizamos maquinaria de última generación, materiales certificados y contamos con un riguroso control de calidad para ofrecer productos que superen las expectativas de nuestros clientes.
+            </p>
+        </div>
+    </div>
+</div>
+
 
             <div className="why-us">
-                <div className="why-us-sub">
-                    <div className="why-us-title">
-                        <h1>¿Por qué elegirnos?</h1>
-                    </div>
-                    <div className="why-us-galeri">
-                        {galeri.map((data, index) => (
-                            <div className="why-us-galeri-img" key={index}>
-                                <div className="">
-                                    <div className="why-us-galeri-img-verdadero">
-                                        <img src={data.img} alt={`Galería ${index + 1}`} />
-                                        <div className="overlay">
-                                            <p>{data.descripcion}</p>
-                                        </div>
-                                    </div>
-                                    <div className="why-us-title-card">
-                                        <div className="why-us-title-card-title">
-                                            <h4>{data.title}</h4>
-                                        </div>
-                                        <div className="why-us-title-card-icon">
-                                            <i className="pi pi-plus"></i>
-                                        </div>
-                                    </div>
+        <div className="why-us-sub">
+            <div className="why-us-title">
+                <h1>¿Por qué elegirnos?</h1>
+            </div>
+            <div className="why-us-galeri">
+                {galeri.map((data, index) => (
+                    <div className="why-us-galeri-img" key={index}>
+                        <div className="">
+                            <div className="why-us-galeri-img-verdadero">
+                                <img src={data.img} alt={`Galería ${index + 1}`} />
+                                <div className="overlay">
+                                    <p>{data.descripcion}</p>
                                 </div>
                             </div>
-                        ))}
+                            <div className="why-us-title-card">
+                                <div className="why-us-title-card-title">
+                                    <h4>{data.title}</h4>
+                                </div>
+                                <div className="why-us-title-card-icon">
+                                    <i className="pi pi-plus"></i>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                ))}
             </div>
-
+        </div>
+    </div>
 
             {/* Numeros de la empresa */}
             <div className="contenedor__numeros__general">

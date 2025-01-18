@@ -26,7 +26,7 @@ export const Products = () => {
                 id: 1,
                 id_categoria: 234,
                 imagen: imagen1,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 250.0,
                 rating: 4,
             },
@@ -34,7 +34,7 @@ export const Products = () => {
                 id: 2,
                 id_categoria: 234,
                 imagen: imagen2,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 5,
             },
@@ -42,7 +42,7 @@ export const Products = () => {
                 id: 3,
                 id_categoria: 234,
                 imagen: imagen3,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                descripcion: "mesa de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 5,
             },
@@ -50,7 +50,7 @@ export const Products = () => {
                 id: 4,
                 id_categoria: 234,
                 imagen: imagen4,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                descripcion: "fredoras de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 5,
             },
@@ -58,7 +58,7 @@ export const Products = () => {
                 id: 5,
                 id_categoria: 234,
                 imagen: imagen1,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                descripcion: "escurridores de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 1,
             },
@@ -66,7 +66,7 @@ export const Products = () => {
                 id: 6,
                 id_categoria: 234,
                 imagen: imagen2,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                descripcion: "lavaderos de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 2,
             },
@@ -123,79 +123,40 @@ export const Products = () => {
                 id: 1,
                 nombre: 'Línea Calor',
                 descripcion: [
-                    {
-                        id: 101,
-                        producto: 'Cocina de gas',
-                        productos_destacados: [
-                            { id: 1, id_categoria: 101, imagen: 'imagen1', descripcion: 'Cocina de gas con horno.', precio: 800.0, rating: 5 },
-                            { id: 2, id_categoria: 101, imagen: 'imagen2', descripcion: 'Cocina de gas doble quemador.', precio: 600.0, rating: 4 },
-                            { id: 3, id_categoria: 101, imagen: 'imagen3', descripcion: 'Cocina de gas de acero inoxidable.', precio: 1000.0, rating: 5 },
-                            { id: 4, id_categoria: 101, imagen: 'imagen4', descripcion: 'Cocina de gas compacta.', precio: 550.0, rating: 3 },
-                        ]
-                    },
-                    { id: 102, producto: 'Horno eléctrico' },
-                    { id: 103, producto: 'Freidora de gas' },
-                    { id: 104, producto: 'Salamandra' },
-                    { id: 105, producto: 'Plancha de cocina (griddle)' },
-                    { id: 106, producto: 'Baño maría' }
+                    { id: 101, producto: 'Cocina de gas',},
+                    { id: 102, producto: 'Horno convector' },
+                    { id: 103, producto: 'Horno pizzero' },
+                    { id: 104, producto: 'Freidora covencional' },
+                    { id: 105, producto: 'Freidora automatica' },
                 ]
             },
             {
                 id: 2,
                 nombre: 'Línea Frío',
                 descripcion: [
-                    {
-                        id: 201,
-                        producto: 'Refrigerador industrial',
-                        productos_destacados: [
-                            { id: 5, id_categoria: 201, imagen: 'imagen1', descripcion: 'Refrigerador de gran capacidad.', precio: 2000.0, rating: 5 },
-                            { id: 6, id_categoria: 201, imagen: 'imagen2', descripcion: 'Refrigerador con doble puerta.', precio: 2500.0, rating: 4 },
-                            { id: 7, id_categoria: 201, imagen: 'imagen3', descripcion: 'Refrigerador con sistema No Frost.', precio: 3000.0, rating: 5 },
-                            { id: 8, id_categoria: 201, imagen: 'imagen4', descripcion: 'Refrigerador compacto.', precio: 1800.0, rating: 3 },
-                        ]
-                    },
-                    {
-                        id: 202,
-                        producto: 'Congelador horizontal',
-                        productos_destacados: [
-                            { id: 9, id_categoria: 202, imagen: 'imagen1', descripcion: 'Congelador de gran capacidad.', precio: 1200.0, rating: 5 },
-                            { id: 10, id_categoria: 202, imagen: 'imagen2', descripcion: 'Congelador con tapa abatible.', precio: 1100.0, rating: 4 },
-                            { id: 11, id_categoria: 202, imagen: 'imagen3', descripcion: 'Congelador con termostato ajustable.', precio: 1400.0, rating: 5 },
-                            { id: 12, id_categoria: 202, imagen: 'imagen4', descripcion: 'Congelador compacto.', precio: 1000.0, rating: 3 },
-                        ]
-                    },
+                    { id: 201, producto: 'Refrigerador industrial',},
+                    { id: 202, producto: 'Congelador horizontal',},
                     { id: 203, producto: 'Congelador vertical' },
                     { id: 204, producto: 'Vitrina refrigerada' },
-                    { id: 205, producto: 'Máquina para hacer hielo' },
-                    { id: 206, producto: 'Abatidor de temperatura' }
                 ]
             },
             {
                 id: 3,
                 nombre: 'Línea Neutro',
                 descripcion: [
-                    {
-                        id: 301,
-                        producto: 'Mesa de trabajo lisa',
-                        productos_destacados: [
-                            { id: 13, id_categoria: 301, imagen: 'imagen1', descripcion: 'Mesa lisa de acero inoxidable.', precio: 500.0, rating: 5 },
-                            { id: 14, id_categoria: 301, imagen: 'imagen2', descripcion: 'Mesa compacta y resistente.', precio: 450.0, rating: 4 },
-                            { id: 15, id_categoria: 301, imagen: 'imagen3', descripcion: 'Mesa con acabado premium.', precio: 600.0, rating: 5 },
-                            { id: 16, id_categoria: 301, imagen: 'imagen4', descripcion: 'Mesa resistente a la corrosión.', precio: 550.0, rating: 3 },
-                        ]
-                    },
+                    { id: 301, producto: 'Mesa de trabajo',},
                     { id: 302, producto: 'Mesa de trabajo con repisa' },
                     { id: 303, producto: 'Lavadero de un pozo' },
                     { id: 304, producto: 'Escurridor de platos' },
                     { id: 305, producto: 'Estantería de acero inoxidable' },
-                    { id: 306, producto: 'Carro de transporte' },
-                    { id: 307, producto: 'Campana extractora' }
+                    { id: 307, producto: 'Campana extractora' },
+                    { id: 307, producto: 'Pelador de papas' },
+                    { id: 307, producto: 'Exprimidor de citricos' },
                 ]
             }
         ];
         setProductos(datos);
     }, []);
-
 
     const toggleAccordion = (index) => {
         setActiveIndex(index === activeIndex ? null : index);

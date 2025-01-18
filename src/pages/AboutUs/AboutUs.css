@@ -429,6 +429,16 @@
     background-color: var(--color-con-fondo);
 }
 
+.contenedor__general__title {
+    padding: 0;
+    margin: 0;
+}
+
+.contenedor__general__text{
+    padding: 0;
+    margin: 0;
+}
+
 .contenedor__datos {
     display: flex;
     justify-content: center;

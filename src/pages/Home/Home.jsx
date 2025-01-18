@@ -112,136 +112,68 @@ export const Home = () => {
   }, []);
 
   // Productos destacados
-  const [productosDestacados, setProductosDestacados] = useState([])
-  useEffect(() => {
-    const productos_destacados = [
-      {
-        id: 1,
-        imagen: imagen1,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 250.0,
-        rating: 4,
-      },
-      {
-        id: 2,
-        imagen: imagen2,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 5,
-      },
-      {
-        id: 3,
-        imagen: imagen3,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 5,
-      },
-      {
-        id: 4,
-        imagen: imagen4,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 5,
-      },
-      {
-        id: 5,
-        imagen: imagen1,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 1,
-      },
-      {
-        id: 6,
-        imagen: imagen2,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 2,
-      },
-      {
-        id: 7,
-        imagen: imagen2,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 3,
-      },
-      {
-        id: 8,
-        imagen: imagen2,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-        precio: 1500.0,
-        rating: 4,
-      },
-    ]
-    setProductosDestacados(productos_destacados)
-  }, [])
-
-  // informacion adicional
-  const [informacionAdicional, setInformacionAdicional] = useState([]);
-  useEffect(() => {
-    const informacion_adicional = [
-      {
-        id: 1,
-        logo: destacado1,
-        title: 'Calidad garantizada',
-        descripcion: 'Fabricado con materiales de primera calidad, diseñados para durar toda la vida.'
-      },
-      {
-        id: 2,
-        logo: destacado2,
-        title: 'Atención personalizada',
-        descripcion: 'Nuestro equipo está listo para asesorarte y ayudarte a encontrar exactamente lo que necesitas.'
-      },
-      {
-        id: 3,
-        logo: destacado3,
-        title: 'Fabricación sostenible',
-        descripcion: 'Comprometidos con el cuidado del medio ambiente, utilizamos procesos responsables y materiales reciclables.'
-      },
-      {
-        id: 4,
-        logo: destacado4,
-        title: 'Garantía extendida',
-        descripcion: 'Ofrecemos garantía de hasta 5 años para que compres con tranquilidad.'
-      },
-      {
-        id: 5,
-        logo: destacado5,
-        title: 'Experiencia comprobada',
-        descripcion: 'Más de 10,000 clientes satisfechos avalan la calidad de nuestros productos.'
-      },
-      {
-        id: 6,
-        logo: destacado6,
-        title: 'Seguridad certificada',
-        descripcion: 'Cumplimos con los estándares más altos de calidad y seguridad internacional.'
-      },
-      {
-        id: 7,
-        logo: destacado7,
-        title: 'Prueba antes de comprar',
-        descripcion: 'Experimenta la calidad de nuestros productos antes de decidir tu compra.'
-      },
-      {
-        id: 8,
-        logo: destacado8,
-        title: 'Descuentos por volumen',
-        descripcion: 'Ahorra más con nuestras ofertas exclusivas al comprar por mayor.'
-      },
-      {
-        id: 9,
-        logo: destacado9,
-        title: 'Soporte técnico especializado',
-        descripcion: 'Recibe asistencia técnica profesional cuando la necesites.'
-      },
-      {
-        id: 10,
-        logo: destacado10,
-        title: 'Entrega rápida',
-        descripcion: 'Recibe tus pedidos en tiempo récord, sin demoras.'
-      },
-    ];
-    setInformacionAdicional(informacion_adicional)
-  }, [])
+const [productosDestacados, setProductosDestacados] = useState([]);
+useEffect(() => {
+  const productos_destacados = [
+    {
+      id: 1,
+      imagen: imagen1,
+      descripcion: "Refrigeradora de gran capacidad con acabado premium y eficiencia energética clase A+.",
+      precio: 1200.0,
+      rating: 4,
+    },
+    {
+      id: 2,
+      imagen: imagen2,
+      descripcion: "Horno eléctrico multifunción con temporizador digital y fácil limpieza.",
+      precio: 750.0,
+      rating: 5,
+    },
+    {
+      id: 3,
+      imagen: imagen3,
+      descripcion: "Cocina industrial de acero inoxidable con 6 quemadores de alto rendimiento.",
+      precio: 2500.0,
+      rating: 5,
+    },
+    {
+      id: 4,
+      imagen: imagen4,
+      descripcion: "Freidora doble con termostato ajustable para uso profesional.",
+      precio: 900.0,
+      rating: 4,
+    },
+    {
+      id: 5,
+      imagen: imagen5,
+      descripcion: "Lavavajillas compacto y eficiente para cocinas pequeñas.",
+      precio: 650.0,
+      rating: 3,
+    },
+    {
+      id: 6,
+      imagen: imagen1,
+      descripcion: "Escurridor de acero inoxidable con diseño robusto y fácil montaje.",
+      precio: 250.0,
+      rating: 3,
+    },
+    {
+      id: 7,
+      imagen: imagen1,
+      descripcion: "Batidora planetaria profesional con capacidad de 10 litros.",
+      precio: 1500.0,
+      rating: 5,
+    },
+    {
+      id: 8,
+      imagen: imagen1,
+      descripcion: "Congelador horizontal de gran capacidad para uso comercial.",
+      precio: 1800.0,
+      rating: 4,
+    },
+  ];
+  setProductosDestacados(productos_destacados);
+}, []);
 
   // Cambio automático cada 5 segundos
   useEffect(() => {
@@ -274,113 +206,200 @@ export const Home = () => {
           {
             id: 1,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Freidora a gas',
+            descripcion: 'Freidora industrial a gas, ideal para restaurantes y negocios de comida rápida.'
           },
           {
             id: 2,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Freidora automatica',
+            descripcion: 'Freidora eléctrica de acero inoxidable, fácil de limpiar y eficiente.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Freidora convencional',
+            descripcion: 'Freidora doble para manejar múltiples preparaciones al mismo tiempo.'
           },
         ]
       },
       {
         id: 2,
-        image: imagen2,
+        image: img_why,
         title: 'MESAS',
         item: [
           {
             id: 1,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Mesa de trabajo',
+            descripcion: 'Mesa de trabajo de acero inoxidable con superficie amplia.'
           },
           {
             id: 2,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Mesa con estante',
+            descripcion: 'Mesa de acero inoxidable con estante inferior para almacenamiento.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Mesa con ruedas',
+            descripcion: 'Mesa de acero inoxidable con ruedas para mayor movilidad.'
           },
         ]
       },
       {
         id: 3,
-        image: imagen3,
+        image: img_why,
         title: 'COCINAS',
         item: [
           {
             id: 1,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Cocina a gas',
+            descripcion: 'Cocina industrial a gas con múltiples quemadores.'
           },
           {
             id: 2,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Cocina eléctrica',
+            descripcion: 'Cocina eléctrica de alto rendimiento para uso profesional.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Cocina con horno',
+            descripcion: 'Cocina a gas con horno integrado para mayor funcionalidad.'
           },
         ]
       },
       {
         id: 4,
-        image: imagen4,
+        image: img_why,
         title: 'ESCURRIDORES',
         item: [
           {
             id: 1,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Escurridor de platos',
+            descripcion: 'Escurridor de platos compacto y resistente.'
           },
           {
             id: 2,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Escurridor grande',
+            descripcion: 'Escurridor grande de acero inoxidable para uso industrial.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Escurridor de vasos',
+            descripcion: 'Escurridor especializado para secar vasos rápidamente.'
           },
         ]
       },
       {
         id: 5,
-        image: imagen5,
+        image: img_why,
         title: 'HORNOS',
         item: [
           {
             id: 1,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Horno eléctrico',
+            descripcion: 'Horno eléctrico de convección para una cocción uniforme.'
           },
           {
             id: 2,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Horno pizzero',
+            descripcion: 'Horno a gas de alta capacidad para panaderías.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Horno combinado',
+            descripcion: 'Horno combinado con opciones de vapor y convección.'
           },
         ]
       },
       {
         id: 6,
-        image: imagen5,
+        image: img_why,
         title: 'LAVADEROS',
         item: [
           {
             id: 1,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Lavadero sencillo',
+            descripcion: 'Lavadero de acero inoxidable con un solo compartimento.'
           },
           {
             id: 2,
             img: img_why,
-            title: 'Mesas de acero',
-            descripcion: 'Mesa para el escritorio y para hacer trabajos comunes en el estudio.'
+            title: 'Lavadero doble',
+            descripcion: 'Lavadero de acero inoxidable con dos compartimentos.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Lavadero con escurridor',
+            descripcion: 'Lavadero con espacio lateral para escurrir utensilios.'
           },
         ]
       },
-    ]
+      {
+        id: 7,
+        image: img_why,
+        title: 'REFRIGERACIÓN',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Refrigerador vertical',
+            descripcion: 'Refrigerador vertical de acero inoxidable para conservar alimentos.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Vitrina refrigerada',
+            descripcion: 'Vitrina refrigerada para exhibición de alimentos.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Refrigerador de bar',
+            descripcion: 'Refrigerador compacto para bares y cafeterías.'
+          },
+        ]
+      },
+      {
+        id: 8,
+        image: img_why,
+        title: 'EXTRACTORES',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Extractor de humo',
+            descripcion: 'Extractor industrial para eliminar humo de cocinas.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Extractor de olores',
+            descripcion: 'Extractor diseñado para eliminar olores de cocinas industriales.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Extractor de grasa',
+            descripcion: 'Extractor eficiente para capturar grasas suspendidas en el aire.'
+          },
+        ]
+      },
+    ];
+    
     setCategorias(data);
   }, []);
 
@@ -606,36 +625,39 @@ export const Home = () => {
         <TestimonialsCarousel />
       </div>
 
-      {/* Quienes somos 1: productos destacados, 2:  */}
-      <div className="about-us__container">
-        <div className="about-us__content">
-          <div className="about-us__image">
-            <img src={imagen5} alt="Fabricante de equipamiento de acero inoxidable" />
-          </div>
-          <div className="about-us__text">
-            <p className="about-us__subtitle">¿Quiénes somos?</p>
-            <div>
-              <Ball />
-            </div>
-            <h1 className="about-us__title">Fabricante de equipamiento de acero inoxidable</h1>
-            <p className="about-us__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, saepe mollitia. Est excepturi dolorum accusantium expedita error veniam, nam assumenda vitae sed voluptatibus dolorem laudantium officiis animi totam ullam rerum.
-            </p>
-            <p className="about-us__description">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque illum cupiditate error odit dolore veritatis natus corporis facilis delectus a eligendi veniam maiores, corrupti magni hic reprehenderit aperiam! Iste, cumque!
-            </p>
-            <h4 className="about-us__highlight">COMPRA TU EQUIPAMIENTO DE ACERO INOXIDABLE</h4>
-            <div className="about-us__guarantee">
-              <div className="about-us__progress-bar">
-                <div
-                  className="about-us__progress-bar-fill"
-                  style={{ width: `${progress}%` }}
-                ><span className="about-us__progress-span">Garantía {progress}%</span></div>
-              </div>
-            </div>
+      {/* Quiénes somos: productos destacados, garantía y misión */}
+<div className="about-us__container">
+  <div className="about-us__content">
+    <div className="about-us__image">
+      <img src={imagen5} alt="Fabricante de equipamiento de acero inoxidable" />
+    </div>
+    <div className="about-us__text">
+      <p className="about-us__subtitle">¿Quiénes somos?</p>
+      <div>
+        <Ball />
+      </div>
+      <h1 className="about-us__title">Expertos en Equipamiento de Acero Inoxidable</h1>
+      <p className="about-us__description">
+        Somos una empresa líder en la fabricación de equipamiento de acero inoxidable, diseñada para satisfacer las necesidades de la industria gastronómica y comercial. Nos enorgullece ofrecer productos duraderos, funcionales y con acabados de alta calidad.
+      </p>
+      <p className="about-us__description">
+        Con años de experiencia, nos hemos consolidado como un referente en el mercado gracias a nuestro compromiso con la innovación, el diseño y la satisfacción del cliente. Nuestro objetivo es brindar soluciones eficientes y personalizadas que superen las expectativas.
+      </p>
+      <h4 className="about-us__highlight">ADQUIERE TU EQUIPAMIENTO DE ACERO INOXIDABLE CON NOSOTROS</h4>
+      <div className="about-us__guarantee">
+        <div className="about-us__progress-bar">
+          <div
+            className="about-us__progress-bar-fill"
+            style={{ width: `${progress}%` }}
+          >
+            <span className="about-us__progress-span">Garantía del {progress}% de satisfacción</span>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+</div>
+
 
       {/* Preguntas frecuentes */}
       <div className="accordion-container">
