@@ -1,6 +1,21 @@
-:root {
-    --sidebar-width: 250px;
-}
+:root{
+    /* Para los bakcground de los elementos */
+    --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+    --background-color-primario:#0C5ADB;/* Para los principales */ 
+    --background-color-secundario:#00247E;/* Para los hover */
+    --background-color-claro:#007BFF; 
+  
+    /* Para los boxs shadoms */
+    --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+    --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+    --box-shadow-elevado:2px 2px 50px rgba(7, 75, 247, 0.4);
+  
+    /* Colore de letras dentro de un color con bakcground */
+    --color-con-fondo:#ffffff;
+  
+    /* Color de las letras */
+    --color-letras:#616161;
+  }
 
 .header__menu{
     height: 100%;
@@ -45,10 +60,10 @@
   }
 .sidebar__list-item a {
     text-decoration: none;
-    color: #46494d;
-    font-size: 18px;
+    color: var(--color-letras);
+    font-size: 16px;
     transition: color 0.3s ease;
-    font-weight: bold;
+    font-weight: 800;
     padding: 40px 0 40px 0;
 }
 

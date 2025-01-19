@@ -64,6 +64,7 @@
     text-align: center;
     font-size: 40px;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 /* Estilos para la seccion de productos card y categorias */
@@ -84,25 +85,26 @@
 
 .contenedor-sub-articulos{
     max-width: 1200px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
 }
 
 .contenedor-articulos-productos{
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    width: 100%;
     position: relative;
+    align-items: center;
+}
+
+.home__products{
+    height: 100%;
 }
 
 .contenedor-encabesado-categorias{
     background-color: #007bff;
-    padding: 10px;
     border-radius: 10px;
     color: var(--color-con-fondo);
     text-align: center;
@@ -111,6 +113,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.encabesado-categorias-btn{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 800;
+    border: none;
+    border-radius: 10px;
+    background-color: transparent;
+    color: var(--color-con-fondo);
+    cursor: pointer;
 }
 
 .contenedor-articulos-acordeon{
@@ -127,6 +143,13 @@
     text-align: center;
     margin: 10px auto;
     text-align: center;
+}
+
+.contenedor-articulos-acordeon-acordeon h4{
+    margin: 0;
+    padding: 0;
+    font-weight: 800;
+    color: var(--color-letras);
 }
 
 .contenedor-linea-adordeon{
@@ -162,6 +185,7 @@
 .accordion-header-products h5{
     margin: 0;
     padding: 0;
+    font-weight: 800;
 }
 
 .accordion-header-products:hover {
@@ -179,7 +203,7 @@
 
 .accordion-content.active {
     max-height: 300px; /* Altura máxima para el contenido */
-    padding: 15px;
+    padding: 0 15px 0 20px;
 }
 
 .accordion-link {
@@ -189,6 +213,7 @@
     text-decoration: none;
     transition: color 0.2s ease;
     cursor: pointer;
+    font-weight: 600;
 }
 
 .accordion-link:hover {
@@ -240,6 +265,6 @@
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        gap: 10px;
+        gap: 2rem;
     }
   }

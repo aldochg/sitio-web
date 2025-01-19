@@ -175,9 +175,6 @@ useEffect(() => {
     };
 
 
-    
-
-
     return (
         <div>
     {/* Sección de servicios */}

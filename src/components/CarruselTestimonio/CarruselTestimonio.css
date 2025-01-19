@@ -39,6 +39,7 @@
     font-size: 2rem;
     margin: 100px 0 20px 0;
     color: var(--color-letras);
+    font-weight: 800;
   }
   
   .testimonial-card {
@@ -63,6 +64,7 @@
   
   .testimonial-content {
     margin-bottom: 20px;
+    font-weight: 600;
   }
   
   .testimonial-quote {
@@ -99,6 +101,7 @@
   .testimonial-avatar h3 {
     font-size: 1.2rem;
     color: #333;
+    font-weight: 800;
   }
 /*   
 .p-link{

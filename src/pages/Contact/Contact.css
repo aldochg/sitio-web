@@ -60,6 +60,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-weight: 800;
 }
 
 .contact__content h1{

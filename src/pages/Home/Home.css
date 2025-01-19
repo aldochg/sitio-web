@@ -91,14 +91,14 @@
 
 .home__container__text__title h1 {
   font-size: 40px;
-  font-weight: bold;
+  font-weight: 800;
   padding: 10px 0;
   margin: 0;
 }
 
 .home__container__text__title p {
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0;
 }
 
@@ -118,7 +118,7 @@
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-weight: bold;
+  font-weight: 800;
   color: var(--color-con-fondo);
   box-shadow: var(--box-shadow-principal);
 }
@@ -332,6 +332,14 @@
   text-align: center;
 }
 
+.categorias-container-title h1{
+  font-size: 40px;
+  padding: 0;
+  margin: 0;
+  font-weight: 800;
+  color: var(--color-letras);
+}
+
 /**************************************************************************/
 /***************Estilos para por la galeria de categorias******************/
 /**************************************************************************/
@@ -358,6 +366,7 @@
   max-width: 370px;
   overflow: hidden;
   box-shadow: var(--box-shadow-principal);
+  border-radius: 8px;
 }
 
 .why-us-galeri-img-categori img {
@@ -383,6 +392,10 @@
   opacity: 0;
   transition: opacity 0.5s ease;
   z-index: 100;
+}
+
+.overlay-categori p{
+  font-weight: 600;
 }
 
 .overlay-categori-line {
@@ -413,6 +426,8 @@
 .overlay-categori-line-text {
   padding: 0;
   margin: 0;
+  font-weight: 800;
+  font-size: 1.2rem;
 }
 
 
@@ -422,6 +437,11 @@
   margin: 0px;
   padding: 0px;
   position: relative;
+  border-radius: 8px;
+}
+
+.why-us-galeri-img-verdadero-categori img{
+  border-radius: 8px;
 }
 
 .why-us-title-card{
@@ -467,6 +487,7 @@
   font-size: 40px;
   margin: 0;
   color: var(--color-letras);
+  font-weight: 800;
 }
 
 .homo_container_productos_destacados {
@@ -643,10 +664,12 @@
 
 .home__message__container h1{
   margin: 0;
+  font-weight: 800;
 }
 
 .home__message__container p{
   margin: 0;
+  font-weight: 600;
 }
 
 @media (max-width: 690px) {
@@ -660,7 +683,7 @@
   border: none;
   border-radius: 50px;
   padding: 18px 35px 18px 35px;
-  font-weight: bold;
+  font-weight: 800;
   background: var(--color-con-fondo);
   color: var(--color-letras);
   font-size: 16px;
@@ -763,7 +786,6 @@
   height: 100%;
   width: 0%;
   background-color: var(--background-color-primario);
-  
   transition: width 0.2s ease-in-out;
   border-radius: 20px;
   display: flex;
@@ -822,6 +844,7 @@
   text-align: center;
   color: var(--color-letras);
   transition: max-height 0.9s ease-in-out;
+  font-weight: 800;
 }
 
 
@@ -856,8 +879,8 @@
 
 .accordion-question {
   font-size: 16px;
-  font-weight: 600;
-  color: #3D3D49;
+  font-weight: 800;
+  color: var(--color-letras);
   padding: 0;
   margin: 0;
 }
@@ -882,10 +905,11 @@
 
 .accordion-answer {
   font-size: 1rem;
-  color: #333;
+  color: var(--color-letras);
   padding: 0;
   margin: 0;
   line-height: 30px;
+  font-weight: 600;
 }
 
 @media(max-width: 1000px) {

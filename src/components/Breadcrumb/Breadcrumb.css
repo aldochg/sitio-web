@@ -23,7 +23,7 @@
     text-decoration: none;
     color: var(--color-con-fondo);
     margin: 0 5px;
-    font-weight: bold;
+    font-weight: 800;
   }
 
   .breadcrumb__link i {

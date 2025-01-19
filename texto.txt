@@ -1,0 +1,208 @@
+  //Codigo para manejar las categorias de los productos.
+  const [categorias, setCategorias] = useState([]);
+  useEffect(() => {
+    const data = [
+      {
+        id: 1,
+        image: imagen1,
+        title: 'FREIDORAS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Freidora a gas',
+            descripcion: 'Freidora industrial a gas, ideal para restaurantes y negocios de comida rápida.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Freidora automatica',
+            descripcion: 'Freidora eléctrica de acero inoxidable, fácil de limpiar y eficiente.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Freidora convencional',
+            descripcion: 'Freidora doble para manejar múltiples preparaciones al mismo tiempo.'
+          },
+        ]
+      },
+      {
+        id: 2,
+        image: img_why,
+        title: 'MESAS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Mesa de trabajo',
+            descripcion: 'Mesa de trabajo de acero inoxidable con superficie amplia.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Mesa con estante',
+            descripcion: 'Mesa de acero inoxidable con estante inferior para almacenamiento.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Mesa con ruedas',
+            descripcion: 'Mesa de acero inoxidable con ruedas para mayor movilidad.'
+          },
+        ]
+      },
+      {
+        id: 3,
+        image: img_why,
+        title: 'COCINAS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Cocina a gas',
+            descripcion: 'Cocina industrial a gas con múltiples quemadores.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Cocina eléctrica',
+            descripcion: 'Cocina eléctrica de alto rendimiento para uso profesional.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Cocina con horno',
+            descripcion: 'Cocina a gas con horno integrado para mayor funcionalidad.'
+          },
+        ]
+      },
+      {
+        id: 4,
+        image: img_why,
+        title: 'ESCURRIDORES',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Escurridor de platos',
+            descripcion: 'Escurridor de platos compacto y resistente.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Escurridor grande',
+            descripcion: 'Escurridor grande de acero inoxidable para uso industrial.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Escurridor de vasos',
+            descripcion: 'Escurridor especializado para secar vasos rápidamente.'
+          },
+        ]
+      },
+      {
+        id: 5,
+        image: img_why,
+        title: 'HORNOS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Horno eléctrico',
+            descripcion: 'Horno eléctrico de convección para una cocción uniforme.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Horno pizzero',
+            descripcion: 'Horno a gas de alta capacidad para panaderías.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Horno combinado',
+            descripcion: 'Horno combinado con opciones de vapor y convección.'
+          },
+        ]
+      },
+      {
+        id: 6,
+        image: img_why,
+        title: 'LAVADEROS',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Lavadero sencillo',
+            descripcion: 'Lavadero de acero inoxidable con un solo compartimento.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Lavadero doble',
+            descripcion: 'Lavadero de acero inoxidable con dos compartimentos.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Lavadero con escurridor',
+            descripcion: 'Lavadero con espacio lateral para escurrir utensilios.'
+          },
+        ]
+      },
+      {
+        id: 7,
+        image: img_why,
+        title: 'REFRIGERACIÓN',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Refrigerador vertical',
+            descripcion: 'Refrigerador vertical de acero inoxidable para conservar alimentos.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Vitrina refrigerada',
+            descripcion: 'Vitrina refrigerada para exhibición de alimentos.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Refrigerador de bar',
+            descripcion: 'Refrigerador compacto para bares y cafeterías.'
+          },
+        ]
+      },
+      {
+        id: 8,
+        image: img_why,
+        title: 'EXTRACTORES',
+        item: [
+          {
+            id: 1,
+            img: img_why,
+            title: 'Extractor de humo',
+            descripcion: 'Extractor industrial para eliminar humo de cocinas.'
+          },
+          {
+            id: 2,
+            img: img_why,
+            title: 'Extractor de olores',
+            descripcion: 'Extractor diseñado para eliminar olores de cocinas industriales.'
+          },
+          {
+            id: 3,
+            img: img_why,
+            title: 'Extractor de grasa',
+            descripcion: 'Extractor eficiente para capturar grasas suspendidas en el aire.'
+          },
+        ]
+      },
+    ];
+
+    setCategorias(data);
+  }, []);

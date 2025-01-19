@@ -58,56 +58,37 @@ export const AboutUs = () => {
                 descripcion: 'Ofrecemos precios altamente competitivos sin sacrificar la calidad de nuestros productos. Trabajamos para garantizar la mejor relación calidad-precio para tu negocio.'
             },
         ];
-    
+
         setGaleri(data);
     }, []);
 
-    const [count, setCount] = useState(0); // Estado inicial del contador
-    const [isVisible, setIsVisible] = useState(false); // Estado para detectar visibilidad
-    const target = 5000; // Número objetivo
-    const increment = 50; // Incremento en cada paso
-    const intervalTime = 20; // Tiempo entre incrementos
-    const counterRef = useRef(null); // Referencia al elemento del contador
+    const [ventas, setVentas] = useState(0);
+    const [clientes, setClientes] = useState(0);
+    const [proyectos, setProyectos] = useState(0);
+    const [experiencia, setExperiencia] = useState(0);
 
-    // Función para manejar visibilidad del elemento
+    const velocidad = 50;
+
+    const animarContador = (setState, valorFinal) => {
+        let contador = 0;
+        const incremento = Math.ceil(valorFinal / 100);
+
+        const intervalo = setInterval(() => {
+            contador += incremento;
+            if (contador >= valorFinal) {
+                contador = valorFinal;
+                clearInterval(intervalo);
+            }
+            setState(contador);
+        }, velocidad);
+    };
+
     useEffect(() => {
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                setIsVisible(entry.isIntersecting); // Actualiza si el elemento es visible
-            },
-            { threshold: 0.1 } // Detecta cuando al menos el 10% del elemento es visible
-        );
-
-        if (counterRef.current) {
-            observer.observe(counterRef.current);
-        }
-
-        return () => {
-            if (counterRef.current) observer.unobserve(counterRef.current);
-        };
+        animarContador(setVentas, 5000);
+        animarContador(setClientes, 10000);
+        animarContador(setProyectos, 5000);
+        animarContador(setExperiencia, 15);
     }, []);
-
-    // Incrementa el contador cuando el elemento es visible
-    useEffect(() => {
-        if (!isVisible || count >= target) return; // Solo cuenta si es visible y no alcanzó el objetivo
-
-        const interval = setInterval(() => {
-            setCount((prevCount) => {
-                const nextValue = prevCount + increment;
-                return nextValue >= target ? target : nextValue; // Evita exceder el objetivo
-            });
-        }, intervalTime);
-
-        return () => clearInterval(interval); // Limpia el intervalo al desmontar
-    }, [isVisible, count]);
-
-    // Reinicia el contador si vuelve a entrar a la pantalla
-    useEffect(() => {
-        if (!isVisible) {
-            setCount(0); // Reinicia cuando deja de ser visible
-        }
-    }, [isVisible]);
-
     return (
         <div>
             <div className="about-us">
@@ -158,53 +139,53 @@ export const AboutUs = () => {
                 </div>
             </div>
             <div className="about-us__container">
-    <div className="about-us__content">
-        <div className="about-us__image">
-            <img src={sobre_nosotros1} alt="Proceso de fabricación" />
-        </div>
-        <div className="about-us__text">
-            <p className="about-us__subtitle">Nuestro Proceso de Fabricación</p>
-            <h1 className="about-us__title">Tecnología y Mano de Obra Especializada</h1>
-            <p className="about-us__description">
-                En [Nombre de tu empresa], nuestro proceso de fabricación se basa en la combinación de la tecnología más avanzada y la experiencia de nuestro equipo humano. Desde el diseño hasta la entrega del producto final, cada etapa se ejecuta con precisión para garantizar productos de la más alta calidad.
-            </p>
-            <p className="about-us__description">
-                Utilizamos maquinaria de última generación, materiales certificados y contamos con un riguroso control de calidad para ofrecer productos que superen las expectativas de nuestros clientes.
-            </p>
-        </div>
-    </div>
-</div>
+                <div className="about-us__content">
+                    <div className="about-us__image">
+                        <img src={sobre_nosotros1} alt="Proceso de fabricación" />
+                    </div>
+                    <div className="about-us__text">
+                        <p className="about-us__subtitle">Nuestro Proceso de Fabricación</p>
+                        <h1 className="about-us__title">Tecnología y Mano de Obra Especializada</h1>
+                        <p className="about-us__description">
+                            En [Nombre de tu empresa], nuestro proceso de fabricación se basa en la combinación de la tecnología más avanzada y la experiencia de nuestro equipo humano. Desde el diseño hasta la entrega del producto final, cada etapa se ejecuta con precisión para garantizar productos de la más alta calidad.
+                        </p>
+                        <p className="about-us__description">
+                            Utilizamos maquinaria de última generación, materiales certificados y contamos con un riguroso control de calidad para ofrecer productos que superen las expectativas de nuestros clientes.
+                        </p>
+                    </div>
+                </div>
+            </div>
 
 
             <div className="why-us">
-        <div className="why-us-sub">
-            <div className="why-us-title">
-                <h1>¿Por qué elegirnos?</h1>
-            </div>
-            <div className="why-us-galeri">
-                {galeri.map((data, index) => (
-                    <div className="why-us-galeri-img" key={index}>
-                        <div className="">
-                            <div className="why-us-galeri-img-verdadero">
-                                <img src={data.img} alt={`Galería ${index + 1}`} />
-                                <div className="overlay">
-                                    <p>{data.descripcion}</p>
-                                </div>
-                            </div>
-                            <div className="why-us-title-card">
-                                <div className="why-us-title-card-title">
-                                    <h4>{data.title}</h4>
-                                </div>
-                                <div className="why-us-title-card-icon">
-                                    <i className="pi pi-plus"></i>
-                                </div>
-                            </div>
-                        </div>
+                <div className="why-us-sub">
+                    <div className="why-us-title">
+                        <h1>¿Por qué elegirnos?</h1>
                     </div>
-                ))}
+                    <div className="why-us-galeri">
+                        {galeri.map((data, index) => (
+                            <div className="why-us-galeri-img" key={index}>
+           
+                                <div className="why-us-galeri-img-verdadero">
+                                    <img src={data.img} alt={`Galería ${index + 1}`} />
+                                    <div className="overlay">
+                                        <p>{data.descripcion}</p>
+                                    </div>
+                                </div>
+                                <div className="why-us-title-card">
+                                    <div className="why-us-title-card-title">
+                                        <h4>{data.title}</h4>
+                                    </div>
+                                    <div className="why-us-title-card-icon">
+                                        <i className="pi pi-plus"></i>
+                                    </div>
+                                </div>
+
+                            </div>
+                        ))}
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
 
             {/* Numeros de la empresa */}
             <div className="contenedor__numeros__general">
@@ -217,7 +198,9 @@ export const AboutUs = () => {
                                 </div>
                             </div>
                             <div className="contendor__general__info">
-                                <h1 className="contenedor__general__title" ref={counterRef}>{count.toLocaleString()} +</h1>
+                                <h1 className="contenedor__general__title">
+                                    {ventas.toLocaleString()} +
+                                </h1>
                                 <p className="contenedor__general__text">Cantidad de Ventas</p>
                             </div>
                         </div>
@@ -228,7 +211,9 @@ export const AboutUs = () => {
                                 </div>
                             </div>
                             <div className="contendor__general__info">
-                                <h1 className="contenedor__general__title">10,000+</h1>
+                                <h1 className="contenedor__general__title">
+                                    {clientes.toLocaleString()} +
+                                </h1>
                                 <p className="contenedor__general__text">Cantidad de Clientes</p>
                             </div>
                         </div>
@@ -239,7 +224,9 @@ export const AboutUs = () => {
                                 </div>
                             </div>
                             <div className="contendor__general__info">
-                                <h1 className="contenedor__general__title">5,000+</h1>
+                                <h1 className="contenedor__general__title">
+                                    {proyectos.toLocaleString()} +
+                                </h1>
                                 <p className="contenedor__general__text">Proyectos Realizados</p>
                             </div>
                         </div>
@@ -250,14 +237,13 @@ export const AboutUs = () => {
                                 </div>
                             </div>
                             <div className="contendor__general__info">
-                                <h1 className="contenedor__general__title">15 Años</h1>
+                                <h1 className="contenedor__general__title">{experiencia} Años</h1>
                                 <p className="contenedor__general__text">Años de Experiencia</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-
             {/* Nuestra mision y vision y objetivos */}
             <div className="mision-vision__content">
                 <div className="mision-vision">
@@ -275,10 +261,8 @@ export const AboutUs = () => {
                     </div>
                 </div>
             </div>
-
             {/* Por que elegirnos */}
             <CarruselEmpresa />
-
         </div>
     );
 }

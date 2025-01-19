@@ -71,6 +71,7 @@
     text-align: center;
     font-size: 40px;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 /* Estilos para el card de informacion */
@@ -140,10 +141,12 @@
 .card__message__title {
     line-height: 30px;
     margin-bottom: 10px;
+    font-weight: 800;
 }
 
 .card__message__text {
     line-height: 30px;
+    font-weight: 600;
 }
 
 .card__message__button {
@@ -241,18 +244,21 @@
     flex-direction: column;
     align-items: flex-start;
     justify-content: start;
+    font-weight: 600;
 }
 
 .about-us__subtitle {
     font-size: 1.2rem;
     color: #555;
     margin-bottom: 0.5rem;
+    font-weight: 800;
 }
 
 .about-us__title {
     font-size: 2rem;
-    color: #222;
+    color: var(--color-letras);
     margin-bottom: 1rem;
+    font-weight: 800;
 }
 
 .about-us__description {
@@ -264,8 +270,11 @@
 
 .about-us__highlight {
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 1rem;
+    margin: 0;
+    padding: 0;
+    color: var(--color-letras);
 }
 
 .about-us__guarantee {
@@ -312,6 +321,8 @@
 
 .why-us-title h1 {
     margin-bottom: 20px;
+    font-weight: 800;
+    color: var(--color-letras);
 }
 
 .why-us-galeri {
@@ -322,19 +333,25 @@
 }
 
 .why-us-galeri-img {
+    display: flex;
+    flex-direction: column;
     max-width: 370px;
-    overflow: hidden;
+    min-height: 350px;
     box-shadow: var(--box-shadow-elevado);
 }
 .why-us-galeri-img-verdadero{
     position: relative;
+    height: 80%;
 }
 
 .why-us-galeri-img img {
     width: 100%;
     height: 100%;
+    object-fit: cover; /* Hace que la imagen llene el contenedor respetando su proporción */
+    object-position: center; /* Centra la imagen en caso de recorte */
     transition: transform 0.5s ease;
 }
+
 
 .overlay {
     position: absolute;
@@ -360,12 +377,7 @@
 }
 
 .why-us-title-card{
-    display: flex;
-    justify-content: space-between;
-    background-color: var(--background-color-claro);
-    color: var(--color-con-fondo);
-    height: 60px;
-    align-items: center;
+    height: 20%;
 }
 
 .why-us-title-card-title{
@@ -375,6 +387,7 @@
 .why-us-title-card h4{
     padding: 0;
     margin: 0;
+    font-weight: 800;
 }
 
 .why-us-title-card-icon{
@@ -392,15 +405,11 @@
     opacity: 1;
 }
 
-.overlay h4 {
-    margin: 0;
-    font-size: 1.5rem;
-}
-
 .overlay p {
     margin: 10px 0 0;
     font-size: 1rem;
     line-height: 30px;
+    font-weight: 600;
 }
 
 /* Estilso de los numeros de la empresa */
@@ -432,11 +441,14 @@
 .contenedor__general__title {
     padding: 0;
     margin: 0;
+    font-weight: 800;
+    font-size: 25px;
 }
 
 .contenedor__general__text{
     padding: 0;
     margin: 0;
+    font-weight: 600;
 }
 
 .contenedor__datos {
@@ -634,6 +646,7 @@
     /* Para que el texto esté encima de la capa */
     margin: 0;
     line-height: 30px;
+    font-weight: 600;
 }
 
 @media(max-width: 1000px) {

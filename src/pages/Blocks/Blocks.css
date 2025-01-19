@@ -59,6 +59,7 @@
     text-align: center;
     font-size: 40px;
     margin-bottom: 20px;
+    font-weight: 800;
 }
 
 
@@ -78,7 +79,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
 
+.contenedor-filter-block-sub h1 {
+    font-weight: 800;
+    color: var(--color-letras);
 }
 
 /* Estilos para los blocks */
@@ -125,9 +130,14 @@
 
 .grid-boxs-title{
     line-height: 1.3;
+    font-weight: 800;
+    color: var(--color-letras);
+    margin: 0;
 }
 .grid-boxs-description{
     line-height: 27px;
+    font-weight: 600;
+    color: var(--color-letras);
 }
 
 .grid-boxs-header{
@@ -139,6 +149,8 @@
     position: relative;
     padding: 0 8px 0 0;
     margin: 0 8px 0 0;
+    font-weight: 600;
+    color: var(--color-letras);
 }
 
 .grid-boxs-header-text::after{
@@ -160,6 +172,7 @@
     margin-top: 20px;
     background-color: #EDF4FC;
     max-width: 130px;
+    font-weight: 600;
 }
 
 .grid-boxs-leer-mas i{
@@ -168,6 +181,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: 600;
 }
 
 @media(max-width: 900px) {
