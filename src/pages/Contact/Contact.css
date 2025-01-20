@@ -69,6 +69,17 @@
   margin-bottom: 20px;
 }
 
+
+@media (max-width: 368px) {
+  .contact__content h1{
+    font-size: 30px;
+  }
+  
+}
+
+
+
+
 /* Estilos para el formulario y la mapa de google maps */
 .contact-container-info{
   display: flex;

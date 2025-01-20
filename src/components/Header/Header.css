@@ -56,12 +56,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px;
     margin: 0 10px 0 10%;
 }
 
 .img-logo{
-    width: 140px;
+    width: 200px;
 }
 
 .header__icons {
@@ -167,6 +166,7 @@
 
     .img-logo{
         width: 100px;
+        padding: 20px 0; 
     }
 }
 

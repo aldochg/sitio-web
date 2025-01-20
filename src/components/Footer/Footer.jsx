@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import './Footer.css';
-import imagen from '../../assets/logo_original.jpg';
+import imagen from '../../assets/logo1.png';
 
 export const Footer = () => {
     return (

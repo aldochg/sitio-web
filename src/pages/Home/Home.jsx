@@ -1,13 +1,10 @@
 import { useState, useEffect } from "react";
 import './Home.css';
-import { SliderAutomatico } from "../../components/SliderAutomatico/SliderAutomatico";
 import { Ball } from "../../components/Ball/Ball";
-import { Accordion, AccordionTab } from 'primereact/accordion';
+
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
 
 import img_why from '../../assets/acero1.jpg'
-
-import { Carousel } from 'primereact/carousel';
 
 import imagen1 from '../../assets/inicio/uno.jpg';
 import imagen2 from '../../assets/inicio/dos.jpg';
@@ -23,18 +20,13 @@ import slider17 from '../../assets/slider17.jpg'
 import slider4 from '../../assets/slider4.jpg'
 import slider5 from '../../assets/slider5.webp'
 
-
-import destacado1 from '../../assets/destacados/calidad_garantizada.jpg'
-import destacado2 from '../../assets/destacados/atencion_personalizada.webp'
-import destacado3 from '../../assets/destacados/fabricación_sostenible.avif'
-import destacado4 from '../../assets/destacados/garantía_extendida.jpg'
-import destacado5 from '../../assets/destacados/experiencia_comprobada.jpg'
-import destacado6 from '../../assets/destacados/seguridad_certificada.webp'
-import destacado7 from '../../assets/destacados/prueba_antes_comprar.jpg'
-import destacado8 from '../../assets/destacados/descuentos_volumen.webp'
-import destacado9 from '../../assets/destacados/soporte_tecnico_especializado.jpg'
-import destacado10 from '../../assets/destacados/entrega_rapida1.jpg'
-
+//imagenes para categrias
+import cat1 from '../../assets/categorias/mesa1.jpg';
+import stan1 from '../../assets/categorias/estanteria1.jpg';
+import fre_aut1 from '../../assets/categorias/frei_automa1.jpg';
+import cocina1 from '../../assets/categorias/cocina1.jpg';
+import horno1 from '../../assets/categorias/horno1.jpg';
+import lava1 from '../../assets/categorias/lava1.jpg';
 
 export const Home = () => {
   const images = [slider1, slider2, slider3, slider4, slider5, slider9, slider17];
@@ -228,37 +220,37 @@ export const Home = () => {
     const data = [
       {
         id: 1,
-        img: img_why,
+        img: cat1,
         title: 'Mesas de Trabajo',
         descripcion: 'Mesas de acero inoxidable diseñadas para soportar trabajos pesados en cocinas industriales y talleres.'
       },
       {
         id: 2,
-        img: img_why,
+        img: stan1,
         title: 'Estanterías de Acero',
         descripcion: 'Estanterías robustas y resistentes para almacenar utensilios, herramientas o productos de forma segura y ordenada.'
       },
       {
         id: 3,
-        img: img_why,
-        title: 'Campanas Extractoras',
+        img: lava1,
+        title: 'Lavaderos',
         descripcion: 'Campanas extractoras de alta calidad para eliminar humos y mantener la higiene en cocinas profesionales.'
       },
       {
         id: 4,
-        img: img_why,
+        img: fre_aut1,
         title: 'Fregaderos Industriales',
         descripcion: 'Fregaderos amplios y duraderos, ideales para el lavado de grandes volúmenes en restaurantes y hoteles.'
       },
       {
         id: 5,
-        img: img_why,
-        title: 'Carros de Transporte',
+        img: horno1,
+        title: 'Hornos',
         descripcion: 'Carros de acero inoxidable para facilitar el transporte de productos y utensilios de manera eficiente.'
       },
       {
         id: 6,
-        img: img_why,
+        img: cocina1,
         title: 'Cocinas Industriales',
         descripcion: 'Cocinas diseñadas para el uso intensivo, con materiales de alta resistencia y acabados impecables.'
       }
@@ -368,7 +360,7 @@ export const Home = () => {
 
       <div className="home__menssage">
         <div className="home__message__container">
-          <h1 style={{ fontSize: '50px' }}>Equipamiento de Acero Inoxidable</h1>
+          <h1>Equipamiento de Acero Inoxidable</h1>
           <p>¿Quieres llevar tu negocio al siguiente nivel con equipos confiables y duraderos?</p>
           <p style={{ lineHeight: '30px' }}>
             En EMPRESA S.A.C, diseñamos y fabricamos equipamiento de acero inoxidable que combina resistencia, estilo y funcionalidad. Cada pieza está creada pensando en optimizar tus operaciones, reducir costos a largo plazo y destacar la imagen profesional de tu negocio. ¡Con nosotros, tu éxito está asegurado!
