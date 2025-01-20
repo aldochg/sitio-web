@@ -255,10 +255,21 @@ export const Home = () => {
         descripcion: 'Cocinas diseñadas para el uso intensivo, con materiales de alta resistencia y acabados impecables.'
       }
     ];
-    
+
 
     setGaleri(data)
   }, []);
+
+  const enviarMensajeWhatsApp = (productoSeleccionado = "equipamiento industrial en general") => {
+    const empresaNombre = "Alpha Steel Engine S.A.C.";
+    const numeroTelefono = "51972373515";
+    const mensaje = `¡Hola! Estoy interesado/a en los productos de acero inoxidable y equipamiento industrial que ofrece ${empresaNombre}, especialmente en: ${productoSeleccionado}. ¿Podrían brindarme más información?`;
+
+    window.open(
+      `https://wa.me/${numeroTelefono}/?text=${encodeURIComponent(mensaje)}`,
+      "_blank"
+    );
+  }
 
   return (
     <div>
@@ -276,7 +287,7 @@ export const Home = () => {
                   <p style={{ lineHeight: '34px' }}>Transformamos tus espacios con equipos de acero inoxidable diseñados para superar expectativas. Fabricamos soluciones que optimizan tu eficiencia y te permiten concentrarte en lo que realmente importa: hacer crecer tu negocio.</p>
                   <div className="home__container__con__vide">
                     <div>
-                      <button className="home__container__button"><i className="pi pi-whatsapp"></i>CONTACTANOS</button>
+                      <button className="home__container__button" onClick={() => enviarMensajeWhatsApp()}><i className="pi pi-whatsapp"></i>CONTACTANOS</button>
                     </div>
                     <div>
                       <div className="home__container__video">
@@ -346,7 +357,7 @@ export const Home = () => {
                 <div className="home__products__rating">
                   <i className="pi pi-star-fill"></i><i className="pi pi-star-fill"></i><i className="pi pi-star-fill"></i><i className="pi pi-star-fill"></i><i className="pi pi-star-o"></i>
                 </div>
-                <button className="home__products__btn">
+                <button className="home__products__btn" onClick={() => enviarMensajeWhatsApp()}>
                   <i className="pi pi-whatsapp"></i> Cotizar
                 </button>
                 <button className="home__products__btn">
@@ -365,7 +376,7 @@ export const Home = () => {
           <p style={{ lineHeight: '30px' }}>
             En EMPRESA S.A.C, diseñamos y fabricamos equipamiento de acero inoxidable que combina resistencia, estilo y funcionalidad. Cada pieza está creada pensando en optimizar tus operaciones, reducir costos a largo plazo y destacar la imagen profesional de tu negocio. ¡Con nosotros, tu éxito está asegurado!
           </p>
-          <button className="home__message__button">¡Solicita tu cotización hoy mismo!</button>
+          <button className="home__message__button" onClick={() => enviarMensajeWhatsApp()}>¡Solicita tu cotización hoy mismo!</button>
         </div>
       </div>
 

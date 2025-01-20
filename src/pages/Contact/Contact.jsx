@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import './Contact.css';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
-import { SliderAutomatico } from "../../components/SliderAutomatico/SliderAutomatico";
+import ApiServices from "../../api/apiServices";
 
 // Google Maps API Component
 const GoogleMap = () => {
@@ -31,11 +31,21 @@ export const Contact = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    const handleSubmit = (e) => {
+    // const handleSubmit = (e) => {
+    //     e.preventDefault();
+    //     console.log("Form submitted:", formData);
+    //     alert("Gracias por contactarnos, responderemos pronto.");
+    // };
+
+    const handleSubmit = async(e) => {
         e.preventDefault();
-        console.log("Form submitted:", formData);
-        alert("Gracias por contactarnos, responderemos pronto.");
-    };
+        const response = await ApiServices.postData('', {
+            email: formData,
+        })
+
+        console.log(formData);
+    }
+
     return (
         <div>
             <div className="contact">
