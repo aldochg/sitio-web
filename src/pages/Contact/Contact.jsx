@@ -21,6 +21,7 @@ const GoogleMap = () => {
 export const Contact = () => {
     const [formData, setFormData] = useState({
         name: "",
+        subject:"Cotizacion de productos.",
         email: "",
         phone: "",
         message: "",
@@ -31,19 +32,11 @@ export const Contact = () => {
         setFormData({ ...formData, [name]: value });
     };
 
-    // const handleSubmit = (e) => {
-    //     e.preventDefault();
-    //     console.log("Form submitted:", formData);
-    //     alert("Gracias por contactarnos, responderemos pronto.");
-    // };
-
     const handleSubmit = async(e) => {
         e.preventDefault();
-        const response = await ApiServices.postData('', {
-            email: formData,
-        })
-
-        console.log(formData);
+        const response = await ApiServices.postData('emails/send-email', formData);
+        
+        console.log(response);
     }
 
     return (

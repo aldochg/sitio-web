@@ -5,7 +5,10 @@ const getToken = () => {
   return tokenString;
 };
 
-const apiUrl = import.meta.env.VITE_APP_API_URL;
+// const apiUrl = import.meta.env.VITE_APP_API_URL;
+const apiUrl = "http://127.0.0.1:8000/";
+
+console.log(apiUrl)
 
 const http = axios.create({
   baseURL: apiUrl,
