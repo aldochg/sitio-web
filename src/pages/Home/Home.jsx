@@ -18,6 +18,29 @@ import slider17 from '../../assets/slider17.jpg'
 import slider4 from '../../assets/slider4.jpg'
 import slider5 from '../../assets/slider5.webp'
 
+//Cosina con dos ornillas
+import cocina from '../../assets/linea_calor/cocinas/cocina3.png';
+
+//Horno
+import horno from '../../assets/linea_calor/hornos/horno1.jpg';
+
+//Mesas
+import mesa from '../../assets/linea_neutro/mesas/mesa4.webp';
+
+//Lavaderos
+import lavadero from '../../assets/linea_neutro/lavaderos/lavadero3.jpg';
+//Freidoras
+import freidora from '../../assets/linea_calor/freidoras/freidora1.jpg';
+
+//Freidoras utomatica
+import freidora_aut from '../../assets/linea_calor/freidoras/freidora3.jpg';
+
+//Escurridor utomatica
+import escurridor from '../../assets/linea_neutro/escurridores/escurridor.jpg';
+
+//Repisa utomatica
+import repisa from '../../assets/linea_neutro/repisas/repisa.jpg';
+
 //imagenes para categrias
 import cat1 from '../../assets/categorias/mesa1.jpg';
 import stan1 from '../../assets/categorias/estanteria1.jpg';
@@ -107,7 +130,7 @@ export const Home = () => {
     const productos_destacados = [
       {
         id: 1,
-        imagen: imagen1,
+        imagen: cocina,
         name: 'Cocina Industrial con Dos Hornillas',
         descripcion: "Cocina industrial compacta con dos hornillas de alto rendimiento, ideal para espacios pequeños en cocinas profesionales.",
         precio: 1200.0,
@@ -115,7 +138,7 @@ export const Home = () => {
       },
       {
         id: 2,
-        imagen: imagen2,
+        imagen: horno,
         name: 'Hornos Industriales',
         descripcion: "Horno industrial diseñado para asar y hornear diversos tipos de alimentos, ofreciendo una cocción uniforme y eficiente.",
         precio: 750.0,
@@ -123,7 +146,7 @@ export const Home = () => {
       },      
       {
         id: 3,
-        imagen: imagen3,
+        imagen: mesa,
         name: 'Mesas de Trabajo de Acero Inoxidable',
         descripcion: "Mesas de trabajo robustas y duraderas de acero inoxidable, diseñadas para cocinas industriales y talleres.",
         precio: 2500.0,
@@ -131,7 +154,7 @@ export const Home = () => {
       },
       {
         id: 4,
-        imagen: imagen4,
+        imagen: lavadero,
         name: 'Lavaderos Industriales',
         descripcion: "Lavaderos amplios y resistentes de acero inoxidable, ideales para el lavado de grandes volúmenes en cocinas profesionales.",
         precio: 900.0,
@@ -139,7 +162,7 @@ export const Home = () => {
       },
       {
         id: 5,
-        imagen: imagen5,
+        imagen: repisa,
         name: 'Repisas de Acero Inoxidable',
         descripcion: "Repisas funcionales y resistentes de acero inoxidable, perfectas para organizar utensilios y productos en cocinas industriales.",
         precio: 650.0,
@@ -147,7 +170,7 @@ export const Home = () => {
       },
       {
         id: 6,
-        imagen: imagen1,
+        imagen: freidora_aut,
         name: 'Freidoras Automáticas',
         descripcion: "Freidora automática de acero inoxidable con controles de temperatura precisos para un uso eficiente en restaurantes.",
         precio: 250.0,
@@ -155,7 +178,7 @@ export const Home = () => {
       },
       {
         id: 7,
-        imagen: imagen1,
+        imagen: escurridor,
         name: 'Escurridores de Acero Inoxidable',
         descripcion: "Escurridores diseñados para un drenaje rápido y eficiente, fabricados en acero inoxidable de alta durabilidad.",
         precio: 1500.0,
@@ -163,7 +186,7 @@ export const Home = () => {
       },
       {
         id: 8,
-        imagen: imagen1,
+        imagen: freidora,
         name: 'Freidoras Convencionales',
         descripcion: "Freidoras de diseño tradicional con controles manuales, ideales para cocinas que requieren soluciones prácticas y confiables.",
         precio: 1800.0,

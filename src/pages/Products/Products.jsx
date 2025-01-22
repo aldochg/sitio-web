@@ -13,7 +13,7 @@ import imagen4 from '../../assets/inicio/cuatro.jpg';
 //Archivos de parrilas
 import parrilla1 from '../../assets/linea_calor/parrillas/parrilla1.webp';
 import parrilla2 from '../../assets/linea_calor/parrillas/parrilla2.webp';
-import parrilla3 from '../../assets/linea_calor/parrillas/parrilla3.webp';
+import parrilla3 from '../../assets/linea_calor/parrillas/parrilla3.png';
 import parrilla4 from '../../assets/linea_calor/parrillas/parrilla4.jpg';
 
 //Archivos de freidoras
@@ -22,7 +22,7 @@ import freidora2 from '../../assets/linea_calor/freidoras/freidora2.jpg';
 import freidora3 from '../../assets/linea_calor/freidoras/freidora3.jpg';
 import freidora4 from '../../assets/linea_calor/freidoras/freidora4.jpg';
 import freidora5 from '../../assets/linea_calor/freidoras/freidora5.jpg';
-import freidora6 from '../../assets/linea_calor/freidoras/freidora6.webp';
+import freidora6 from '../../assets/linea_calor/freidoras/freidora6.png';
 
 //archivo de brosteras
 import brostera1 from '../../assets/linea_calor/brosteras/brostera1.png';
@@ -33,7 +33,7 @@ import brostera4 from '../../assets/linea_calor/brosteras/brostera4.png';
 //Archivos para cocinas
 import cocina1 from '../../assets/linea_calor/cocinas/cocina1.jpg';
 import cocina2 from '../../assets/linea_calor/cocinas/cocina2.png';
-import cocina3 from '../../assets/linea_calor/cocinas/cocina3.webp';
+import cocina3 from '../../assets/linea_calor/cocinas/cocina3.png';
 import cocina4 from '../../assets/linea_calor/cocinas/cocina4.jpg';
 import cocina5 from '../../assets/linea_calor/cocinas/cocina5.jpg';
 import cocina6 from '../../assets/linea_calor/cocinas/cocina6.jpg';
@@ -74,7 +74,7 @@ import lavadero6 from '../../assets/linea_neutro/lavaderos/lavadero6.jpg';
 //Refrigeracion
 import refri1 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
 import refri2 from '../../assets/linea_frio/refrigeraciones/refri2.jpg';
-import refri3 from '../../assets/linea_frio/refrigeraciones/refri3.webp';
+import refri3 from '../../assets/linea_frio/refrigeraciones/refri3.png';
 import refri4 from '../../assets/linea_frio/refrigeraciones/refri4.webp';
 import refri5 from '../../assets/linea_frio/refrigeraciones/refri5.webp';
 import refri6 from '../../assets/linea_frio/refrigeraciones/refri6.webp';
@@ -83,8 +83,8 @@ import vitri1 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
 import vitri2 from '../../assets/linea_frio/vitrinas/vitrina2.jpg';
 import vitri3 from '../../assets/linea_frio/vitrinas/vitrina3.webp';
 import vitri4 from '../../assets/linea_frio/vitrinas/vitrina4.webp';
-import vitri5 from '../../assets/linea_frio/vitrinas/vitrina5.webp';
-import vitri6 from '../../assets/linea_frio/vitrinas/vitrina6.webp';
+import vitri5 from '../../assets/linea_frio/vitrinas/vitrina5.png';
+import vitri6 from '../../assets/linea_frio/vitrinas/vitrina6.png';
 
 export const Products = () => {
     // paginatos 
