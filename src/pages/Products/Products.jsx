@@ -54,36 +54,37 @@ import horno6 from '../../assets/linea_calor/hornos/horno6.jpg';
 
 //Mesas de trabajo
 import mesa1 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa2 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa3 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa4 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa5 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa6 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa7 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa8 from '../../assets/linea_neutro/mesas/mesa1.jpg';
-import mesa9 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa2 from '../../assets/linea_neutro/mesas/mesa2.webp';
+import mesa3 from '../../assets/linea_neutro/mesas/mesa3.webp';
+import mesa4 from '../../assets/linea_neutro/mesas/mesa4.webp';
+import mesa5 from '../../assets/linea_neutro/mesas/mesa5.webp';
+import mesa6 from '../../assets/linea_neutro/mesas/mesa6.webp';
+import mesa7 from '../../assets/linea_neutro/mesas/mesa7.webp';
+import mesa8 from '../../assets/linea_neutro/mesas/mesa8.jpg';
+import mesa9 from '../../assets/linea_neutro/mesas/mesa9.jpg';
 
 //Lavaderos
 import lavadero1 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
-import lavadero2 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
-import lavadero3 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
-import lavadero4 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
-import lavadero5 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
-import lavadero6 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+import lavadero2 from '../../assets/linea_neutro/lavaderos/lavadero2.jpg';
+import lavadero3 from '../../assets/linea_neutro/lavaderos/lavadero3.jpg';
+import lavadero4 from '../../assets/linea_neutro/lavaderos/lavadero4.jpg';
+import lavadero5 from '../../assets/linea_neutro/lavaderos/lavadero5.jpg';
+import lavadero6 from '../../assets/linea_neutro/lavaderos/lavadero6.jpg';
 
 //Refrigeracion
 import refri1 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
-import refri2 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
-import refri3 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
-import refri4 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
-import refri5 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
-import refri6 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+import refri2 from '../../assets/linea_frio/refrigeraciones/refri2.jpg';
+import refri3 from '../../assets/linea_frio/refrigeraciones/refri3.webp';
+import refri4 from '../../assets/linea_frio/refrigeraciones/refri4.webp';
+import refri5 from '../../assets/linea_frio/refrigeraciones/refri5.webp';
+import refri6 from '../../assets/linea_frio/refrigeraciones/refri6.webp';
 //Vitrinas
 import vitri1 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
-import vitri2 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
-import vitri3 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
-import vitri4 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
-import vitri5 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
+import vitri2 from '../../assets/linea_frio/vitrinas/vitrina2.jpg';
+import vitri3 from '../../assets/linea_frio/vitrinas/vitrina3.webp';
+import vitri4 from '../../assets/linea_frio/vitrinas/vitrina4.webp';
+import vitri5 from '../../assets/linea_frio/vitrinas/vitrina5.webp';
+import vitri6 from '../../assets/linea_frio/vitrinas/vitrina6.webp';
 
 export const Products = () => {
     // paginatos 
@@ -275,14 +276,6 @@ export const Products = () => {
                 rating: 3,
             },
             {
-                id: 23,
-                id_categoria: 201,
-                imagen: imagen2,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-                precio: 1500.0,
-                rating: 4,
-            },
-            {
                 id: 24,
                 id_categoria: 101,
                 imagen: freidora1,
@@ -362,6 +355,224 @@ export const Products = () => {
                 precio: 1500.0,
                 rating: 4,
             },
+
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa1,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa2,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa3,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa4,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa5,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa6,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa7,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa8,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 201,
+                imagen: mesa9,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 202,
+                imagen: lavadero1,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 202,
+                imagen: lavadero2,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 202,
+                imagen: lavadero3,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 202,
+                imagen: lavadero4,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 202,
+                imagen: lavadero5,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 202,
+                imagen: lavadero6,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+
+            {
+                id: 14,
+                id_categoria: 301,
+                imagen: refri1,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 301,
+                imagen: refri2,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 301,
+                imagen: refri3,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 301,
+                imagen: refri4,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 301,
+                imagen: refri5,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 301,
+                imagen: refri6,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 302,
+                imagen: vitri1,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 302,
+                imagen: vitri2,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 302,
+                imagen: vitri3,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 302,
+                imagen: vitri4,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 302,
+                imagen: vitri5,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 302,
+                imagen: vitri6,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
+                precio: 1500.0,
+                rating: 4,
+            },
         ]
         setProductosDestacados(productos_destacados)
     }, [])
@@ -428,12 +639,12 @@ export const Products = () => {
         const empresaNombre = "Alpha Steel Engine S.A.C.";
         const numeroTelefono = "51972373515";
         const mensaje = `¡Hola! Estoy interesado/a en los productos de acero inoxidable y equipamiento industrial que ofrece ${empresaNombre}, especialmente en: ${productoSeleccionado}. ¿Podrían brindarme más información?`;
-    
+
         window.open(
-          `https://wa.me/${numeroTelefono}/?text=${encodeURIComponent(mensaje)}`,
-          "_blank"
+            `https://wa.me/${numeroTelefono}/?text=${encodeURIComponent(mensaje)}`,
+            "_blank"
         );
-      }
+    }
 
     return (
         <div>
@@ -478,7 +689,7 @@ export const Products = () => {
                             </div>
                         </div>
                     </div>
-                    <div className="contenedor-articulos-productos">
+                    <div className="contenedor-articulos-productos-1">
                         <div className="contenedor-articulos-productos">
                             {productosDestacadosReal.map((producto, index) => (
                                 <div className="home__products" key={index}>
@@ -508,24 +719,23 @@ export const Products = () => {
                                 </div>
                             ))}
                         </div>
-                        <div className="contenedor-paginator-first">
-                            <Paginator
-                                first={first}
-                                rows={rows}
-                                totalRecords={productosFiltrados.length}
-                                rowsPerPageOptions={[3, 6, 9]}
-                                onPageChange={onPageChange}
-                            />
-                        </div>
                     </div>
                 </div>
             </div>
-
             <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => { if (!visible) return; setVisible(false); }}>
                 <p className="m-0">
                     Hola mundo de laa mara villas
                 </p>
             </Dialog>
+            <div style={{ minHeight: '10vh', padding:'20px 0' }}>
+                <Paginator
+                    first={first}
+                    rows={rows}
+                    totalRecords={productosFiltrados.length}
+                    rowsPerPageOptions={[3, 6, 9]}
+                    onPageChange={onPageChange}
+                />
+            </div>
         </div>
     );
 }

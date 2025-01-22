@@ -80,7 +80,7 @@
     min-height: 80vh;
     display: flex;
     justify-content: center;
-    padding: 100px 0 100px 0;
+    padding: 100px 0 0 0;
 }
 
 .contenedor-sub-articulos{
@@ -95,7 +95,7 @@
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     width: 100%;
-    position: relative;
+
     align-items: center;
 }
 
@@ -234,8 +234,8 @@
 .contenedor-paginator-first{
     position: absolute;
     bottom: -80px;
-    left: 50%; /* Mueve horizontalmente el centro */
-    transform: translateX(-50%); /* Ajusta el centro al eje X */
+    left: 50%; 
+    transform: translateX(-50%); 
 }
 
 @media(max-width: 580px) {
