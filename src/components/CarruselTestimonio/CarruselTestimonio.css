@@ -100,7 +100,7 @@
   
   .testimonial-avatar h3 {
     font-size: 1.2rem;
-    color: #333;
+    color: var(--color-letras);
     font-weight: 800;
   }
 /*   

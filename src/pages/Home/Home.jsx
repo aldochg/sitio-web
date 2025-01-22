@@ -4,8 +4,6 @@ import { Ball } from "../../components/Ball/Ball";
 
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
 
-import img_why from '../../assets/acero1.jpg'
-
 import imagen1 from '../../assets/inicio/uno.jpg';
 import imagen2 from '../../assets/inicio/dos.jpg';
 import imagen3 from '../../assets/inicio/tres.jpg';
@@ -110,60 +108,69 @@ export const Home = () => {
       {
         id: 1,
         imagen: imagen1,
-        descripcion: "Refrigeradora de gran capacidad con acabado premium y eficiencia energética clase A+.",
+        name: 'Cocina Industrial con Dos Hornillas',
+        descripcion: "Cocina industrial compacta con dos hornillas de alto rendimiento, ideal para espacios pequeños en cocinas profesionales.",
         precio: 1200.0,
         rating: 4,
       },
       {
         id: 2,
         imagen: imagen2,
-        descripcion: "Horno eléctrico multifunción con temporizador digital y fácil limpieza.",
+        name: 'Hornos Industriales',
+        descripcion: "Horno industrial diseñado para asar y hornear diversos tipos de alimentos, ofreciendo una cocción uniforme y eficiente.",
         precio: 750.0,
         rating: 5,
-      },
+      },      
       {
         id: 3,
         imagen: imagen3,
-        descripcion: "Cocina industrial de acero inoxidable con 6 quemadores de alto rendimiento.",
+        name: 'Mesas de Trabajo de Acero Inoxidable',
+        descripcion: "Mesas de trabajo robustas y duraderas de acero inoxidable, diseñadas para cocinas industriales y talleres.",
         precio: 2500.0,
         rating: 5,
       },
       {
         id: 4,
         imagen: imagen4,
-        descripcion: "Freidora doble con termostato ajustable para uso profesional.",
+        name: 'Lavaderos Industriales',
+        descripcion: "Lavaderos amplios y resistentes de acero inoxidable, ideales para el lavado de grandes volúmenes en cocinas profesionales.",
         precio: 900.0,
         rating: 4,
       },
       {
         id: 5,
         imagen: imagen5,
-        descripcion: "Lavavajillas compacto y eficiente para cocinas pequeñas.",
+        name: 'Repisas de Acero Inoxidable',
+        descripcion: "Repisas funcionales y resistentes de acero inoxidable, perfectas para organizar utensilios y productos en cocinas industriales.",
         precio: 650.0,
         rating: 3,
       },
       {
         id: 6,
         imagen: imagen1,
-        descripcion: "Escurridor de acero inoxidable con diseño robusto y fácil montaje.",
+        name: 'Freidoras Automáticas',
+        descripcion: "Freidora automática de acero inoxidable con controles de temperatura precisos para un uso eficiente en restaurantes.",
         precio: 250.0,
         rating: 3,
       },
       {
         id: 7,
         imagen: imagen1,
-        descripcion: "Batidora planetaria profesional con capacidad de 10 litros.",
+        name: 'Escurridores de Acero Inoxidable',
+        descripcion: "Escurridores diseñados para un drenaje rápido y eficiente, fabricados en acero inoxidable de alta durabilidad.",
         precio: 1500.0,
         rating: 5,
       },
       {
         id: 8,
         imagen: imagen1,
-        descripcion: "Congelador horizontal de gran capacidad para uso comercial.",
+        name: 'Freidoras Convencionales',
+        descripcion: "Freidoras de diseño tradicional con controles manuales, ideales para cocinas que requieren soluciones prácticas y confiables.",
         precio: 1800.0,
         rating: 4,
       },
     ];
+    
     setProductosDestacados(productos_destacados);
   }, []);
 
@@ -222,41 +229,39 @@ export const Home = () => {
         id: 1,
         img: cat1,
         title: 'Mesas de Trabajo',
-        descripcion: 'Mesas de acero inoxidable diseñadas para soportar trabajos pesados en cocinas industriales y talleres.'
+        descripcion: 'Mesas de acero inoxidable diseñadas para ofrecer una superficie resistente y funcional en cocinas industriales y talleres.'
       },
       {
         id: 2,
         img: stan1,
         title: 'Estanterías de Acero',
-        descripcion: 'Estanterías robustas y resistentes para almacenar utensilios, herramientas o productos de forma segura y ordenada.'
+        descripcion: 'Estanterías de acero inoxidable robustas y duraderas, ideales para organizar utensilios, herramientas y productos de forma segura.'
       },
       {
         id: 3,
         img: lava1,
         title: 'Lavaderos',
-        descripcion: 'Campanas extractoras de alta calidad para eliminar humos y mantener la higiene en cocinas profesionales.'
+        descripcion: 'Lavaderos de acero inoxidable espaciosos y resistentes, diseñados para facilitar el lavado en cocinas profesionales y entornos industriales.'
       },
       {
         id: 4,
         img: fre_aut1,
-        title: 'Fregaderos Industriales',
-        descripcion: 'Fregaderos amplios y duraderos, ideales para el lavado de grandes volúmenes en restaurantes y hoteles.'
+        title: 'Freidoras Automáticas',
+        descripcion: 'Freidoras automáticas de alto rendimiento, ideales para preparar alimentos fritos de manera eficiente y uniforme.'
       },
       {
         id: 5,
         img: horno1,
         title: 'Hornos',
-        descripcion: 'Carros de acero inoxidable para facilitar el transporte de productos y utensilios de manera eficiente.'
+        descripcion: 'Hornos industriales de alta calidad, diseñados para garantizar una cocción uniforme y resultados excepcionales.'
       },
       {
         id: 6,
         img: cocina1,
         title: 'Cocinas Industriales',
-        descripcion: 'Cocinas diseñadas para el uso intensivo, con materiales de alta resistencia y acabados impecables.'
+        descripcion: 'Cocinas industriales fabricadas con materiales de alta resistencia, perfectas para soportar el uso intensivo en restaurantes y hoteles.'
       }
     ];
-
-
     setGaleri(data)
   }, []);
 
@@ -352,7 +357,7 @@ export const Home = () => {
                 <img src={producto.imagen} alt={`Producto ${index + 1}`} />
               </div>
               <div className="home__products__descripcion">
-                <p className="home__products__description">{producto.descripcion}</p>
+                <p className="home__products__description">{producto.name}</p>
                 <p className="home__products__price">S/. {producto.precio.toFixed(2)}</p>
                 <div className="home__products__rating">
                   <i className="pi pi-star-fill"></i><i className="pi pi-star-fill"></i><i className="pi pi-star-fill"></i><i className="pi pi-star-fill"></i><i className="pi pi-star-o"></i>

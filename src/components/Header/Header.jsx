@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { SidebarH } from "../SidebarH/SidebarH";
 import './Header.css';
-import imagen from '../../assets/8.png';
 import logon from '../../assets/logo.png'
 import 'primeicons/primeicons.css';
 import { Sidebar } from 'primereact/sidebar';

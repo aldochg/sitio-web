@@ -10,10 +10,85 @@ import imagen2 from '../../assets/inicio/dos.jpg';
 import imagen3 from '../../assets/inicio/tres.jpg';
 import imagen4 from '../../assets/inicio/cuatro.jpg';
 
+//Archivos de parrilas
+import parrilla1 from '../../assets/linea_calor/parrillas/parrilla1.webp';
+import parrilla2 from '../../assets/linea_calor/parrillas/parrilla2.webp';
+import parrilla3 from '../../assets/linea_calor/parrillas/parrilla3.webp';
+import parrilla4 from '../../assets/linea_calor/parrillas/parrilla4.jpg';
+
+//Archivos de freidoras
+import freidora1 from '../../assets/linea_calor/freidoras/freidora1.jpg';
+import freidora2 from '../../assets/linea_calor/freidoras/freidora2.jpg';
+import freidora3 from '../../assets/linea_calor/freidoras/freidora3.jpg';
+import freidora4 from '../../assets/linea_calor/freidoras/freidora4.jpg';
+import freidora5 from '../../assets/linea_calor/freidoras/freidora5.jpg';
+import freidora6 from '../../assets/linea_calor/freidoras/freidora6.webp';
+
+//archivo de brosteras
+import brostera1 from '../../assets/linea_calor/brosteras/brostera1.png';
+import brostera2 from '../../assets/linea_calor/brosteras/brostera2.png';
+import brostera3 from '../../assets/linea_calor/brosteras/brostera3.png';
+import brostera4 from '../../assets/linea_calor/brosteras/brostera4.png';
+
+//Archivos para cocinas
+import cocina1 from '../../assets/linea_calor/cocinas/cocina1.jpg';
+import cocina2 from '../../assets/linea_calor/cocinas/cocina2.png';
+import cocina3 from '../../assets/linea_calor/cocinas/cocina3.webp';
+import cocina4 from '../../assets/linea_calor/cocinas/cocina4.jpg';
+import cocina5 from '../../assets/linea_calor/cocinas/cocina5.jpg';
+import cocina6 from '../../assets/linea_calor/cocinas/cocina6.jpg';
+import cocina7 from '../../assets/linea_calor/cocinas/cocina7.jpg';
+import cocina8 from '../../assets/linea_calor/cocinas/cocina8.png';
+import cocina9 from '../../assets/linea_calor/cocinas/cocina9.png';
+import cocina10 from '../../assets/linea_calor/cocinas/cocina10.png';
+import cocina11 from '../../assets/linea_calor/cocinas/cocina11.png';
+import cocina12 from '../../assets/linea_calor/cocinas/cocina12.jpg';
+
+//archivos de hornos
+import horno1 from '../../assets/linea_calor/hornos/horno1.jpg';
+import horno2 from '../../assets/linea_calor/hornos/horno2.jpg';
+import horno3 from '../../assets/linea_calor/hornos/horno3.jpg';
+import horno4 from '../../assets/linea_calor/hornos/horno4.jpg';
+import horno5 from '../../assets/linea_calor/hornos/horno5.webp';
+import horno6 from '../../assets/linea_calor/hornos/horno6.jpg';
+
+//Mesas de trabajo
+import mesa1 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa2 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa3 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa4 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa5 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa6 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa7 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa8 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+import mesa9 from '../../assets/linea_neutro/mesas/mesa1.jpg';
+
+//Lavaderos
+import lavadero1 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+import lavadero2 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+import lavadero3 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+import lavadero4 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+import lavadero5 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+import lavadero6 from '../../assets/linea_neutro/lavaderos/lavadero1.jpg';
+
+//Refrigeracion
+import refri1 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+import refri2 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+import refri3 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+import refri4 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+import refri5 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+import refri6 from '../../assets/linea_frio/refrigeraciones/refri1.jpg';
+//Vitrinas
+import vitri1 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
+import vitri2 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
+import vitri3 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
+import vitri4 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
+import vitri5 from '../../assets/linea_frio/vitrinas/vitrina1.webp';
+
 export const Products = () => {
     // paginatos 
     const [first, setFirst] = useState(0);
-    const [rows, setRows] = useState(8);
+    const [rows, setRows] = useState(9);
 
     // Estilos para la visibilidad del modal
     const [visible, setVisible] = useState(false);
@@ -25,62 +100,182 @@ export const Products = () => {
         const productos_destacados = [
             {
                 id: 1,
-                id_categoria: 101,
-                imagen: imagen1,
+                id_categoria: 102,
+                imagen: brostera1,
                 descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 250.0,
                 rating: 4,
             },
             {
                 id: 2,
-                id_categoria: 101,
-                imagen: imagen2,
+                id_categoria: 102,
+                imagen: brostera2,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 3,
+                id_categoria: 102,
+                imagen: brostera3,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 4,
+                id_categoria: 102,
+                imagen: brostera4,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 5,
+                id_categoria: 103,
+                imagen: cocina1,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 6,
+                id_categoria: 103,
+                imagen: cocina2,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 7,
+                id_categoria: 103,
+                imagen: cocina3,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 8,
+                id_categoria: 103,
+                imagen: cocina4,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 9,
+                id_categoria: 103,
+                imagen: cocina5,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 10,
+                id_categoria: 103,
+                imagen: cocina6,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 11,
+                id_categoria: 103,
+                imagen: cocina7,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 12,
+                id_categoria: 103,
+                imagen: cocina8,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 13,
+                id_categoria: 103,
+                imagen: cocina9,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 103,
+                imagen: cocina10,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 15,
+                id_categoria: 103,
+                imagen: cocina11,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 16,
+                id_categoria: 103,
+                imagen: cocina12,
+                descripcion: "cocina de gran capacidad con acabado premium.",
+                precio: 250.0,
+                rating: 4,
+            },
+            {
+                id: 17,
+                id_categoria: 104,
+                imagen: horno1,
                 descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 5,
             },
             {
-                id: 3,
-                id_categoria: 301,
-                imagen: imagen3,
+                id: 18,
+                id_categoria: 104,
+                imagen: horno2,
                 descripcion: "mesa de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 5,
             },
             {
-                id: 4,
+                id: 19,
                 id_categoria: 104,
-                imagen: imagen4,
+                imagen: horno3,
                 descripcion: "freidoras de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 5,
             },
             {
-                id: 5,
-                id_categoria: 304,
-                imagen: imagen1,
+                id: 20,
+                id_categoria: 104,
+                imagen: horno4,
                 descripcion: "escurridores de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 1,
             },
             {
-                id: 6,
-                id_categoria: 303,
-                imagen: imagen2,
+                id: 21,
+                id_categoria: 104,
+                imagen: horno5,
                 descripcion: "lavaderos de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 2,
             },
             {
-                id: 7,
-                id_categoria: 201,
-                imagen: imagen2,
+                id: 22,
+                id_categoria: 104,
+                imagen: horno6,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
                 precio: 1500.0,
                 rating: 3,
             },
             {
-                id: 8,
+                id: 23,
                 id_categoria: 201,
                 imagen: imagen2,
                 descripcion: "Refrigeradora de gran capacidad con acabado premium.",
@@ -88,26 +283,82 @@ export const Products = () => {
                 rating: 4,
             },
             {
-                id: 9,
-                id_categoria: 201,
-                imagen: imagen2,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
-                precio: 1500.0,
-                rating: 4,
-            },
-            {
-                id: 10,
-                id_categoria: 201,
-                imagen: imagen2,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                id: 24,
+                id_categoria: 101,
+                imagen: freidora1,
+                descripcion: "Freidora automatica",
                 precio: 1500.0,
                 rating: 4,
             },
             {
                 id: 11,
-                id_categoria: 201,
-                imagen: imagen2,
-                descripcion: "Refrigeradora de gran capacidad con acabado premium.",
+                id_categoria: 101,
+                imagen: freidora2,
+                descripcion: "Freidora automatica",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 12,
+                id_categoria: 101,
+                imagen: freidora3,
+                descripcion: "Freidora automatica",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 13,
+                id_categoria: 101,
+                imagen: freidora4,
+                descripcion: "Freidora automatica",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 101,
+                imagen: freidora5,
+                descripcion: "Freidora automatica",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 15,
+                id_categoria: 101,
+                imagen: freidora6,
+                descripcion: "Freidora automatica",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 11,
+                id_categoria: 105,
+                imagen: parrilla1,
+                descripcion: "Parrilla Premium Grande 2 en 1",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 12,
+                id_categoria: 105,
+                imagen: parrilla2,
+                descripcion: "Parrilla La Carbonera Grill 350 Full Acero Inoxidable 201",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 13,
+                id_categoria: 105,
+                imagen: parrilla3,
+                descripcion: "Parrilla De Acero Inoxidable (sistema De Elevacion)",
+                precio: 1500.0,
+                rating: 4,
+            },
+            {
+                id: 14,
+                id_categoria: 105,
+                imagen: parrilla4,
+                descripcion: "Parrilla A Carbon Acero Inoxidable Reforzada De Empotrar",
                 precio: 1500.0,
                 rating: 4,
             },
@@ -124,37 +375,29 @@ export const Products = () => {
                 id: 1,
                 nombre: 'Línea Calor',
                 descripcion: [
-                    { id: 101, producto: 'Cocina de gas', },
-                    { id: 102, producto: 'Horno convector' },
-                    { id: 103, producto: 'Horno pizzero' },
-                    { id: 104, producto: 'Freidora covencional' },
-                    { id: 105, producto: 'Freidora automatica' },
+                    { id: 101, producto: 'Freidoras Industriales' },
+                    { id: 102, producto: 'Brosteras Industriales' },
+                    { id: 103, producto: 'Cocinas Industriales' },
+                    { id: 104, producto: 'Hornos Industriales' },
+                    { id: 105, producto: 'Parrillas' },
                 ]
             },
             {
                 id: 2,
-                nombre: 'Línea Frío',
+                nombre: 'Línea Neutro',
                 descripcion: [
-                    { id: 201, producto: 'Refrigerador industrial', },
-                    { id: 202, producto: 'Congelador horizontal', },
-                    { id: 203, producto: 'Congelador vertical' },
-                    { id: 204, producto: 'Vitrina refrigerada' },
+                    { id: 201, producto: 'Mesas de trabajo' },
+                    { id: 202, producto: 'Lavaderos' },
                 ]
             },
             {
                 id: 3,
-                nombre: 'Línea Neutro',
+                nombre: 'Línea Frío',
                 descripcion: [
-                    { id: 301, producto: 'Mesa de trabajo', },
-                    { id: 302, producto: 'Mesa de trabajo con repisa' },
-                    { id: 303, producto: 'Lavadero de un pozo' },
-                    { id: 304, producto: 'Escurridor de platos' },
-                    { id: 305, producto: 'Estantería de acero inoxidable' },
-                    { id: 307, producto: 'Campana extractora' },
-                    { id: 307, producto: 'Pelador de papas' },
-                    { id: 307, producto: 'Exprimidor de citricos' },
+                    { id: 301, producto: 'Equipos de refrigeración' },
+                    { id: 302, producto: 'Vitrinas exhibidoras' },
                 ]
-            }
+            },
         ];
         setProductos(datos);
     }, []);
@@ -237,8 +480,8 @@ export const Products = () => {
                     </div>
                     <div className="contenedor-articulos-productos">
                         <div className="contenedor-articulos-productos">
-                            {productosDestacadosReal.map((producto) => (
-                                <div className="home__products" key={producto.id}>
+                            {productosDestacadosReal.map((producto, index) => (
+                                <div className="home__products" key={index}>
                                     <div className="home__product">
                                         <img
                                             src={producto.imagen || '/path/to/default-image.jpg'}
@@ -270,7 +513,7 @@ export const Products = () => {
                                 first={first}
                                 rows={rows}
                                 totalRecords={productosFiltrados.length}
-                                rowsPerPageOptions={[2, 4, 8]}
+                                rowsPerPageOptions={[3, 6, 9]}
                                 onPageChange={onPageChange}
                             />
                         </div>
