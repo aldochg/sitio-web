@@ -4,6 +4,7 @@ import './Header.css';
 import logon from '../../assets/logo.png'
 import 'primeicons/primeicons.css';
 import { Sidebar } from 'primereact/sidebar';
+import { NavLink } from "react-router-dom";
 import { Button } from 'primereact/button';
 
 import { CartContext } from '../../context/CartContext';
@@ -90,10 +91,10 @@ export const Header = () => {
                             <div className="product-info">
                                 <h3>{item.nombre}</h3>
                                 <div className="quantity-controls">
-                                    <button onClick={() => decreaseQuantity(item.id)}  disabled={item.cantidad <= 1}>-</button>
+                                    <button onClick={() => decreaseQuantity(item.id)}  disabled={item.cantidad <= 1}><i className="pi pi-minus"></i></button>
                                     <span>{item.cantidad}</span>
-                                    <button onClick={() => increaseQuantity(item.id)}>+</button>
-                                    <button onClick={() => deleteFromCart(item.id)}>Eliminar</button>
+                                    <button onClick={() => increaseQuantity(item.id)}><i className="pi pi-plus"></i></button>
+                                    <button onClick={() => deleteFromCart(item.id)}><i className="pi pi-trash"></i></button>
                                 </div>
                             </div>
                         </div>
@@ -101,6 +102,9 @@ export const Header = () => {
                 </div>
             )}
             {cart.length > 0 && <div>Total: {getTotalPrice()} PEN</div>}
+            <button>
+            <NavLink to="/cart">About</NavLink>
+            </button>
         </Sidebar>
 
         </header>

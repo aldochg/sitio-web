@@ -7,19 +7,22 @@ import { Contact } from './pages/Contact/Contact';
 import { Products } from './pages/Products/Products';
 import { Header } from './components/Header/Header';
 import { Footer } from './components/Footer/Footer';
+import { CardShopping } from './pages/Cart/CardShoping';
 
 const App = () => {
   return (
     <div className='app'>
-      <Header/>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/products" element={<Products />} />
-        <Route path="/blocks" element={<Blocks />} />
-        <Route path="/about-us" element={<AboutUs />} />
-        <Route path="/contact" element={<Contact />} />
+        {/* Rutas que incluyen Header y Footer */}
+        <Route path="/" element={<><Header/><Home/><Footer/></>} />
+        <Route path="/products" element={<><Header/><Products/><Footer/></>} />
+        <Route path="/blocks" element={<><Header/><Blocks/><Footer/></>} />
+        <Route path="/about-us" element={<><Header/><AboutUs/><Footer/></>} />
+        <Route path="/contact" element={<><Header/><Contact/><Footer/></>} />
+
+        {/* Ruta de CardShoping sin Header ni Footer */}
+        <Route path="/cart" element={<CardShopping />} />
       </Routes>
-      <Footer/>
     </div>
   );
 };
