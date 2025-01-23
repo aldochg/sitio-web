@@ -5,8 +5,8 @@ const getToken = () => {
   return tokenString;
 };
 
-// const apiUrl = import.meta.env.VITE_APP_API_URL;
-const apiUrl = "http://127.0.0.1:8000/";
+const apiUrl = import.meta.env.VITE_API_URL;
+//const apiUrl = "http://127.0.0.1:8000/";
 
 console.log(apiUrl)
 

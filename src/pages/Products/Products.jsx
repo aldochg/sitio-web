@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import './Products.css';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 import { Ball } from "../../components/Ball/Ball";
 import { Paginator } from 'primereact/paginator';
 import { Dialog } from 'primereact/dialog';
+import { CartContext } from '../../context/CartContext';
 
 //Archivos de parrilas
 import parrilla1 from '../../assets/linea_calor/parrillas/parrilla1.webp';
@@ -82,22 +83,9 @@ import vitri5 from '../../assets/linea_frio/vitrinas/vitrina5.png';
 import vitri6 from '../../assets/linea_frio/vitrinas/vitrina6.png';
 
 export const Products = () => {
+    const { addToCart } = useContext(CartContext);
     // Agregar o actualizar la cantidad de producto en el carrito
-    const addToCart = (product) => {
-        const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
 
-        const existingProduct = storedCart.find((item) => item.id === product.id);
-
-        if (existingProduct) {
-            const updatedCart = storedCart.map((item) =>
-                item.id === product.id ? { ...item, cantidad: item.cantidad + 1 } : item
-            );
-            localStorage.setItem('cart', JSON.stringify(updatedCart));
-        } else {
-            storedCart.push({ ...product, cantidad: 1 });
-            localStorage.setItem('cart', JSON.stringify(storedCart));
-        }
-    };
 
     // paginatos 
     const [first, setFirst] = useState(0);
@@ -779,12 +767,12 @@ export const Products = () => {
                                             <i className="pi pi-star-fill"></i>
                                             <i className="pi pi-star-o"></i>
                                         </div>
-                                        <button className="home__products__btn" onClick={() => enviarMensajeWhatsApp()}>
-                                            <i className="pi pi-whatsapp"></i> Cotizar
-                                        </button>
                                         <button className="home__products__btn" onClick={() => addToCart(producto)}>
-                                            <i className="pi pi-eye"></i> Ver
+                                            <i className="pi pi-cart-plus"></i> Agregar
                                         </button>
+                                        {/* <button className="home__products__btn">
+                                            <i className="pi pi-eye"></i> Ver
+                                        </button> */}
                                     </div>
                                 </div>
                             ))}

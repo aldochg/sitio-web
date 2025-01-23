@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext  } from "react";
 import { SidebarH } from "../SidebarH/SidebarH";
 import './Header.css';
 import logon from '../../assets/logo.png'
@@ -6,53 +6,12 @@ import 'primeicons/primeicons.css';
 import { Sidebar } from 'primereact/sidebar';
 import { Button } from 'primereact/button';
 
+import { CartContext } from '../../context/CartContext';
+
 export const Header = () => {
+    const { cart, increaseQuantity, decreaseQuantity, deleteFromCart, getTotalPrice } =
+    useContext(CartContext);
 
-    //Hacer un get a carrito de compras
-    const [cart, setCart] = useState([]);
-
-    const getItem = () => {
-        try {
-            const usuarioInfo = JSON.parse(localStorage.getItem('cart'));
-            setCart(usuarioInfo)
-            setVisibleRight(true)
-        } catch (error) {
-            console.log(error)
-        }
-
-    }
-
-    // Disminuir la cantidad del producto
-    const decreaseQuantity = (productId) => {
-        setCart((prevCart) =>
-            prevCart.map((item) =>
-                item.id === productId && item.cantidad > 1
-                    ? { ...item, cantidad: item.cantidad - 1 }
-                    : item
-            )
-        );
-    };
-
-    // Aumentar la cantidad del producto
-    const increaseQuantity = (productId) => {
-        setCart((prevCart) =>
-            prevCart.map((item) =>
-                item.id === productId ? { ...item, cantidad: item.cantidad + 1 } : item
-            )
-        );
-    };
-
-    const goToCheckout = () => {
-        // Lógica para redirigir al usuario al proceso de pago
-    };
-
-    const deleteBackToShopping = (id) => {
-        const filterCard = JSON.parse(localStorage.getItem('cart'));
-        const updatedCart = filterCard.filter((item) => item.id !== id);
-        
-        localStorage.setItem('cart', JSON.stringify(updatedCart));
-        console.log(updatedCart)
-    };
     
 
 
@@ -108,7 +67,10 @@ export const Header = () => {
                 <div className="header__icons">
                     <i className="pi pi-user plex-icons"></i>
                     <i className="pi pi-heart-fill plex-icons"></i>
-                    <i className="pi pi-shopping-cart plex-icons" onClick={getItem}></i>
+                    <div className="contador">
+                        <div className="contador-card">{cart.length}</div>
+                        <i className="pi pi-shopping-cart plex-icons" onClick={() => setVisibleRight(true)}></i>
+                    </div>
                     <i id="pi-align-justify" className="pi pi-align-justify" onClick={() => setVisible(true)}></i>
                 </div>
             </div>
@@ -117,53 +79,29 @@ export const Header = () => {
                 <SidebarH />
             </Sidebar>
             <Sidebar visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
-                <h2>Carrito de compras</h2>
-                {cart.length === 0 ? (
-                    <p>No hay productos en el carrito</p>
-                ) : (
-                    <div className="card-container">
-                        {cart.map((item, index) => (
-                            <div key={index} className="card-item">
-                                <img src={item.imagen} alt={item.nombre} />
-                                <div className="product-info">
-                                    <h3>{item.nombre}</h3>
-                                    <div className="quantity-controls">
-                                        <Button
-                                            style={{ width: '30px', height: '30px' }}
-                                            icon="pi pi-minus"
-                                            onClick={() => decreaseQuantity(item.id)}
-                                            disabled={item.cantidad <= 1}
-                                        />
-                                        <span>{item.cantidad}</span>
-                                        <Button
-                                            style={{ width: '30px', height: '30px' }}
-                                            icon="pi pi-plus"
-                                            onClick={() => increaseQuantity(item.id)}
-                                        />
-                                        <Button
-                                            style={{ width: '30px', height: '30px' }}
-                                            icon="pi pi-trash"
-                                            onClick={() => deleteBackToShopping(item.id)}
-                                        />
-                                    </div>
+            <h2>Carrito de compras</h2>
+            {cart.length === 0 ? (
+                <p>No hay productos en el carrito</p>
+            ) : (
+                <div className="card-container">
+                    {cart.map((item) => (
+                        <div key={item.id} className="card-item">
+                            <img src={item.imagen} alt={item.nombre} />
+                            <div className="product-info">
+                                <h3>{item.nombre}</h3>
+                                <div className="quantity-controls">
+                                    <button onClick={() => decreaseQuantity(item.id)}  disabled={item.cantidad <= 1}>-</button>
+                                    <span>{item.cantidad}</span>
+                                    <button onClick={() => increaseQuantity(item.id)}>+</button>
+                                    <button onClick={() => deleteFromCart(item.id)}>Eliminar</button>
                                 </div>
                             </div>
-                        ))}
-                    </div>
-                )}
-
-                {cart.length > 0 && (
-                    <div className="cart-summary">
-                        <div className="total">
-                            <span>Total:</span>
-                            <span>{cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0).toFixed(2)} PEN</span>
                         </div>
-                        <div className="actions">
-                            <Button label="Proceder al pago" icon="pi pi-credit-card" onClick={goToCheckout} />
-                        </div>
-                    </div>
-                )}
-            </Sidebar>
+                    ))}
+                </div>
+            )}
+            {cart.length > 0 && <div>Total: {getTotalPrice()} PEN</div>}
+        </Sidebar>
 
         </header>
     );

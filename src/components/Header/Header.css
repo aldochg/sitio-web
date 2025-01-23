@@ -1,3 +1,21 @@
+:root{
+    /* Para los bakcground de los elementos */
+    --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
+    --background-color-primario:#0C5ADB;/* Para los principales */ 
+    --background-color-secundario:#00247E;/* Para los hover */
+    --background-color-claro:#007BFF; 
+  
+    /* Para los boxs shadoms */
+    --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
+    --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
+    --box-shadow-elevado:2px 2px 50px rgba(7, 75, 247, 0.4);
+  
+    /* Colore de letras dentro de un color con bakcground */
+    --color-con-fondo:#ffffff;
+  
+    /* Color de las letras */
+}
+
 .header {
     width: 100%;
     position: fixed;
@@ -80,6 +98,24 @@
 
 #pi-align-justify{
     display: none;
+}
+
+.contador{
+    position: relative;
+}
+
+.contador-card{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-color: var(--background-color-claro);
+    color: var(--color-con-fondo);
+    top: -10px;
+    right: -20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (max-width: 1200px) {

@@ -11,11 +11,15 @@ import 'primeicons/primeicons.css';                              // Iconos
 import 'primeflex/primeflex.css';                                // PrimeFlex para diseño
 import 'primereact/resources/primereact.css';
 
+import { CartProvider } from './context/CartContext';
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <PrimeReactProvider>
-        <App />
+        <CartProvider>
+          <App />
+        </CartProvider>
       </PrimeReactProvider>
     </BrowserRouter>
   </React.StrictMode>
