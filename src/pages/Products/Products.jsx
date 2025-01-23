@@ -2,13 +2,8 @@ import { useState, useEffect } from "react";
 import './Products.css';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 import { Ball } from "../../components/Ball/Ball";
-import { NavLink } from "react-router-dom";
 import { Paginator } from 'primereact/paginator';
 import { Dialog } from 'primereact/dialog';
-import imagen1 from '../../assets/inicio/uno.jpg';
-import imagen2 from '../../assets/inicio/dos.jpg';
-import imagen3 from '../../assets/inicio/tres.jpg';
-import imagen4 from '../../assets/inicio/cuatro.jpg';
 
 //Archivos de parrilas
 import parrilla1 from '../../assets/linea_calor/parrillas/parrilla1.webp';
@@ -25,10 +20,10 @@ import freidora5 from '../../assets/linea_calor/freidoras/freidora5.jpg';
 import freidora6 from '../../assets/linea_calor/freidoras/freidora6.png';
 
 //archivo de brosteras
-import brostera1 from '../../assets/linea_calor/brosteras/brostera1.png';
-import brostera2 from '../../assets/linea_calor/brosteras/brostera2.png';
-import brostera3 from '../../assets/linea_calor/brosteras/brostera3.png';
-import brostera4 from '../../assets/linea_calor/brosteras/brostera4.png';
+import freidora7 from '../../assets/linea_calor/freidoras/freidora7.png';
+import freidora8 from '../../assets/linea_calor/freidoras/freidora8.png';
+import freidora9 from '../../assets/linea_calor/freidoras/freidora9.png';
+import freidora10 from '../../assets/linea_calor/freidoras/freidora10.png';
 
 //Archivos para cocinas
 import cocina1 from '../../assets/linea_calor/cocinas/cocina1.jpg';
@@ -101,32 +96,32 @@ export const Products = () => {
         const productos_destacados = [
             {
                 id: 1,
-                id_categoria: 102,
-                imagen: brostera1,
+                id_categoria: 101,
+                imagen: freidora7,
                 descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 250.0,
                 rating: 4,
             },
             {
                 id: 2,
-                id_categoria: 102,
-                imagen: brostera2,
+                id_categoria: 101,
+                imagen: freidora8,
                 descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 250.0,
                 rating: 4,
             },
             {
                 id: 3,
-                id_categoria: 102,
-                imagen: brostera3,
+                id_categoria: 101,
+                imagen: freidora9,
                 descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 250.0,
                 rating: 4,
             },
             {
                 id: 4,
-                id_categoria: 102,
-                imagen: brostera4,
+                id_categoria: 101,
+                imagen: freidora10,
                 descripcion: "cocina de gran capacidad con acabado premium.",
                 precio: 250.0,
                 rating: 4,
@@ -587,7 +582,6 @@ export const Products = () => {
                 nombre: 'Línea Calor',
                 descripcion: [
                     { id: 101, producto: 'Freidoras Industriales' },
-                    { id: 102, producto: 'Brosteras Industriales' },
                     { id: 103, producto: 'Cocinas Industriales' },
                     { id: 104, producto: 'Hornos Industriales' },
                     { id: 105, producto: 'Parrillas' },

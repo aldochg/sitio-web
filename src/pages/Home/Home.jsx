@@ -3,11 +3,6 @@ import './Home.css';
 import { Ball } from "../../components/Ball/Ball";
 
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
-
-import imagen1 from '../../assets/inicio/uno.jpg';
-import imagen2 from '../../assets/inicio/dos.jpg';
-import imagen3 from '../../assets/inicio/tres.jpg';
-import imagen4 from '../../assets/inicio/cuatro.jpg';
 import imagen5 from '../../assets/somos5.jpg';
 
 import slider1 from '../../assets/slider1.jpg'
@@ -20,27 +15,20 @@ import slider5 from '../../assets/slider5.webp'
 
 //Cosina con dos ornillas
 import cocina from '../../assets/linea_calor/cocinas/cocina3.png';
-
 //Horno
 import horno from '../../assets/linea_calor/hornos/horno1.jpg';
-
 //Mesas
 import mesa from '../../assets/linea_neutro/mesas/mesa4.webp';
-
 //Lavaderos
 import lavadero from '../../assets/linea_neutro/lavaderos/lavadero3.jpg';
 //Freidoras
 import freidora from '../../assets/linea_calor/freidoras/freidora1.jpg';
-
 //Freidoras utomatica
 import freidora_aut from '../../assets/linea_calor/freidoras/freidora3.jpg';
-
 //Escurridor utomatica
 import escurridor from '../../assets/linea_neutro/escurridores/escurridor.jpg';
-
 //Repisa utomatica
 import repisa from '../../assets/linea_neutro/repisas/repisa.jpg';
-
 //imagenes para categrias
 import cat1 from '../../assets/categorias/mesa1.jpg';
 import stan1 from '../../assets/categorias/estanteria1.jpg';

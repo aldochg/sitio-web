@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import './AboutUs.css';
 import sobre_nosotros1 from '../../assets/sobre_nosotros1.png';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
-import img_why from '../../assets/acero1.jpg'
 import { CarruselEmpresa } from "../../components/CarruselEmpresa/CarruselEmpresa";
 
 import por_que1 from '../../assets/por_que_elegirnos/por_que1.jpg';
