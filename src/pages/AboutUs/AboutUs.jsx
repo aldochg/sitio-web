@@ -193,7 +193,7 @@ export const AboutUs = () => {
                         <div className="contenedor__datos">
                             <div className="contenedor__general__icons">
                                 <div className="contenedor__general__i">
-                                    <i className="pi pi-chart-scatter"></i>
+                                    <i className="pi pi-chart-line"></i>
                                 </div>
                             </div>
                             <div className="contendor__general__info">
@@ -206,7 +206,7 @@ export const AboutUs = () => {
                         <div className="contenedor__datos">
                             <div className="contenedor__general__icons">
                                 <div className="contenedor__general__i">
-                                    <i className="pi pi-discord"></i>
+                                    <i className="pi pi-user-plus"></i>
                                 </div>
                             </div>
                             <div className="contendor__general__info">
@@ -219,7 +219,7 @@ export const AboutUs = () => {
                         <div className="contenedor__datos">
                             <div className="contenedor__general__icons">
                                 <div className="contenedor__general__i">
-                                    <i className="pi pi-facebook"></i>
+                                    <i className="pi pi-id-card"></i>
                                 </div>
                             </div>
                             <div className="contendor__general__info">
@@ -232,7 +232,7 @@ export const AboutUs = () => {
                         <div className="contenedor__datos">
                             <div className="contenedor__general__icons">
                                 <div className="contenedor__general__i">
-                                    <i className="pi pi-twitch"></i>
+                                    <i className="pi pi-trophy"></i>
                                 </div>
                             </div>
                             <div className="contendor__general__info">

@@ -3,6 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import "./CardShoping.css"; // Archivo de estilos
 import { CartContext } from '../../context/CartContext';
 import logo_empresa from '../../assets/logo1.png';
+import apiService from '../../api/apiServices'
 
 export const CardShopping = () => {
     const { cart, increaseQuantity, decreaseQuantity, deleteFromCart, getTotalPrice } =
@@ -13,7 +14,35 @@ export const CardShopping = () => {
         const handleRedirect = () => {
           navigate("/products");
         };
-    
+
+    //Datos para el formulario
+    const [formData, setFormData] = useState({
+        name: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        message: '',
+        ruc: '',
+        address: '',
+        cart: cart,
+    });
+
+    //revicion de los documenyos, titulo ambos lados, boletos = comprobantes, no tickets de pago, solicitud = rembolso el monto gastado,  todo eso al asesor.
+    // correo personal. o alternativo.
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData({ ...formData, [name]: value });
+    };
+
+    const handleSubmit = async () => {
+        try {
+            const response = await apiService.postData('/contact', formData);
+            console.log('Datos enviados correctamente', response);
+        } catch (error) {
+            console.error('Error al enviar los datos:', error);
+        }
+    };
 
     return (
         <section className="container-card-section">
@@ -71,24 +100,20 @@ export const CardShopping = () => {
                     <div className="contact-form-container">
                         <h1>Datos de cotizacion</h1>
                         <div className="form-group">
-                          
-                            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" />
+                            <input type="text" placeholder="Ingrese su nombre" name="name" onChange={handleInputChange} />
+                        </div>
+                        <div className="form-group">
+                            <input type="text" placeholder="Ingrese su Apellidos" name="lastName" onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
                            
-                            <input type="text" id="name" name="name" placeholder="Ingrese su Apellidos" />
+                            <input type="text" placeholder="Ingrese su nombre" name="email" onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                           
-                            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" />
+                            <input type="text" placeholder="Ingrese su nombre" name="phone" onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
-                            
-                            <input type="text" id="name" name="name" placeholder="Ingrese su nombre" />
-                        </div>
-                        <div className="form-group">
-                          
-                            <input type="text" id="name" name="name" placeholder="Ingrese su ruc" />
+                            <input type="text" placeholder="Ingrese su ruc" name="ruc" onChange={handleInputChange} />
                         </div>
                         <div className="form-group">
                             <textarea
@@ -98,9 +123,10 @@ export const CardShopping = () => {
                                 required
                                 placeholder="Mensaje"
                                 className="animated-border-input"
+                                onChange={handleInputChange}
                             ></textarea>
                         </div>
-                        <button className="send-button">Enviar</button>
+                        <button className="send-button" onClick={handleSubmit}>Enviar</button>
                     </div>
                 </div>
             </div>

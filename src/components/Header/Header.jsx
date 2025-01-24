@@ -132,9 +132,7 @@ export const Header = () => {
                             ))}
                         </div>
                     )}
-                    <div className="cart-total">
-                        {cart.length > 0 && <div>Total: {getTotalPrice()} PEN</div>}
-                    </div>
+          
                     <div className="cart-actions">
                         <button
                             className="redirect-btn"
