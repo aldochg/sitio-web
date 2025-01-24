@@ -1,5 +1,8 @@
 import { useState, useEffect } from "react";
 import './Home.css';
+
+import { Dialog } from 'primereact/dialog';
+
 import { Ball } from "../../components/Ball/Ball";
 
 import { TestimonialsCarousel } from "../../components/CarruselTestimonio/CarruselTestimonio";
@@ -38,6 +41,11 @@ import horno1 from '../../assets/categorias/horno1.jpg';
 import lava1 from '../../assets/categorias/lava1.jpg';
 
 export const Home = () => {
+
+  // Estilos para la visibilidad del modal
+  const [visible, setVisible] = useState(false);
+
+
   const images = [slider1, slider2, slider3, slider4, slider5, slider9, slider17];
 
   // Generar imagene automaticas
@@ -56,6 +64,7 @@ export const Home = () => {
   const toggleAccordion = (index) => {
     setActiveIndex(activeIndex === index ? null : index);
   };
+
   const [preguntasFrecuentes, setPreguntasFrecuentes] = useState([])
   useEffect(() => {
     const faqs = [
@@ -131,7 +140,7 @@ export const Home = () => {
         descripcion: "Horno industrial diseñado para asar y hornear diversos tipos de alimentos, ofreciendo una cocción uniforme y eficiente.",
         precio: 750.0,
         rating: 5,
-      },      
+      },
       {
         id: 3,
         imagen: mesa,
@@ -181,7 +190,7 @@ export const Home = () => {
         rating: 4,
       },
     ];
-    
+
     setProductosDestacados(productos_destacados);
   }, []);
 
@@ -204,33 +213,6 @@ export const Home = () => {
     setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
   };
 
-  const responsiveOptions = [
-    {
-      breakpoint: '1400px',
-      numVisible: 2,
-      numScroll: 1
-    },
-    {
-      breakpoint: '1199px',
-      numVisible: 3,
-      numScroll: 1
-    },
-    {
-      breakpoint: '767px',
-      numVisible: 2,
-      numScroll: 1
-    },
-    {
-      breakpoint: '575px',
-      numVisible: 1,
-      numScroll: 1
-    }
-  ];
-  const [activeId, setActiveId] = useState(null); // Estado para el producto activo
-
-  const handleClick = (id) => {
-    setActiveId(id); // Activar el producto clickeado
-  };
 
   // Datos para galeria de por que elegirnos
   const [galeri, setGaleri] = useState([]);
@@ -286,6 +268,35 @@ export const Home = () => {
       "_blank"
     );
   }
+
+  //funcion para mostrar en el modal de ver
+  const [verModal, setVerModal] = useState([]);
+  const modalData = (item) => {
+    setVisible(true);
+    setVerModal(item);
+  }
+
+  const [transformOrigin, setTransformOrigin] = useState("center center");
+  const [isZoomed, setIsZoomed] = useState(false);
+
+  const handleMouseMove = (e) => {
+    const container = e.currentTarget; // Contenedor de la imagen
+    const rect = container.getBoundingClientRect(); // Coordenadas del contenedor
+
+    // Posición del mouse dentro del contenedor
+    const mouseX = e.clientX - rect.left;
+    const mouseY = e.clientY - rect.top;
+
+    // Calcula el porcentaje de la posición del mouse dentro del contenedor
+    const percentX = (mouseX / rect.width) * 100;
+    const percentY = (mouseY / rect.height) * 100;
+
+    // Establece el origen del zoom dinámico
+    setTransformOrigin(`${percentX}% ${percentY}%`);
+  };
+
+  const handleMouseEnter = () => setIsZoomed(true);
+  const handleMouseLeave = () => setIsZoomed(false);
 
   return (
     <div>
@@ -376,7 +387,7 @@ export const Home = () => {
                 <button className="home__products__btn" onClick={() => enviarMensajeWhatsApp()}>
                   <i className="pi pi-whatsapp"></i> Cotizar
                 </button>
-                <button className="home__products__btn">
+                <button className="home__products__btn" onClick={() => modalData(producto)}>
                   <i className="pi pi-eye"></i> Ver
                 </button>
               </div>
@@ -433,6 +444,53 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
+      <Dialog
+        header="Detalles del Producto"
+        visible={visible}
+        style={{ width: '50vw' }}
+        onHide={() => { if (!visible) return; setVisible(false); }}
+      >
+        <div className="dialog-content">
+          {/* Columna de la imagen */}
+          <div className="dialog-image"
+            onMouseMove={handleMouseMove}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+          >
+            <img src={verModal.imagen} alt={verModal.name}
+              style={{
+                transformOrigin: transformOrigin,
+                transform: isZoomed ? "scale(3)" : "scale(1)", // Zoom dinámico
+              }} />
+          </div>
+
+          {/* Columna de información */}
+          <div className="dialog-info">
+            <div className="info-row">
+              <h2 className="product-name-card">{verModal.name}</h2>
+            </div>
+            <div className="info-row">
+              <p className="product-price">Precio: {verModal.precio} PEN</p>
+            </div>
+            <div className="info-row">
+              <p className="product-description">{verModal.descripcion}</p>
+            </div>
+            <div className="info-row rating">
+              <div className="stars">
+                {Array.from({ length: verModal.rating }).map((_, index) => (
+                  <i
+                    key={index}
+                    className={`pi ${index < verModal.rating ? "pi-star-fill" : "pi-star-o"
+                      }`}
+                  ></i>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Dialog>
+
 
       {/* Preguntas frecuentes */}
       <div className="accordion-container">

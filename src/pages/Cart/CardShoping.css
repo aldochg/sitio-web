@@ -1,28 +1,47 @@
-:root{
+:root {
     /* Para los bakcground de los elementos */
-    --background-fond-primario: rgba(7, 75, 247, 0.4); /* Para los colores transparentes */  
-    --background-color-primario:#0C5ADB;/* Para los principales */ 
-    --background-color-secundario:#00247E;/* Para los hover */
-    --background-color-claro:#007BFF; 
-  
+    --background-fond-primario: rgba(7, 75, 247, 0.4);
+    /* Para los colores transparentes */
+    --background-color-primario: #0C5ADB;
+    /* Para los principales */
+    --background-color-secundario: #00247E;
+    /* Para los hover */
+    --background-color-claro: #007BFF;
+
     /* Para los boxs shadoms */
-    --box-shadow-principal:0 4px 6px rgba(7, 75, 247, 0.4); /* Para los shadow principal. */ 
-    --box-shadow-secundario:0 6px 12px rgba(7, 75, 247, 0.15); /* Para los shadow principal. */ 
-    --box-shadow-elevado:2px 2px 50px rgba(7, 75, 247, 0.4);
-  
+    --box-shadow-principal: 0 4px 6px rgba(7, 75, 247, 0.4);
+    /* Para los shadow principal. */
+    --box-shadow-secundario: 0 6px 12px rgba(7, 75, 247, 0.15);
+    /* Para los shadow principal. */
+    --box-shadow-elevado: 2px 2px 50px rgba(7, 75, 247, 0.4);
+
     /* Colore de letras dentro de un color con bakcground */
-    --color-con-fondo:#ffffff;
-  
+    --color-con-fondo: #ffffff;
+
     /* Color de las letras */
-    --color-letras:#616161;
-  }
-.container-card-section{
+    --color-letras: #616161;
+}
+
+.container-card-section {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.header-card{
+
+.header-card {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    height: 100px;
+    width: 100%;
+    background-color: var(--color-con-fondo);
+    box-shadow: var(--box-shadow-principal);
+}
+
+.header-card-sub {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -30,24 +49,31 @@
     max-width: 1200px;
     height: 100px;
     width: 100%;
-    border-bottom: 1px solid var(--color-letras);
 }
 
-.return-button{
-    display: block;
+.return-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 800;
     text-align: center;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    background-color: var(--background-color-claro);
+    color: var(--color-con-fondo);
+}
+
+.return-button:hover {
+    box-shadow: var(--box-shadow-elevado);
 }
 
 /* Estilos para la sección de compras */
-
 .card-shopping-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -58,6 +84,7 @@
     font-family: 'Poppins', sans-serif;
     background-color: var(--color-con-fondo);
     border-radius: 10px;
+    margin-top: 110px;
 }
 
 .card-shopping-grid {
@@ -80,22 +107,24 @@
     overflow: hidden;
 }
 
-.shopping-table th, .shopping-table td {
+.shopping-table th,
+.shopping-table td {
     padding: 15px;
     text-align: left;
 }
 
 .shopping-table th {
-    background-color: #f4f4f4;
+    background-color: var(--background-color-claro);
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
+    font-weight: 800;
 }
 
-tr{
+tr {
     border-bottom: 1px solid #ddd;
 }
 
-.product-total-real{
+.product-total-real {
     display: flex;
     padding: 20px 10px;
     justify-content: flex-end;
@@ -116,10 +145,10 @@ tr{
     height: 50px;
     object-fit: cover;
     border-radius: 5px;
-    
 }
 
-.product-price, .product-total {
+.product-price,
+.product-total {
     font-weight: bold;
     color: var(--color-letras);
 }
@@ -131,8 +160,8 @@ tr{
 }
 
 .product-quantity button {
-    background-color: #007bff;
-    color: #fff;
+    background-color: var(--background-color-claro);
+    color: var(--color-con-fondo);
     border: none;
     border-radius: 5px;
     padding: 5px 10px;
@@ -147,15 +176,15 @@ tr{
 }
 
 .product-quantity button:hover:not(:disabled) {
-    background-color: #0056b3;
+    background-color: var(--background-color-claro);
 }
 
 /* Formulario de datos de contacto */
 .contact-form-container {
     padding: 20px;
-    background-color: #fff;
+    background-color: var(--color-con-fondo);
     border-radius: 8px;
-    box-shadow: var(--box-shadow-principal);
+    border: 1px solid rgba(156, 156, 156, 0.4);
 }
 
 .contact-form-container h1 {
@@ -179,13 +208,13 @@ tr{
 .form-group input {
     width: 100%;
     padding: 10px;
-    border: 1px solid #ddd;
     border-radius: 5px;
     font-size: 14px;
     box-sizing: border-box;
 }
 
-.form-group input::placeholder {
+.form-group input::placeholder,
+textarea::placeholder {
     color: #aaa;
 }
 
@@ -204,17 +233,12 @@ tr{
 }
 
 .send-button {
-    background-color: #007bff;
+    background-color: var(--background-color-claro);
     color: #fff;
 }
 
 .send-button:hover {
-    background-color: #0056b3;
-}
-
-.return-button {
-    background-color: #6c757d;
-    color: #fff;
+    box-shadow: var(--box-shadow-elevado);
 }
 
 .return-button a {
@@ -222,11 +246,7 @@ tr{
     text-decoration: none;
 }
 
-.return-button:hover {
-    background-color: #5a6268;
-}
 
-/* Responsive Design */
 @media (max-width: 768px) {
     .card-shopping-grid {
         grid-template-columns: 1fr;

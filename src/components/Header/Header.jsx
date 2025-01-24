@@ -1,20 +1,17 @@
-import { useState, useEffect, useContext  } from "react";
+import { useState, useEffect, useContext } from "react";
 import { SidebarH } from "../SidebarH/SidebarH";
 import './Header.css';
 import logon from '../../assets/logo.png'
 import 'primeicons/primeicons.css';
 import { Sidebar } from 'primereact/sidebar';
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { Button } from 'primereact/button';
 
 import { CartContext } from '../../context/CartContext';
 
 export const Header = () => {
     const { cart, increaseQuantity, decreaseQuantity, deleteFromCart, getTotalPrice } =
-    useContext(CartContext);
-
-    
-
+        useContext(CartContext);
 
     const [isVisible, setIsVisible] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);
@@ -43,6 +40,19 @@ export const Header = () => {
 
     // const usuarioInfo = JSON.parse(localStorage.getItem('usuarioInfo'));
 
+    const customHeader = (
+        <div className="flex align-items-center gap-0">
+            <h3>Carrito de compras</h3>
+        </div>
+    );
+
+    const navigate = useNavigate();
+
+    const handleRedirect = () => {
+        navigate("/cart");
+    };
+
+
     return (
         <header className={`header ${isVisible ? 'visible' : 'hidden'}`}>
             {/* Primera fila: Información relevante */}
@@ -68,9 +78,9 @@ export const Header = () => {
                 <div className="header__icons">
                     <i className="pi pi-user plex-icons"></i>
                     <i className="pi pi-heart-fill plex-icons"></i>
-                    <div className="contador">
+                    <div className="contador" onClick={() => setVisibleRight(true)}>
                         <div className="contador-card">{cart.length}</div>
-                        <i className="pi pi-shopping-cart plex-icons" onClick={() => setVisibleRight(true)}></i>
+                        <i className="pi pi-shopping-cart plex-icons"></i>
                     </div>
                     <i id="pi-align-justify" className="pi pi-align-justify" onClick={() => setVisible(true)}></i>
                 </div>
@@ -79,33 +89,65 @@ export const Header = () => {
             <Sidebar visible={visible} onHide={() => setVisible(false)}>
                 <SidebarH />
             </Sidebar>
-            <Sidebar visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
-            <h2>Carrito de compras</h2>
-            {cart.length === 0 ? (
-                <p>No hay productos en el carrito</p>
-            ) : (
-                <div className="card-container">
-                    {cart.map((item) => (
-                        <div key={item.id} className="card-item">
-                            <img src={item.imagen} alt={item.nombre} />
-                            <div className="product-info">
-                                <h3>{item.nombre}</h3>
-                                <div className="quantity-controls">
-                                    <button onClick={() => decreaseQuantity(item.id)}  disabled={item.cantidad <= 1}><i className="pi pi-minus"></i></button>
-                                    <span>{item.cantidad}</span>
-                                    <button onClick={() => increaseQuantity(item.id)}><i className="pi pi-plus"></i></button>
-                                    <button onClick={() => deleteFromCart(item.id)}><i className="pi pi-trash"></i></button>
+            <Sidebar header={customHeader} visible={visibleRight} position="right" onHide={() => setVisibleRight(false)}>
+                <div className="cart-container">
+                    {cart.length === 0 ? (
+                        <p className="empty-cart">No hay productos en el carrito</p>
+                    ) : (
+                        <div className="card-container">
+                            {cart.map((item) => (
+                                <div key={item.id} className="card-item">
+                                    {/* Columna de la imagen */}
+                                    <div className="card-image">
+                                        <img src={item.imagen} alt={item.nombre} />
+                                    </div>
+
+                                    {/* Columna de información */}
+                                    <div className="card-info">
+                                        <h3 className="product-name">{item.nombre}</h3>
+                                        <div className="quantity-controls">
+                                            <button
+                                                className="quantity-btn decrease"
+                                                onClick={() => decreaseQuantity(item.id)}
+                                                disabled={item.cantidad <= 1}
+                                            >
+                                                <i className="pi pi-minus"></i>
+                                            </button>
+                                            <span className="quantity-display">{item.cantidad}</span>
+                                            <button
+                                                className="quantity-btn increase"
+                                                onClick={() => increaseQuantity(item.id)}
+                                            >
+                                                <i className="pi pi-plus"></i>
+                                            </button>
+                                            <button
+                                                className="quantity-btn delete"
+                                                onClick={() => deleteFromCart(item.id)}
+                                            >
+                                                <i className="pi pi-trash"></i>
+                                            </button>
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
+                            ))}
                         </div>
-                    ))}
+                    )}
+                    <div className="cart-total">
+                        {cart.length > 0 && <div>Total: {getTotalPrice()} PEN</div>}
+                    </div>
+                    <div className="cart-actions">
+                        <button
+                            className="redirect-btn"
+                            onClick={handleRedirect}
+                            disabled={cart.length <= 0}
+                        >
+                            <i className="pi pi-send"></i>
+                            <span>Continuar</span>
+                        </button>
+
+                    </div>
                 </div>
-            )}
-            {cart.length > 0 && <div>Total: {getTotalPrice()} PEN</div>}
-            <button>
-            <NavLink to="/cart">About</NavLink>
-            </button>
-        </Sidebar>
+            </Sidebar>
 
         </header>
     );

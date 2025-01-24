@@ -3,7 +3,6 @@ import './Products.css';
 import { Breadcrumb } from '../../components/Breadcrumb/Breadcrumb'
 import { Ball } from "../../components/Ball/Ball";
 import { Paginator } from 'primereact/paginator';
-import { Dialog } from 'primereact/dialog';
 import { CartContext } from '../../context/CartContext';
 
 //Archivos de parrilas
@@ -90,9 +89,6 @@ export const Products = () => {
     // paginatos 
     const [first, setFirst] = useState(0);
     const [rows, setRows] = useState(9);
-
-    // Estilos para la visibilidad del modal
-    const [visible, setVisible] = useState(false);
 
     // Productos destacados
     const [verificarProducto, setVerificarProducto] = useState(null);
@@ -780,11 +776,6 @@ export const Products = () => {
                     </div>
                 </div>
             </div>
-            <Dialog header="Header" visible={visible} style={{ width: '50vw' }} onHide={() => { if (!visible) return; setVisible(false); }}>
-                <p className="m-0">
-                    Hola mundo de laa mara villas
-                </p>
-            </Dialog>
             <div style={{ minHeight: '10vh', padding: '20px 0' }}>
                 <Paginator
                     first={first}

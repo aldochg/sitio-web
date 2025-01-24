@@ -974,3 +974,82 @@
   }
 
 }
+
+/* Estilos para los productos de dialog */
+.dialog-content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 1rem;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dialog-image {
+  width: 100%; /* Ancho del contenedor */
+  overflow: hidden; /* Oculta las partes ampliadas de la imagen */
+  position: relative;
+  border-radius: 8px;
+  cursor: zoom-in;
+  height: 100%;
+}
+
+.dialog-image img {
+  position: absolute; /* Permite mover la imagen dentro del contenedor */
+  width: 100%; /* Imagen ajustada inicialmente al tamaño del contenedor */
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.2s ease, transform-origin 0.2s ease; /* Animación suave para el zoom */
+}
+
+.dialog-info {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0%;
+}
+
+.info-row {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.product-name-card {
+  font-weight: bold;
+  font-size: 1.5rem;
+  color: var(--color-letras);
+  font-weight: 800;
+}
+
+.product-price {
+  font-size: 1rem;
+  color: var(--color-letras);
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+}
+
+.product-description {
+  font-size: 1rem;
+  color: var(--color-letras);
+  margin: 0;
+  padding: 0;
+  line-height: 30px;
+
+}
+
+.rating i {
+  color: var(--color-letras);
+  margin-right: 0.2rem;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .dialog-content {
+    flex-direction: column;
+  }
+
+  .dialog-image {
+    margin-bottom: 1rem;
+  }
+}
