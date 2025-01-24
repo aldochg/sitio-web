@@ -148,7 +148,6 @@ export const Header = () => {
                     </div>
                 </div>
             </Sidebar>
-
         </header>
     );
 };

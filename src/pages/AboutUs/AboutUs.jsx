@@ -16,7 +16,7 @@ import por_que7 from '../../assets/por_que_elegirnos/por_que7.jpg';
 export const AboutUs = () => {
 
     // Datos para galeria de por que elegirnos
-    const [galeri, setGaleri] = useState([]);
+    const [galeriAbout, setGaleriAbout] = useState([]);
 
     useEffect(() => {
         const data = [
@@ -58,7 +58,7 @@ export const AboutUs = () => {
             },
         ];
 
-        setGaleri(data);
+        setGaleriAbout(data);
     }, []);
 
     const [ventas, setVentas] = useState(0);
@@ -162,7 +162,7 @@ export const AboutUs = () => {
                         <h1>¿Por qué elegirnos?</h1>
                     </div>
                     <div className="why-us-galeri">
-                        {galeri.map((data, index) => (
+                        {galeriAbout.map((data, index) => (
                             <div className="why-us-galeri-img" key={index}>
            
                                 <div className="why-us-galeri-img-verdadero">
